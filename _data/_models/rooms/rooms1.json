@@ -1,19 +1,9 @@
 {
-  "amenities_localized": {
-    "en": "<ul>\n<li>King Bed</li>\n<li>Separate living and sleeping area</li>\n<li>Double size sleeper sofa</li>\n<li>Wet bar</li>\n<li>Sleeps up to 4</li>\n</ul>"
-  },
-  "title_localized": {
-    "en": "Sagamore King Suite"
-  },
-  "url_friendly_name_localized": {
-    "en": "sagamore-king-suite"
-  },
-  "short_info_localized": {
-    "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulum malesuada urna, vitae cursus lorem sagittis eget. Maecenas non egestas turpis."
-  },
-  "long_info_localized": {
-    "en": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulum malesuada urna, vitae cursus lorem sagittis eget. Maecenas non egestas turpis.</p>"
-  },
+  "amenities": "<ul>\n<li>King Bed</li>\n<li>Separate living and sleeping area</li>\n<li>Double size sleeper sofa</li>\n<li>Wet bar</li>\n<li>Sleeps up to 4</li>\n</ul>",
+  "title": "Sagamore King Suite",
+  "url_friendly_name": "sagamore-king-suite",
+  "short_info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulum malesuada urna, vitae cursus lorem sagittis eget. Maecenas non egestas turpis.",
+  "long_info": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulum malesuada urna, vitae cursus lorem sagittis eget. Maecenas non egestas turpis.</p>",
   "book_now_link": "https://www.myhotelreservation.net/b/hamiasag/HAMIASAG/?lang=en_US&roc=STE",
   "room_size": "550",
   "banner_image": {
@@ -117,5 +107,6 @@
       "alt": "Sagamore Suite Diagram",
       "caption": ""
     }
-  ]
+  ],
+  "order": 1
 }

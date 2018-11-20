@@ -1,13 +1,7 @@
 {
-  "amenities_localized": {
-    "en": "<ul>\n<li>2 Full Beds</li>\n<li>Separate living and sleeping area</li>\n<li>Double size sleeper sofa</li>\n<li>Wet bar</li>\n<li>Sleeps up to 4</li>\n</ul>"
-  },
-  "title_localized": {
-    "en": "Double Suite"
-  },
-  "url_friendly_name_localized": {
-    "en": "double-suite"
-  },
+  "amenities": "<ul>\n<li>2 Full Beds</li>\n<li>Separate living and sleeping area</li>\n<li>Double size sleeper sofa</li>\n<li>Wet bar</li>\n<li>Sleeps up to 4</li>\n</ul>",
+  "title": "Double Suite",
+  "url_friendly_name": "double-suite",
   "room_size": "550 - 630",
   "book_now_link": "https://www.myhotelreservation.net/b/hamiasag/HAMIASAG/?lang=en_US&roc=SUI",
   "banner_image": {
@@ -132,10 +126,7 @@
       "caption": ""
     }
   ],
-  "short_info_localized": {
-    "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulum malesuada urna, vitae cursus lorem sagittis eget. Maecenas non egestas turpis."
-  },
-  "long_info_localized": {
-    "en": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulum malesuada urna, vitae cursus lorem sagittis eget. Maecenas non egestas turpis.</p>"
-  }
+  "short_info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulum malesuada urna, vitae cursus lorem sagittis eget. Maecenas non egestas turpis.",
+  "long_info": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulum malesuada urna, vitae cursus lorem sagittis eget. Maecenas non egestas turpis.</p>",
+  "order": 2
 }
