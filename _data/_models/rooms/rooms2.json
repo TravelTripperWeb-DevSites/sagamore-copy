@@ -1,0 +1,141 @@
+{
+  "amenities_localized": {
+    "en": "<ul>\n<li>2 Full Beds</li>\n<li>Separate living and sleeping area</li>\n<li>Double size sleeper sofa</li>\n<li>Wet bar</li>\n<li>Sleeps up to 4</li>\n</ul>"
+  },
+  "title_localized": {
+    "en": "Double Suite"
+  },
+  "url_friendly_name_localized": {
+    "en": "double-suite"
+  },
+  "room_size": "550 - 630",
+  "book_now_link": "https://www.myhotelreservation.net/b/hamiasag/HAMIASAG/?lang=en_US&roc=SUI",
+  "banner_image": {
+    "name": "banner",
+    "file_name": "banner.jpg",
+    "url": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074244/banner.jpg",
+    "tags": "",
+    "description": "",
+    "date_added": "2018-11-20-074244",
+    "file_type": "image/jpeg",
+    "width": 900,
+    "height": 500,
+    "file_size": 294321,
+    "url_large": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074244/large_banner.jpg",
+    "url_medium": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074244/medium_banner.jpg",
+    "url_small": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074244/small_banner.jpg",
+    "url_xsmall": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074244/xsmall_banner.jpg",
+    "url_thumb": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074244/thumb_banner.jpg",
+    "path": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074244/banner.jpg",
+    "alt": "Double Suite",
+    "caption": ""
+  },
+  "room_images": [
+    {
+      "name": "Double Suite Bedroom",
+      "file_name": "Double Suite Bedroom.jpg",
+      "url": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074306/Double_Suite_Bedroom.jpg",
+      "tags": "",
+      "description": "",
+      "date_added": "2018-11-20-074306",
+      "file_type": "image/jpeg",
+      "width": 1400,
+      "height": 650,
+      "file_size": 508966,
+      "url_large": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074306/large_Double_Suite_Bedroom.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074306/medium_Double_Suite_Bedroom.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074306/small_Double_Suite_Bedroom.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074306/xsmall_Double_Suite_Bedroom.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074306/thumb_Double_Suite_Bedroom.jpg",
+      "path": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074306/Double_Suite_Bedroom.jpg",
+      "alt": "Double Suite Bedroom",
+      "caption": ""
+    },
+    {
+      "name": "Double Suite Bedroom 2",
+      "file_name": "Double Suite Bedroom 2.jpg",
+      "url": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074322/Double_Suite_Bedroom_2.jpg",
+      "tags": "",
+      "description": "",
+      "date_added": "2018-11-20-074322",
+      "file_type": "image/jpeg",
+      "width": 1400,
+      "height": 650,
+      "file_size": 408256,
+      "url_large": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074322/large_Double_Suite_Bedroom_2.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074322/medium_Double_Suite_Bedroom_2.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074322/small_Double_Suite_Bedroom_2.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074322/xsmall_Double_Suite_Bedroom_2.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074322/thumb_Double_Suite_Bedroom_2.jpg",
+      "path": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074322/Double_Suite_Bedroom_2.jpg",
+      "alt": "Double Suite Bedroom 2",
+      "caption": ""
+    },
+    {
+      "name": "Double Suite Living Room",
+      "file_name": "Double Suite Living Room.jpg",
+      "url": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074344/Double_Suite_Living_Room.jpg",
+      "tags": "",
+      "description": "",
+      "date_added": "2018-11-20-074344",
+      "file_type": "image/jpeg",
+      "width": 1400,
+      "height": 650,
+      "file_size": 517544,
+      "url_large": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074344/large_Double_Suite_Living_Room.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074344/medium_Double_Suite_Living_Room.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074344/small_Double_Suite_Living_Room.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074344/xsmall_Double_Suite_Living_Room.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074344/thumb_Double_Suite_Living_Room.jpg",
+      "path": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074344/Double_Suite_Living_Room.jpg",
+      "alt": "Double Suite Living Room",
+      "caption": ""
+    },
+    {
+      "name": "Double Suite Living Room 2",
+      "file_name": "Double Suite Living Room 2.jpg",
+      "url": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074358/Double_Suite_Living_Room_2.jpg",
+      "tags": "",
+      "description": "",
+      "date_added": "2018-11-20-074358",
+      "file_type": "image/jpeg",
+      "width": 1400,
+      "height": 650,
+      "file_size": 509341,
+      "url_large": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074358/large_Double_Suite_Living_Room_2.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074358/medium_Double_Suite_Living_Room_2.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074358/small_Double_Suite_Living_Room_2.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074358/xsmall_Double_Suite_Living_Room_2.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074358/thumb_Double_Suite_Living_Room_2.jpg",
+      "path": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074358/Double_Suite_Living_Room_2.jpg",
+      "alt": "Double Suite Living Room 2",
+      "caption": ""
+    },
+    {
+      "name": "Double Suite Bathroom",
+      "file_name": "Double Suite Bathroom.jpg",
+      "url": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074412/Double_Suite_Bathroom.jpg",
+      "tags": "",
+      "description": "",
+      "date_added": "2018-11-20-074412",
+      "file_type": "image/jpeg",
+      "width": 1400,
+      "height": 650,
+      "file_size": 457548,
+      "url_large": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074412/large_Double_Suite_Bathroom.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074412/medium_Double_Suite_Bathroom.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074412/small_Double_Suite_Bathroom.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074412/xsmall_Double_Suite_Bathroom.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074412/thumb_Double_Suite_Bathroom.jpg",
+      "path": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-20-074412/Double_Suite_Bathroom.jpg",
+      "alt": "Double Suite Bathroom",
+      "caption": ""
+    }
+  ],
+  "short_info_localized": {
+    "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulum malesuada urna, vitae cursus lorem sagittis eget. Maecenas non egestas turpis."
+  },
+  "long_info_localized": {
+    "en": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulum malesuada urna, vitae cursus lorem sagittis eget. Maecenas non egestas turpis.</p>"
+  }
+}
