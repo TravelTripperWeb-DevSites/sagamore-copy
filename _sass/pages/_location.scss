@@ -680,11 +680,11 @@
   .cta {
     background-color: rgba(0,0,0,0.6);
     padding: 40px 15px;
-    width: 280px;
+    max-width: 280px;
     margin: 0 auto;
     @media(min-width: $screen-sm-min) {
       padding: 40px 20px;
-      width: 290px;
+        max-width: 290px;
     }
     @media(min-width: $screen-md-min) {
       padding: 42px  20px;
@@ -713,6 +713,14 @@
       img {
         width: 100%;
       }
+    }
+    p {
+      margin-top: 20px;
+      line-height: 28px;
+      color: $body-bg;
+    }
+    &.width-600 {
+      max-width: 600px;
     }
   }
 
