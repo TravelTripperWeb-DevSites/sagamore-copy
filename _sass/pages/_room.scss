@@ -2,7 +2,6 @@
   #rd-carousel {
     overflow: hidden;
   }
-
   .carousel-inner {
     .item {
       padding: 60px 0;
@@ -135,7 +134,7 @@
   color: $grey-color;
   letter-spacing: 3px;
   padding: 15px 19px;
-  transition: all .4s;
+  transition: all 0.4s;
   display: inline-block;
   text-transform: uppercase;
 
@@ -558,7 +557,7 @@
     right: 0;
     z-index: 3;
     margin-top: 30px;
-    @media (max-width:1070px) {
+    @media (max-width: 1070px) {
       margin-top: 20px;
     }
 
@@ -575,34 +574,32 @@
     }
 
     .left {
-      background-image: none;
       position: absolute;
-      left: 0;
       top: 0;
-
+      left: 0;
+      padding: 5px 0 0;
+      background-image: none;
       &:before {
         content: '\2039';
       }
     }
 
     .right {
-      background-image: none;
       position: absolute;
-      right: 0;
       top: 0;
-
+      right: 0;
+      padding: 5px 0 0;
+      background-image: none;
       &:before {
+        font-size: 33px;
         line-height: 27px;
         content: '\203A';
-        font-size: 33px;
       }
     }
 
     .glyphicon {
       border: 1px solid #03111d;
     }
-
-    .glyphicon-chevron-left {}
   }
 }
 

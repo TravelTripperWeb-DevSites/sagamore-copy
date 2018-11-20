@@ -2,13 +2,13 @@
   <div class="footer-wrapper four-coloumn">
     <div class="container-fluid no-padding">
 
-      <div class="col-md-4 col-sm-2 no-padding v-top p-around">
+      <div class="col-md-4 col-sm-2 no-padding v-top">
         <div class="footer-logo">
-          <a href="/"><img src="/assets/images/logo-black.svg" alt="Stewart Hotel NYC"></a>
+          <a href="/"><img src="/assets/images/logo-black.png" alt="Stewart Hotel NYC"></a>
         </div>
       </div>
 
-      <div class="col-md-8 col-sm-10 p-around b-l">
+      <div class="col-md-8 col-sm-10 b-l footer-right">
         <div class="container-fluid p-l-70">
           <div class="row center">
 
@@ -27,7 +27,7 @@
                 <h2>Learn More</h2>
                 <ul class="block-element company-name links">
                   {% for link in site.data.navigation.footer %}
-                    <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                  <li><a href="{{ link.url }}">{{ link.title }}</a></li>
                   {% endfor %}
                 </ul>
               </div>
@@ -38,19 +38,16 @@
                 <form class="jotform-form" action="https://submit.jotform.me/submit/63502629299464/" method="post" name="form_63502629299464" id="63502629299464" accept-charset="utf-8">
                   <input type="hidden" name="formID" value="63502629299464">
                   <div class="form-holder ">
-                    <input type="email" class=" form-textbox validate[required] input-text" data-type="input-textbox" title="YOUR EMAIL" aria-label="YOUR EMAIL"  id="input_3" name="q3_email" size="21" value=""  placeholder="YOUR EMAIL"required="required">
+                    <input type="email" class=" form-textbox validate[required] input-text" data-type="input-textbox" title="YOUR EMAIL" aria-label="YOUR EMAIL" id="input_3" name="q3_email" size="21" value="" placeholder="YOUR EMAIL" required="required">
                     <button id="subscribe" type="submit" class="form-button-arrow">Submit</button>
                   </div>
                   <div class="form-holder form-check tnc">
-                  <input type="checkbox" class="form-check-input" id="agree" name="q4_iAgree[]" value="agree" required>
+                    <input type="checkbox" class="form-check-input" id="agree" name="q4_iAgree[]" value="agree" required>
 
-                  <label class="form-check-label" for="agree">I agree to the <a href="/terms/" target="_blank">Terms of Service</a> and <a href="/privacy-policy/" target="_blank">Privacy Policy</a>.</label>
+                    <label class="form-check-label" for="agree">I agree to the <a href="/terms/" target="_blank">Terms of Service</a> and <a href="/privacy-policy/" target="_blank">Privacy Policy</a>.</label>
 
-                </div>
+                  </div>
                   <input type="hidden" id="simple_spc" name="simple_spc" value="63502629299464">
-                  <!-- <script type="text/javascript">
-                                        document.getElementById("si" + "mple" + "_spc").value = "63502629299464-63502629299464";
-                                    </script> -->
                 </form>
                 <div class="highgate-logo">
                   <a href="http://www.highgate.com/" target="_blank"><img src="/assets/images/highgate-logo-black.jpg" alt="Highgate"></a>

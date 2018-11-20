@@ -1,56 +1,19 @@
 <header class="site-header container-fluid">
-
   <div class="row top">
-
-    <div class="language-selector">
-        <div class="selected-language">
-
-            {% if page.url contains '/es/' %}
-                Español
-            {% elsif page.url contains '/fr/' %}
-                Français
-            {% elsif page.url contains '/zh/' %}
-                中文
-            {% elsif page.url contains '/pt/' %}
-                Português
-            {% else %}
-                English
-            {% endif %}
-             <i class="fa fa-sort-desc" aria-hidden="true"></i>
-        </div>
-        <ul>
-
-            <li><a href="/es/">Español</a></li>
-            <li><a href="/fr/">Français</a></li>
-            <li><a href="/zh/">中文</a></li>
-            <li><a href="/pt/">Português</a></li>
-            <li><a href="/">English</a></li>
-        </ul>
-    </div>
-
     <div class="logo">
-      <a href="{% if page.url contains '/es/' %}/es/{% elsif page.url contains '/fr/' %}/fr/{% elsif page.url contains '/zh/' %}/zh/{% else %}/{% endif %}">
+      <a href="/">
         <img src="/assets/images/logo.png" alt="Sagamore South Beach" class="normal">
       </a>
     </div>
-
     <div class="booknow">
-      <a class="btn-header" href="javascript:void(0)" show-booking-widget>
-      {% if page.url contains '/es/' %}Reserve
-      {% elsif page.url contains '/fr/' %}Réserver
-      {% elsif page.url contains '/zh/' %}立即预订
-      {% elsif page.url contains '/pt/' %}Reserve agora
-      {% else %}Book Now
-      {% endif %}</a>
+      <a class="btn-header" href="javascript:void(0);" show-booking-widget>
+        Book Now
+      </a>
     </div>
-
   </div>
-
   <div class="row menu-toggle">
     <i class="fa fa-bars"></i>
   </div>
-
   {% include nav-header.html %}
-
 </header>
 {% include special-banner-bar.html %}
