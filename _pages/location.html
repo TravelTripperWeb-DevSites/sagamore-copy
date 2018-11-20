@@ -1,28 +1,201 @@
 ---
 layout: default
-title: Location
-meta_description:
+title: Hotel near Penn Station NYC | Stewart Hotel in Manhattan
+meta_description: Stewart Hotel is located just a few steps from Penn Station NYC, in the heart of Midtown Manhattan. Close to Times Square and many other New York attractions!
 permalink: /location/
 meta_tags:
   robots:
 ---
 
-{% comment %}
+<section class="container-fluid no-padding">
+  <div class="page-banner" style="background-image: url('/assets/images/location/location-banner.jpg')">
+    {% regionblock page_title, type:header %}
+      <h1 class="page-title">Location</h1>
+    {% endregionblock %}
+  </div>
+</section>
 
-  Name:
+<section class="loc-con-one">
 
-    Location Page
+  <div class="container no-padding">
 
-  Description:
+    <div class="col-sm-6 no-padding">
+      <div class="con-one">
+        {% regionblock section_1_title, type:header %}
+          <h2 class="title-head">Hotel Near Penn Station, NYC</h2>
+        {% endregionblock %}
+        {% regionblock section_1_body, type:text %}
+          <p class="des">Uptown affluence and downtown style come together in Times Square and North Chelsea. Cutting-edge art galleries, broadway shows and trendy bars mingle with sought-after high-rises and converted warehouses in these ultra-fashionable and ultra-busy, neighborhoods.</p>
+        {% endregionblock %}
+      </div>
+    </div>
 
-    Static content that can be modified by editable regions.
+    <div class="col-sm-6 no-padding">
+      <div class="con-two">
+        <span class="att">
+          {% regionblock section_1_image_1, type:image %}
+            <img src="/assets/images/location/attractions-2.jpg" alt="Attractions">
+          {% endregionblock %}
+        </span>
+        <span class="att">
+          {% regionblock section_1_image_2, type:image %}
+            <img src="/assets/images/location/attractions-1.jpg" alt="Attractions">
+          {% endregionblock %}
+        </span>
+      </div>
+    </div>
 
-  Usage:
+  </div>
 
-    Text   - {% regionblock region_name, type:text %}{% endregionblock %}
+  <div class="container no-padding">
 
-    Header - {% regionblock region_name, type:header %}{% endregionblock %}
+    <div class="col-md-6 no-padding">
+      <div class="con-tt">
+        <div class="con-three">
+          <span class="att">
+            {% regionblock section_1_image_3, type:image %}
+              <img src="/assets/images/location/attractions-3.jpg" alt="attractions">
+            {% endregionblock %}
+          </span>
+          <span class="att">
+            {% regionblock section_1_image_4, type:image %}
+              <img src="/assets/images/location/attractions-4.jpg" alt="attractions">
+            {% endregionblock %}
+          </span>
+        </div>
+        <div class="con-four">
+          <div class="col-sm-6 no-padding att">
+            {% regionblock section_1_image_5, type:image %}
+              <img class="img-responsive" src="/assets/images/location/attractions-5.jpg" alt="attractions">
+            {% endregionblock %}
+          </div>
+          <div class="col-sm-6 no-padding att-con">
+            {% regionblock section_1_address_1, type:header %}
+              <div class="add-1">ENJOY THE FOLLOWING<span class="nl">PRIVILEGES</span></div>
+            {% endregionblock %}
+            {% regionblock section_1_address_2, type:header %}
+              <div class="add-2">Our<span class="nl">Address</span></div>
+            {% endregionblock %}
+            {% regionblock section_1_address_3, type:header %}
+              <div class="add-3">STEWART HOTEL<br>371 7TH AVENUE<br>NEW YORK, NY 10001</div>
+            {% endregionblock %}
+          </div>
+        </div>
+      </div>
+    </div>
 
-    Image  - {% regionblock region_name, type:image %}{% endregionblock %}
+    <div class="col-md-6 no-padding hot-spots">
 
-{% endcomment %}
+      <div class="loc-tabs">
+        <ul class="nav nav-pills gallery-nav">
+          <li><a data-toggle="pill" href="#restaurants">Restaurants</a></li>
+          <li class="active"><a data-toggle="pill" href="#attractions">Sites & Attractions</a></li>
+          <li><a data-toggle="pill" href="#bars">Bars</a></li>
+        </ul>
+      </div>
+
+      <div class="tab-content">
+
+        <div class="con-five tab-pane" id="restaurants">
+          {% regionblock attractions_restaurants_title, type:header %}
+            <h2 class="title-head">Top Restaurants</h2>
+          {% endregionblock %}
+          {% regionblock attractions_restaurants_body, type:text %}
+            <ul class="con-five-list">
+              <li><a href="http://www.nilesnyc.com/" target="_blank">Niles New York City Restaurant and Bar | 371 Seventh Avenue</a></li>
+              <li><a href="http://www.pennsylvania6nyc.com/" target="_blank">Pennsylvania 6 NYC | 32 W 31st St.</a></li>
+              <li><a href="http://cookshopny.com/" target="_blank">Cookshop | 156 10th Ave.</a></li>
+              <li><a href="http://www.co-pane.com/" target="_blank">Co. | 230 Ninth Ave</a></li>
+              <li><a href="http://hillcountry.com/" target="_blank">Hill Country | 30 W 26th St.</a></li>
+              <li><a href="http://www.txikitonyc.com/" target="_blank">Txikito | 240 Ninth Ave.</a></li>
+            </ul>
+          {% endregionblock %}
+        </div>
+
+        <div class="con-five tab-pane fade in active" id="attractions">
+          {% regionblock attractions_nearby_title, type:header %}
+            <h2 class="title-head">Top Sites &amp; Attractions</h2>
+          {% endregionblock %}
+          {% regionblock attractions_nearby_body, type:text %}
+            <ul class="con-five-list">
+              <li><a href="http://www.nyc.com/visitor_guide/theater_district.702514/editorial_review.aspx" target="_blank">Theater District | from West 40th St. to West 54th St.</a></li>
+              <li><a href="http://www.thegarden.com/" target="_blank">Madison Square Garden | 8th Ave.</a></li>
+              <li><a href="https://www.moma.org/" target="_blank">The Museum of Modern Art MoMA | 11 West 53rd St.</a></li>
+              <li><a href="http://www.radiocity.com/" target="_blank">Radio City Music Hall | 1260 Avenue of the Americas</a></li>
+              <li><a href="http://rubinmuseum.org/" target="_blank">Rubin Museum of Art | 150 W 17th St.</a></li>
+              <li><a href="http://www.fitnyc.edu/museum/" target="_blank">The Museum at FIT | 7th Ave.</a></li>
+              <li><a href="http://chelseagallerymap.com/" target="_blank">Chelsea Art Galleries | Chelsea, Manhattan</a></li>
+              <li><a href="http://www.chelseamarket.com/" target="_blank">Chelsea Market | 75 9th Ave.</a></li>
+              <li><a href="http://www.thehighline.org/" target="_blank">The High Line | Washington St.</a></li>
+              <li><a href="https://www.chelseapiers.com/" target="_blank">Chelsea Piers | 11th Ave.</a></li>
+            </ul>
+          {% endregionblock %}
+        </div>
+
+        <div class="con-five tab-pane" id="bars">
+          {% regionblock attractions_bars_title, type:header %}
+            <h2 class="title-head">Top Bars</h2>
+          {% endregionblock %}
+          {% regionblock attractions_bars_body, type:text %}
+            <ul class="con-five-list">
+              <li><a href="http://sevenbistrony.com/" target="_blank">Seven Bistro | 350 7th Avenue</a></li>
+              <li><a href="http://www.thehalfking.com/" target="_blank">The Half King | 505 W 23rd St.</a></li>
+              <li><a href="http://www.mustangharrys.com/" target="_blank">Mustang Harry's | 352 7th Avenue</a></li>
+              <li><a href="http://jackdoylesnyc.com/" target="_blank">Jack Doyle's Pub &amp; Restaurant | 240 W 35th St.</a></li>
+            </ul>
+          {% endregionblock %}
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="loc-con-one">
+  <div class="container no-padding">
+    {% regionblock map_section_title, type:header %}
+      <h3 class="text-center discover-title">Discover the Best of NYC</h3>
+    {% endregionblock %}
+    <a class="wyndow-carousel" href="https://wyndow.com" data-embed-id="45">Find more great events at Wyndow!</a>
+    <script>
+      ! function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0],
+          p = /^http:/.test(d.location) ? 'http' : 'https';
+        if (!d.getElementById(id)) {
+          js = d.createElement(s);
+          js.id = id;
+          js.src = p + "://platform.wyndow.com/embed.js";
+          fjs.parentNode.insertBefore(js, fjs);
+        }
+      }(document, "script", "wyndow-wjs");
+    </script>
+  </div>
+</section>
+
+<section class="map-holder">
+  <div class="map-inner" id="map"></div>
+</section>
+
+<section class="loc-gal">
+  <div class="container-fluid no-padding">
+    <div class="col-xs-8 no-padding loc-gal-con" style="background-image: url('/assets/images/location/loc-gal-1.jpg');">
+      <div class="strip"></div>
+    </div>
+    <div class="col-xs-4 no-padding loc-gal-con" style="background-image: url('/assets/images/location/loc-gal-2.jpg');"></div>
+  </div>
+</section>
+
+<section class="loc-cta" style="background-image: url('/assets/images/location/loc-cta.jpg');">
+  <div class="container-fluid no-padding">
+    <div class="cta">
+      {% regionblock cta_title, type:header %}
+        <h3>MODERN MANHATTAN</h3>
+      {% endregionblock %}
+      <div class="cta-logo"><a href="/"><img src="/assets/images/logo.svg" alt="The Stewart Hotel"/></a></div>
+      <div class="btn-holder text-center"><a href="{{ site.reztrip_url }}" target="_blank" class="button-common">Book Your Stay</a></div>
+    </div>
+  </div>
+</section>

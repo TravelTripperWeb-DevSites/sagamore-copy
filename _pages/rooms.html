@@ -1,24 +1,35 @@
 ---
 layout: default
-title: Rooms
-meta_description:
+title: New York Hotel Rooms | Midtown Manhattan Hotel Rooms & Suites
+meta_description: Relax in style during your trip to New York City with a wide range of luxurious hotel rooms and suites available to choose from only at the Stewart Hotel NYC.
 permalink: /rooms/
 meta_tags:
   robots:
 ---
 
-{% comment %}
+<section class="container-fluid no-padding">
+  <div class="page-banner" style="background-image:url('/assets/images/rooms/rooms-banner.jpg');">
+    {% regionblock page_title, type:header %}
+      <h1 class="page-title">Comfort &amp; Style</h1>
+    {% endregionblock %}
+  </div>
+</section>
 
-  Name:
-
-    Rooms Listing Page
-
-  Description:
-
-    Display room list from RezTrip.
-
-{% endcomment %}
-
-{% for room in site.data._models.rooms %}
-  {% include components/room %}
-{% endfor %}
+<section class="container">
+  <div class="row">
+    <div class="rooms-holder">
+      <div class="col-md-4 col-sm-6" ng-repeat="room in browser.roomsList">
+        <div class="rooms-item">
+          <figure><img ng-src="[[room.photos[0].yankee_large]]" alt="[[room.name]]"></figure>
+          <h2>[[room.name]]</h2>
+          <div class="room-price">Tonight’s Rate <span><a ng-href="[[room.todayRate == 'CHECK AVAILABILITY' ? '{{site.reztrip_url}}' : '{{site.reztrip_url}}' + 'search?selected_room_category='+room.category+'&selected_room='+room.code ]]" target="_blank">[[ room.todayRate ]]</a></span></div>
+          <p>[[room.short_description | limitTo: 150]][[room.short_description.length > 150 ? '...' : '']]</p>
+          <div class="extra-padding">
+            <a class="button-common btn-blue" ng-href="/room/#[[room.name | formatNameForLink]]/">View room</a>
+            <a class="button-common btn-blue btn-rooms" target="_blank" ng-href="[[room.todayRate == 'CHECK AVAILABILITY' ? '{{site.reztrip_url}}' : '{{site.reztrip_url}}' + 'search?selected_room_category='+room.category+'&selected_room='+room.code ]]">Book Room</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

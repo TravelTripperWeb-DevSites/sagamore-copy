@@ -1,0 +1,78 @@
+.experiences {
+	padding-top: 20px 0px;
+
+	.row {
+		padding: 30px 0px;
+	}
+}
+
+.experience-thumbnail {
+	@media (max-width: 767px) {
+		padding-bottom: 20px;
+		text-align: center;
+	}
+
+	@media (min-width: 768px) {
+		float: left;
+		margin-right: 20px;
+	}
+}
+
+.experience-content {
+	.title {
+		font-family: $main-font-book;
+		font-size: 24px;
+		color: #333;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+	}
+
+	.desc {
+	  font-family: $main-font-light;
+	  font-size: 14px;
+	  line-height: 24px;
+	  padding: 15px 0;
+	  color: $text-color;
+	  letter-spacing: 1px;
+	}
+
+	.button-common {
+	  border: solid 1px #232525;
+	  font-size: 12px;
+	  font-family: $main-font-medium;
+	  color: #232525;
+	  letter-spacing: 2px;
+	  padding: 15px 30px;
+	  transition: all .4s;
+
+	  &:hover {
+	    background-color: #232525;
+	    color: #fff;
+	  }
+
+	  &:focus {
+	    background-color: #fff;
+	    color: #232525;
+	  }
+
+	  .fa {
+	    display: none;
+	  }
+
+	  @media (min-width: $screen-sm-min) {
+	    letter-spacing: 5px;
+	  }
+	}
+
+	@media (max-width: 767px) {
+		.btn-holder {
+			text-align: center;
+		}
+	}
+}
+
+.btn-position {
+	a {
+		margin: 5px 15px;
+	}
+}

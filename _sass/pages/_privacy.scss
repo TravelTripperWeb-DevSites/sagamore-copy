@@ -1,0 +1,26 @@
+.privacy-policy{
+	padding:50px 20px 20px;
+	p{
+		font-family: $main-font-book;
+	    font-size: 12px;
+	    line-height: 24px;
+	    color: $text-color;
+	    letter-spacing: 1px;
+	    margin: 0 auto 20px;
+	}
+	h3{
+		font-family: $main-font-book;
+	    font-size: 14px;
+	    color: $grey-color;
+	    letter-spacing: 2px;
+	    text-transform: uppercase;
+	    line-height: 20px;
+	    padding-bottom: 10px;
+	}
+	.about-list{
+		padding:0;
+		li{
+			color:$text-color;
+		}
+	}
+}

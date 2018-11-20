@@ -1,0 +1,80 @@
+<script>window.cookieConsentConfig = {location: false}</script>
+<script src="https://plugins.traveltripper.io/v3/rt3api.min.js" charset="UTF-8"></script>
+<script src="https://plugins.traveltripper.io/v3/jquery.ttweb.js"></script>
+
+<script>
+  TTWeb.Config.configure({
+    hotelId: 'NYCSTW', //'orwhatever your values are',
+    portalId: 'stewarthotelnyc',
+    defaultTimezone: 'America/New_York', // timezone of site
+    ipAddress: sessionStorage.ip_add,
+    defaultCurrency: 'USD',
+    defaultLocale: $("#siteLang").val() || 'en'
+  });
+  $("[show-booking-widget]").bookingWidget({
+    //showRateCalendar: true,
+    showOfferCode: true
+  });
+</script>
+  
+{% include scripts/conversion-plus-script.html %}
+  
+
+<script>
+  $(document).ready(function($) {
+    $(".main-date-1, .main-date-2").datepicker({
+      dateFormat: "yy-mm-dd",
+      altField: '.main-date-1',
+      altFormat: 'yy-mm-dd',
+      minDate: 0,
+      onSelect: function(date) {
+        var date2 = $('.main-date-1').datepicker('getDate');
+        //date2.setDate(date2.getDate() + 1);
+        $('.main-date-1').datepicker('setDate', date2);
+        //sets minDate to dt1 date + 1
+        $('.alternate-date-1').datepicker('option', 'minDate', date2);
+      }
+    });
+    $('.alternate-date-1, .alternate-date-2').datepicker({
+      dateFormat: "yy-mm-dd",
+      altField: '.alternate-date-1',
+      altFormat: 'yy-mm-dd',
+      onClose: function() {
+        var dt1 = $('#v').datepicker('getDate');
+        console.log(dt1);
+        var dt2 = $('.alternate-date-1').datepicker('getDate');
+        if (dt2 <= dt1) {
+          var minDate = $('.alternate-date-1').datepicker('option', 'minDate');
+          $('.alternate-date-1').datepicker('setDate', minDate);
+        }
+      }
+    })
+  });
+
+  //* Add locale while submitting booking widget form
+  $(document).on('submit', 'form', function() {
+    var this_action = $(this).attr("action");
+    var localeEl = '';
+    var locale = $("#siteLang").val() || 'en';
+    if (this_action && this_action.indexOf('https://stewarthotelnyc.reztrip.com/') != -1 && $(".ttweb-booking-widget input[name='locale']").length == 0) {
+      localeEl = localeEl + "<input type='hidden' name='locale' value='" + locale + "'>";
+    }
+    if (localeEl != '') {
+      localeEl = $(localeEl);
+      $(this).prepend(localeEl);
+    }
+  });
+
+  $(document).on("click", "a", function() {
+    var this_href = $(this).attr("href");
+    var locale = $("#siteLang").val() || 'en';
+    if (this_href && this.href.indexOf('https://stewarthotelnyc.reztrip.com/calendar') != -1 && this_href.indexOf('locale') == -1) {
+      if (this_href.indexOf('?') != -1)
+        this_href = this_href + "&";
+      else
+        this_href = this_href + "?";
+      this_href = this_href + 'locale=' + locale;
+      $(this).attr('href', this_href);
+    }
+  });
+</script>

@@ -1,30 +1,23 @@
-
-gems:
-- jekyll-sitemap
-keep_files:
-- assets
-rsync_copy:
-- _assets
-exclude:
-- sitemap.json
-- media.json
-- old_media.json
-- models.json
-
 # Site Settings
-# title: "Bedrock"
-# title_separator: "|"
-# name: "Hotel Property Name"
-url: # the base hostname & protocol for your site e.g. "https://www.traveltripper.io"
-# repository:  # GitHub username/repo-name e.g. "TravelTripperWeb/bedrock"
+title: "Sagamore South Beach"
+title_separator: "|"
+name: "Sagamore South Beach"
+description: "Experience Sagamore South Beach, formerly known as the Manhattan NYC Hotel. Based in the heart of Manhattan, get the best rates here on our Official Website!"
+url: "https://www.sagamoreisart.com"
+repository: "TravelTripperWeb-Sites/sagamore"
+reztrip_url: ""
 
 # Language Settings
 default_lang: 'en'
 languages: ['en']
 
+# Reading Files
 include:
   - _pages
-
+  - es
+  - fr
+  - zh
+  - pt
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -32,7 +25,6 @@ exclude:
   - .bundle
   - .jekyll-assets-cache
   - .sass-cache
-  - .git
   - Capfile
   - CHANGELOG
   - config
@@ -52,13 +44,12 @@ exclude:
   - README
   - sitemap.json
   - tmp
-  - vendor  
-  - '_assets' # This is handled via rsync
-  - '_ttio_templates'
-
-keep_files: ['assets', 'ttio_templates/bedrock/assets']
-rsync_copy: ['_assets', '_ttio_templates/bedrock/assets']
-
+  - vendor
+keep_files:
+  - .git
+  - assets
+rsync_copy:
+- _assets
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
@@ -80,62 +71,38 @@ kramdown:
 
 # Sass/SCSS
 sass:
-  load_paths:
-    - _sass
-  style: compressed
+    load_paths:
+        - _sass
+    style: compressed
 
 # Outputting
 permalink: pretty
 timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
-data_paginate:
-  per_page: 2
-  data: 'posts'
-  path: 'blog/page:num'
-  pagination_template: 'blog/index.html'
-  sort_field: 'date'
-  sort_reverse: true
+# data_paginate:
+#   per_page: 5
+#   data: 'blog'
+#   path: 'blog/page:num'
+#   pagination_template: 'blog/index.html'
+#   sort_field: 'date'
+#   sort_reverse: true
 
 page_gen: #
-  - data: 'post_categories'
-    template: 'category-posts'
-    dir: 'blog/categories'
-  - data: 'posts'
-    template: 'post-single'
-    dir: 'blog'
   # - data: 'attractions'
-  #   template: 'attraction-single'
+  #   template: 'single-attraction'
   #   dir: 'attractions'
   # - data: 'blog'
-  #   template: 'post-single'
+  #   template: 'single-blog'
   #   dir: 'blog'
   # - data: 'events'
-  #   template: 'event-single'
+  #   template: 'single-event'
   #   dir: 'events'
-  - data: 'offers'
-    template: 'offer-single'
-    dir: 'offers'
-  - data: 'rooms'
-    template: 'room-single'
-    dir: 'rooms'
+  # - data: 'offers'
+  #   template: 'single-offer'
+  #   dir: 'offers'
+  # - data: 'rooms'
+  #   template: 'single-room'
+  #   dir: 'rooms'
   # - data: 'specials'
-  #   template: 'special-single'
+  #   template: 'single-special'
   #   dir: 'specials'
-
-# Template setups
-plugins_dir:
-  - _plugins-core
-  - _plugins
-layouts_dir:
-  - _ttio_templates/bedrock/_layouts
-  - _layouts
-data_dir: 
-  - _ttio_templates/bedrock/_data
-  - _data
-includes_dir:
-  - _includes
-  - _ttio_templates/bedrock/_includes
-i18n_dir:
-  - _ttio_templates/bedrock/_locales
-  - _locales
-  

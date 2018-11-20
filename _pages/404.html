@@ -1,28 +1,37 @@
 ---
 layout: default
-title: Page Not Found
+title: Page Not Found | Stewart Hotel in NYC
 meta_description:
-permalink: /page-not-found/
+permalink: /error-page/
 meta_tags:
-  robots:
+  robots: noindex, nofollow
 ---
 
-{% comment %}
+<style>
+  .img-responsive { max-width: 394px; }
+</style>
 
-  Name:
+<section>
+  <div class="container-fluid no-padding">
+    <div class="page-banner" style="background-image: url('//cdn.traveltripper.io/site-assets/192_552_3091/media/2017-05-12-072727/STEW-Exterior-Night-Web.jpg')">
+      <h1 class="page-title">404 error <br>page not found</h1>
+    </div>
+  </div>
+</section>
 
-    404 (Page Not Found)
+<h3 class="text-error">We're sorry but it looks like that page doesn't exist anymore.<br>
+Please view the Sitemap below or go back to the <a href="/"> Homepage</a>.</h3>
 
-  Description:
-
-    Static content that can be modified by editable regions.
-
-  Usage:
-
-    Text   - {% regionblock region_name, type:text %}{% endregionblock %}
-
-    Header - {% regionblock region_name, type:header %}{% endregionblock %}
-
-    Image  - {% regionblock region_name, type:image %}{% endregionblock %}
-
-{% endcomment %}
+<div class="space">
+  <h2 class="title-error">sitemap</h2>
+  <ul class="container site">
+    <li> <a href="/"><span>home</span></a></li>
+    <li> <a href="/about/"><span>about</span></a></li>
+    <li> <a href="/rooms/"><span>rooms</span></a></li>
+    <li> <a href="/offers/"><span>offers</span></a></li>
+    <li> <a href="/location/"><span>location</span></a></li>
+    <li> <a href="/experiences/"><span>experiences</span></a></li>
+    <li> <a href="/gallery/"><span>gallery</span></a></li>
+    <li><a href="/contact/">Contact</a></li>
+  </ul>
+</div>

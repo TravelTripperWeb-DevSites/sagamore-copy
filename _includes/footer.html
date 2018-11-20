@@ -1,14 +1,76 @@
-<div class="container d-flex justify-content-between">
-  <div class="social-icons">
-    {% if site.data.ui-text[site.default_lang].follow_label %}
-      <strong>{{ site.data.ui-text[site.default_lang].follow_label }}</strong>
-    {% endif %}
-    {% if site.data.social.twitter.username %}
-      <a href="https://twitter.com/{{ site.data.social.twitter.username }}"><i class="fab fa-twitter-square" aria-hidden="true"></i> Twitter</a>
-    {% endif %}
-    {% if site.data.social.facebook.username %}
-      <a href="https://facebook.com/{{ site.data.social.facebook.username }}"><i class="fab fa-facebook-square" aria-hidden="true"></i> Facebook</a>
-    {% endif %}
+<footer class="footer">
+  <div class="footer-wrapper four-coloumn">
+    <div class="container-fluid no-padding">
+
+      <div class="col-md-4 col-sm-2 no-padding v-top p-around">
+        <div class="footer-logo">
+          <a href="/"><img src="/assets/images/logo-black.svg" alt="Stewart Hotel NYC"></a>
+        </div>
+      </div>
+
+      <div class="col-md-8 col-sm-10 p-around b-l">
+        <div class="container-fluid p-l-70">
+          <div class="row center">
+
+            <div class="col-md-3 col-sm-3 no-padding v-top">
+              <div class="footer-grid">
+                <h2>Contact</h2>
+                <p>
+                  <a href="https://goo.gl/maps/JrxVG7wMh6R2" target="_blank"><span class="block-element company-name">Stewart Hotel</span><span class="block-element address">371 Seventh Ave <br>NY 10001-3984 <br>United States</span></a>
+                  <span class="block-element"><a href="tel:1-212-563-1800">1.212.563.1800</a></span>
+                  <span class="block-element"><a href="mailto:info@stewarthotelnyc.com">info@stewarthotelnyc.com</a></span>
+                </p>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-3 no-padding v-top">
+              <div class="footer-grid">
+                <h2>Learn More</h2>
+                <ul class="block-element company-name links">
+                  {% for link in site.data.navigation.footer %}
+                    <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6 no-padding v-top  no-border">
+              <div class="footer-grid">
+                <h2>Newsletter Sign-up</h2>
+                <form class="jotform-form" action="https://submit.jotform.me/submit/63502629299464/" method="post" name="form_63502629299464" id="63502629299464" accept-charset="utf-8">
+                  <input type="hidden" name="formID" value="63502629299464">
+                  <div class="form-holder ">
+                    <input type="email" class=" form-textbox validate[required] input-text" data-type="input-textbox" title="YOUR EMAIL" aria-label="YOUR EMAIL"  id="input_3" name="q3_email" size="21" value=""  placeholder="YOUR EMAIL"required="required">
+                    <button id="subscribe" type="submit" class="form-button-arrow">Submit</button>
+                  </div>
+                  <div class="form-holder form-check tnc">
+                  <input type="checkbox" class="form-check-input" id="agree" name="q4_iAgree[]" value="agree" required>
+
+                  <label class="form-check-label" for="agree">I agree to the <a href="/terms/" target="_blank">Terms of Service</a> and <a href="/privacy-policy/" target="_blank">Privacy Policy</a>.</label>
+
+                </div>
+                  <input type="hidden" id="simple_spc" name="simple_spc" value="63502629299464">
+                  <!-- <script type="text/javascript">
+                                        document.getElementById("si" + "mple" + "_spc").value = "63502629299464-63502629299464";
+                                    </script> -->
+                </form>
+                <div class="highgate-logo">
+                  <a href="http://www.highgate.com/" target="_blank"><img src="/assets/images/highgate-logo-black.jpg" alt="Highgate"></a>
+                </div>
+                <div class="social-icons-footer">
+                  <h2>Follow</h2>
+                  <a href="https://www.facebook.com/stewarthotelnyc/" rel="nofollow" target="blank" title="facebook"><i class="fa fa-facebook"></i></a>
+                  <a href="https://www.instagram.com/stewarthotelnyc/" rel="nofollow" target="blank" title="instagram"><i class="fa fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
-  <span class="text-muted">&copy; {{ site.time | date: '%Y' }} {{ site.data.hotel_settings.name | default: site.data.seo.default_title }}</span>
-</div>
+  <div class="footer-copyright">
+    <div class="container">
+      <p>&copy; <a href="/" title="Stewart Hotel in NYC">Stewart Hotel</a> {{ site.time | date: '%Y' }} All Rights Reserved</p>
+    </div>
+  </div>
+</footer>

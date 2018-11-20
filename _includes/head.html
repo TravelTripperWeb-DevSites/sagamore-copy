@@ -1,0 +1,37 @@
+<meta charset="utf-8">
+{% include analytics.html %}
+
+{% include seo.html %}
+
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="https://plugins.traveltripper.io/v3/css/booking-widget.css">
+<link rel="stylesheet" type="text/css" href="https://plugins.traveltripper.io/v3/css/conversion-plus.css" />
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | absolute_url }}">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="">
+
+<script src="https://use.fontawesome.com/8e70f1644b.js"></script>
+
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<!--Popup that opens only on Mobile-->
+{% include mobile-redirect.html %}
+
+<!-- Hotjar Tracking Code -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:1064164,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
