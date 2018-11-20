@@ -1,40 +1,40 @@
 <!-- Only load Leaflet on specfic pages -->
-{% if page.url == "/" %}
+{% if page.url == "/" or page.url contains 'location'%}
   {% assign map = true %}
 {% endif %}
 
-{% if page.url contains 'location' %}
- {% assign map = true %}
-{% endif %}
-
 {% if map == true %}
- <!-- Leaflet -->
- <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q==" crossorigin=""></script>
+<!-- Leaflet -->
+<script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q==" crossorigin=""></script>
 
- <!-- Leaflet Settings -->
- <script>
-   // Create map object, assign it to the 'map' div, give initial latitude, longitude and zoom values.
-   var map = L.map('map', {scrollWheelZoom:false}).setView([40.749129,-73.991691], 16);
+<!-- Leaflet Settings -->
+<script>
+  // Create map object, assign it to the 'map' div, give initial latitude, longitude and zoom values.
+  var map = L.map('map', {
+    scrollWheelZoom: false
+  }).setView([25.791622, -80.1315017], 16);
 
-   // Add base map tiles from Open Street Map.
-   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png', {
-  attribution:'&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attribution/">CARTO</a>',
-  maxZoom: 20,
-  minZoom: 0,
-}).addTo(map);
+  // Add base map tiles from Open Street Map.
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attribution/">CARTO</a>',
+    maxZoom: 20,
+    minZoom: 0,
+  }).addTo(map);
 
-   // Create a custom marker icon.
-   var hotelIcon = L.icon({
-     iconUrl: '/assets/images/leaflet/loc.png',
-     iconSize: [25, 36],
-   });
+  // Create a custom marker icon.
+  var hotelIcon = L.icon({
+    iconUrl: '/assets/images/leaflet/loc.png',
+    iconSize: [25, 36],
+  });
 
-   // Create a default marker object, pass custom icon as an option, add it to the map.
-   var marker = L.marker([40.749129,-73.991691], {icon:hotelIcon}).addTo(map);
+  // Create a default marker object, pass custom icon as an option, add it to the map.
+  var marker = L.marker([25.791622, -80.1315017], {
+    icon: hotelIcon
+  }).addTo(map);
 
-   // Bind a popup to the default marker.
-   marker.bindPopup('STEWART HOTEL<br>371 Seventh Ave<br>New York City<br>NY 10001-3984<br>United States<br>');
- </script>
+  // Bind a popup to the default marker.
+  marker.bindPopup('The Sagamore Hotel Miami Beach<br>1671 Collins Ave <br>Miami Beach, FL 33139<br>United States');
+</script>
 
 {% endif %}
 {% include scripts/ipify.html %}
@@ -46,44 +46,5 @@
 <script src="/assets/js/rt3-directives.js"></script>
 <script src="/assets/js/rt3-filters.js"></script>
 
-{% include scripts/instafeed.html %} {% include scripts/booking-widget.html %}
-
-<!-- Only load Leaflet on specfic pages -->
-{% if page.url == "/" %}
-  {% assign map = true %}
-{% endif %}
-
-{% if page.url contains 'location' %}
- {% assign map = true %}
-{% endif %}
-
-{% if map == true %}
- <!-- Leaflet -->
- <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q==" crossorigin=""></script>
-
- <!-- Leaflet Settings -->
- <script>
-   // Create map object, assign it to the 'map' div, give initial latitude, longitude and zoom values.
-   var map = L.map('map-canvas', {scrollWheelZoom:false}).setView([24.5609239,-81.80140140000003], 17);
-
-   // Add base map tiles from Open Street Map.
-   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png', {
-  attribution:'&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attribution/">CARTO</a>',
-  maxZoom: 20,
-  minZoom: 0,
-}).addTo(map);
-
-   // Create a custom marker icon.
-   var hotelIcon = L.icon({
-     iconUrl: '/assets/images/leaflet/pointer.png',
-     iconSize: [33, 32],
-   });
-
-   // Create a default marker object, pass custom icon as an option, add it to the map.
-   var marker = L.marker([24.5609239,-81.80140140000003], {icon:hotelIcon}).addTo(map);
-
-   // Bind a popup to the default marker.
-   marker.bindPopup('The Marker Waterfront Resort<br>200 William Street, <br>Key West, Florida 33040, <br>Phone: (305) 501-5193');
- </script>
-
-{% endif %}
+{% include scripts/instafeed.html %}
+{% include scripts/booking-widget.html %}

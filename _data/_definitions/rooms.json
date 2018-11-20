@@ -1,0 +1,49 @@
+{
+  "title": {
+    "label": "Room Name",
+    "required": true,
+    "localizable": true
+  },
+  "url_friendly_name": {
+    "type": "url_slug",
+    "label": "URL Friendly Name",
+    "required": true,
+    "localizable": true
+  },
+  "banner_image": {
+    "label": "Room list image",
+    "type": "image",
+    "required": true
+  },
+  "room_images": {
+    "type": "image",
+    "multiple": true,
+    "required": true
+  },
+  "short_info": {
+    "label": "Short Description",
+    "type": "text",
+    "required": true,
+    "localizable": true
+  },
+  "book_now_link": {
+    "type": "text",
+    "required": true,
+    "label": "Book Now Link"
+  },
+  "long_info":{
+		"label": "Description",
+		"required": true,
+		"type": "richtext",
+    "localizable": true
+	},
+  "room_size":{
+		"label": "Room Size in sq. ft.",
+		"type": "text"
+	},
+  "amenities": {
+    "required": true,
+    "type": "richtext",
+    "localizable": true
+  }
+}

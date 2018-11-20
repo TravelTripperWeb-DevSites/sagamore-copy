@@ -2075,7 +2075,7 @@ margin-bottom: 1px;
 
   .glyphicon-chevron-right {
     right: 68px;
-
+    padding: 3px 0 0;
     &:before {
       font-family: $main-font-light;
       line-height: 27px;
@@ -2088,7 +2088,7 @@ margin-bottom: 1px;
 
   .glyphicon-chevron-left {
     left: 68px;
-
+    padding: 3px 0 0;
     &:before {
       font-family: $main-font-light;
       line-height: 27px;
@@ -2542,12 +2542,14 @@ margin-bottom: 1px;
     }
 
     .glyphicon-chevron-left {
+      padding: 0;
       &:before {
         font-size: 28px;
       }
     }
 
     .glyphicon-chevron-right {
+      padding: 0;
       &:before {
         font-size: 28px;
       }
@@ -2843,16 +2845,6 @@ margin-bottom: 1px;
   }
 
   .content {
-    @media (max-width: 400px) {
-      h4 {
-        font-size: 18px;
-      }
-
-      h5 {
-        font-size: 12px;
-        padding-bottom: 20px;
-      }
-    }
     width: 80%;
     position: absolute;
     top: 50%;
@@ -2877,6 +2869,18 @@ margin-bottom: 1px;
       letter-spacing: 2px;
       padding: 20px 0 40px;
       text-align: center;
+    }
+
+    @media (max-width: 400px) {
+      width: 100%;
+      h4 {
+        font-size: 18px;
+      }
+
+      h5 {
+        font-size: 12px;
+        padding-bottom: 20px;
+      }
     }
 
     a {
