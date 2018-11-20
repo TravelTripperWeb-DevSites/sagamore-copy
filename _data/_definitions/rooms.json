@@ -39,7 +39,7 @@
 	},
   "room_size":{
 		"label": "Room Size in sq. ft.",
-		"type": "integer"
+		"type": "text"
 	},
   "amenities": {
     "required": true,
