@@ -18,18 +18,19 @@ meta_tags:
 <section class="container">
   <div class="row">
     <div class="rooms-holder">
-      <div class="col-md-4 col-sm-6" ng-repeat="room in browser.roomsList">
-        <div class="rooms-item">
-          <figure><img ng-src="[[room.photos[0].yankee_large]]" alt="[[room.name]]"></figure>
-          <h2>[[room.name]]</h2>
-          <div class="room-price">Tonight’s Rate <span><a ng-href="[[room.todayRate == 'CHECK AVAILABILITY' ? '{{site.reztrip_url}}' : '{{site.reztrip_url}}' + 'search?selected_room_category='+room.category+'&selected_room='+room.code ]]" target="_blank">[[ room.todayRate ]]</a></span></div>
-          <p>[[room.short_description | limitTo: 150]][[room.short_description.length > 150 ? '...' : '']]</p>
-          <div class="extra-padding">
-            <a class="button-common btn-blue" ng-href="/room/#[[room.name | formatNameForLink]]/">View room</a>
-            <a class="button-common btn-blue btn-rooms" target="_blank" ng-href="[[room.todayRate == 'CHECK AVAILABILITY' ? '{{site.reztrip_url}}' : '{{site.reztrip_url}}' + 'search?selected_room_category='+room.category+'&selected_room='+room.code ]]">Book Room</a>
+      {% for room in site.data._models.rooms %}
+        <div class="col-md-4 col-sm-6">
+          <div class="rooms-item">
+            <figure><img src="{{room.banner_image.url_medium}}" alt="{{room.banner_image.alt}}"></figure>
+            <h2>{{room.title}}</h2>
+            <p>{{room.short_info}}</p>
+            <div class="extra-padding">
+              <a class="button-common btn-blue" href="/rooms/{{room.url_friendly_name}}/">View room</a>
+              <a class="button-common btn-blue btn-rooms" target="_blank" href="{{room.book_now_link}}">Book Room</a>
+            </div>
           </div>
         </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
