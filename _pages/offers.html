@@ -1,24 +1,41 @@
 ---
 layout: default
-title: Offers
-meta_description:
+title: Midtown Manhattan Hotel Offers | Manhattan Hotel Specials
+meta_description: Looking for Midtown Manhattan Hotel Offers or Packages? At the Stewart Hotel NYC we've got a variety of excellent deals, only available on our Official Website!
 permalink: /offers/
 meta_tags:
   robots:
 ---
 
-{% comment %}
+<section>
+  <div class="container-fluid no-padding">
+    <div class="page-banner" style="background-image:url('/assets/images/offers/offers-banner.jpg');">
+      {% regionblock page_title, type:header %}
+        <h1 class="page-title">Special Offers</h1>
+      {% endregionblock %}
+    </div>
+  </div>
+</section>
 
-  Name:
+<div rt3-special-rates="offers">
+  <div class="m-t-60" ng-repeat="offer in offers.special_rates">
+    <section class="models">
+      <div class="container">
+        <div class=" two-col-wrap">
+          <div class="row no-gutters">
+            <div class="col-sm-6 sp-img v-center" style="background-image:url([[offer.lead_photo_url.yankee_large]]);"></div>
+            <div class="col-sm-6 sp-content v-center">
+              <p class="title">[[offer.rate_plan_name]]</p>
+              <p class="desp">[[offer.short_description]]</p>
+              <div class="btn-holder btn-offerlist">
+                <a class="button-common" href="/offer/#[[offer.rate_plan_name | formatNameForLink ]]/">View this offer</a>
+                <a class="button-common" href="{{ site.reztrip_url }}en/special_offer?rate_code=[[offer.rate_plan_code]]&offer_code=[[offer.offer_code]]" target="_blank" rel="nofollow">BOOK NOW</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 
-    Offers Listing Page
-
-  Description:
-
-    Display offer list from RezTrip.
-
-{% endcomment %}
-
-{% for offer in site.data._models.offers %}
-  {% include components/offer %}
-{% endfor %}
+</div>

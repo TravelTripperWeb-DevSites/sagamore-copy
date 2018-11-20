@@ -1,28 +1,205 @@
 ---
 layout: default
-title: About
-meta_description:
+title: Stewart Hotel in Midtown Manhattan | New York Center Hotels
+meta_description: Just right for those who love the thrill of Broadway life and live performances, the Stewart Hotel captures the spirit of a buzzing pre-show Broadway theater.
 permalink: /about/
 meta_tags:
   robots:
 ---
 
-{% comment %}
+<section class="container-fluid no-padding">
+  <div class="page-banner" style="background-image: url('/assets/images/about/about-banner.jpg')">
+    {% regionblock page_title, type:header %}
+      <h1 class="page-title">Unforgettable Stay</h1>
+    {% endregionblock %}
+  </div>
+</section>
 
-  Name:
+<section class="loc-con-one about">
+  <div class="container no-padding">
+    <div class="col-sm-6 no-padding">
+      <div class="con-two">
+        <div class="abt">
+          {% regionblock section_1_image, type:image %}
+            <img src="/assets/images/about/about-1.jpg" alt="Modern Manhattan">
+          {% endregionblock %}
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 no-padding">
+      <div class="con-one">
+        {% regionblock section_1_title, type:header %}
+          <h2 class="title-head">Modern Manhattan</h2>
+        {% endregionblock %}
+        {% regionblock section_1_body, type:text %}
+          <p class="des">Just right for those who love the thrill of Broadway life and live performances, Stewart Hotel captures the spirit of a buzzing pre-show Broadway theater. Guests gather under high ceilings and flow between its New York-inspired lobby, stunning ballroom, designer <a title="Meeting space in NYC" href="https://www.stewarthotelnyc.com/meetings/">event space</a> and, <a title="Spacious hotel in central NYC" href="https://www.stewarthotelnyc.com/rooms/">spacious suites</a>.</p>
+        {% endregionblock %}
+      </div>
+    </div>
+  </div>
+</section>
 
-    About Page
+<section class="loc-con-one about">
 
-  Description:
+  <div class="container no-padding">
+    <div class="col-sm-6 no-padding">
+      <div class="con-one">
+        {% regionblock section_2_title, type:header %}
+          <h2 class="title-head">Midtown's Best Kept Secret</h2>
+        {% endregionblock %}
+        {% regionblock section_2_body, type:text %}
+          <p class="des">It's not every day you find a meal you'd want to come back for in Midtown Manhattan. But it is at <a href="http://www.nilesnyc.com/" target="_blank">Niles Restaurant</a>. Specializing in New American fare, Niles Restaurant matches its modern menu with impeccable service for a stand-out dining experience in the heart of Manhattan.</p>
+        {% endregionblock %}
+      </div>
+    </div>
+    <div class="col-sm-6 no-padding">
+      <div class="con-two">
+        <div class="abt">
+          {% regionblock section_2_image, type:image %}
+            <img src="https://cdn.traveltripper.io/site-assets/192_552_2688/media/2017-04-26-194503/restaurant01.jpg" alt="Niles Restaurant">
+          {% endregionblock %}
+        </div>
+      </div>
+    </div>
+  </div>
 
-    Static content that can be modified by editable regions.
+  <div class="container no-padding">
 
-  Usage:
+    <div class="col-md-6 no-padding">
+      <div class="con-tt">
 
-    Text   - {% regionblock region_name, type:text %}{% endregionblock %}
+        <div class="con-three">
+          <div class="att default-spacing-minus">
+            <div class="sp-right">
+              {% regionblock section_3_image_1, type:image %}
+                <img src="/assets/images/about/about-2.jpg" alt="Attractions">
+              {% endregionblock %}
+            </div>
+          </div>
+          <div class="att">
+            <div class="sp-left">
+              {% regionblock section_3_image_2, type:image %}
+                <img class="img-responsive" src="/assets/images/about/about-3.jpg" alt="Art Deco Historic District">
+              {% endregionblock %}
+            </div>
+          </div>
+        </div>
 
-    Header - {% regionblock region_name, type:header %}{% endregionblock %}
+        <div class="con-four">
+          <div class="col-sm-6 no-padding att default-spacing-minus">
+            <div class="sp-right">
+              {% regionblock section_3_image_3, type:image %}
+                <img class="img-responsive" src="/assets/images/about/about-4.jpg" alt="Attractions">
+              {% endregionblock %}
+            </div>
+          </div>
+          <div class="col-sm-6 no-padding">
+            <div class="sp-left">
+              {% regionblock section_3_image_4, type:image %}
+                <img class="img-responsive" src="/assets/images/about/about-5.jpg" alt="Attractions">
+              {% endregionblock %}
+            </div>
+          </div>
+        </div>
 
-    Image  - {% regionblock region_name, type:image %}{% endregionblock %}
+      </div>
+    </div>
 
-{% endcomment %}
+    <div class="col-md-6 no-padding prox">
+      <div class="prox-content">
+        {% regionblock section_3_title, type:header %}
+          <h2>Proximity At Its Best</h2>
+        {% endregionblock %}
+        <h3><a href="https://goo.gl/OqAOdb" target="_blank">Stewart Hotel, 371 7TH AVENUE, NEW YORK, NY 10001</a></h3>
+        {% regionblock section_3_body, type:text %}
+          <p>Stewart's high-energy Midtown location puts you at the crossroads of the city's most iconic neighborhood districts- across from Pennsylvania Station and Madison Square Garden. You'll be staying near Chelsea, just steps from Times Square and Fifth Avenue shopping.</p>
+        {% endregionblock %}
+        <div class="btn-holder">
+          <a href="/location/" class="button-common outline">Explore Location</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+{% include offers-carousel.html %}
+
+<section class="loc-cta about-cta" style="background-image: url('/assets/images/about/cta-about.jpg');">
+  <div class="container-fluid no-padding">
+    <div class="cta">
+      <h3>THE PERFECT STAY</h3>
+      <div class="cta-logo"><img src="/assets/images/logo.svg" alt="The Stewart Hotel"></div>
+      <div class="btn-holder text-center"><a href="https://stewarthotelnyc.reztrip.com/" target="_blank" class="button-common" rel="nofollow">Book Now</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="container-fluid no-padding m-20">
+
+  <div class="row no-gutters">
+
+    <div class="col-md-6 p-l-0 p-r-10">
+      <div class="intro-content city">
+        {% regionblock amenities_section_title, type:header %}
+          <h3>Services &amp;<br>Amenities</h3>
+        {% endregionblock %}
+        {% regionblock amenities_section_subtitle, type:header %}
+          <h5>Just right for busy city days and nights</h5>
+        {% endregionblock %}
+        {% regionblock amenities_section_body, type:text %}
+          <p>Stewart Hotel makes every effort to meet your needs and make your stay just right. Our boutique hotel amenities and services are designed to provide a thoroughly relaxing experience in the city that doesn't sleep. Feel free to indulge your senses to connect, relax, drink, eat, work, stay fit and experience <a title="Hotel in Central NYC" href="/location/">New York City</a>.</p>
+        {% endregionblock %}
+        <a class="btn btn-lg btn-primary button-home" href="/location/">Discover More</a>
+      </div>
+    </div>
+
+    <div class="col-md-6 p-r-0 p-l-10 home-map">
+      <div class="con-img-holder">
+        <img src="/assets/images/about/about-6.jpg" alt="Pets Welcome">
+        {% regionblock amenities_image_1_caption, type:header %}
+          <span class="cap">Pets Welcome</span>
+        {% endregionblock %}
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row no-gutters relative-box">
+
+    <div class="col-md-6 p-r-0 p-l-10 home-map">
+      <div class="con-img-holder">
+        <img src="/assets/images/about/about-stay.jpg" alt="Extended Stays">
+        {% regionblock amenities_image_2_caption, type:header %}
+          <span class="cap">EXTENDED STAYS</span>
+        {% endregionblock %}
+      </div>
+    </div>
+
+    <div class="col-md-6 p-r-0 p-l-10 prox-abs">
+      <div class="prox-content prox-list no-margin">
+        {% regionblock amenities_list_title, type:header %}
+          <h2>List of Services</h2>
+        {% endregionblock %}
+        {% regionblock amenities_list_body, type:text %}
+          <ul class="about-list">
+            <li><a href="http://www.nilesnyc.com" target="_blank">NILES NYC RESTAURANT AND BAR</a></li>
+            <li>ROOM SERVICE</li>
+            <li>EXTENDED STAYS</li>
+            <li>PETS WELCOME</li>
+            <li>KITCHENS</li>
+            <li><a href="/meetings/">MEETING &amp; EVENT SPACE</a></li>
+            <li>THE CORNER STORE</li>
+            <li>GYM</li>
+            <li>METRO CONCIERGE</li>
+            <li>VALET PARKING</li>
+            <li>BUSINESS SERVICES</li>
+          </ul>
+        {% endregionblock %}
+      </div>
+    </div>
+
+  </div>
+
+</section>

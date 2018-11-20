@@ -1,0 +1,47 @@
+main:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
+  - title: Sagamore is Art
+    url: /sagamore-art/
+  - title: Rooms
+    url: /rooms/
+  - title: Offers
+    url: /offers/
+  - title: Location
+    url: /location/
+  - title: Experiences
+    url: /experiences/
+  - title: Gallery
+    url: /gallery/
+  - title: Meetings
+    url: /meetings/
+
+footer:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
+  - title: Rooms
+    url: /rooms/
+  - title: Offers
+    url: /offers/
+  - title: Location
+    url: /location/
+  - title: Experiences
+    url: /experiences/
+  - title: Gallery
+    url: /gallery/
+  - title: Meetings
+    url: /meetings/
+  - title: Privacy Policy
+    url: /privacy-policy/
+  - title: Terms & Conditions
+    url: /terms/
+  - title: Contact
+    url: /contact/
+  - title: Policies
+    url: /hotel-policies/
+  - title: Accessibility Statement
+    url: /accessibility-statement/

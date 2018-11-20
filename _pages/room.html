@@ -1,0 +1,162 @@
+---
+layout: default
+title: Rooms | Stewart Hotel
+meta_description:
+permalink: /room/
+meta_tags:
+  robots:
+---
+
+<input type="hidden" id="roomId" value="{{ page.code }}">
+<input type="hidden" id="roomList" value="[[ browser.roomsList ]]">
+
+<div ng-controller="roomDetail">
+
+  <section class="container-fluid no-padding">
+    <div class="page-banner" style="background-image: url('/assets/images/rooms/guest-room-banner.jpg')">
+      <h1 class="page-title">Luxury Redefined</h1>
+    </div>
+  </section>
+
+  <section>
+    <ul class="gallery-nav">
+      <li ng-show="prevRoomName"><a ng-href="/room/#[[prevRoomName | formatNameForLink ]]/">Previous Room</a></li>
+      <li><a ng-href="/room/#[[selectedRoom.name | formatNameForLink ]]/" class="active">[[selectedRoom.name]]</a></li>
+      <li ng-show="nextRoomName"><a ng-href="/room/#[[nextRoomName | formatNameForLink]]/">Next Room</a></li>
+    </ul>
+  </section>
+
+  <section class="rd-row-1">
+    <div id="rd-carousel" class="carousel slide" data-ride="carousel">
+
+      <div class="carousel-inner" role="listbox">
+        <div class="item active" ng-style="{'background-image': 'url('+ selectedRoom.photos[0].yankee_large + ')'} ">
+          <div class="rdc-car-con">
+            <h3 class="sub-title">Luxury Redefined</h3>
+            <h2 class="title">[[selectedRoom.name]]</h2>
+            <div ng-hide="selectedRoom.todayRate == 'CHECK AVAILABILITY'">
+              <div class="room-rate-holder"><a ng-href="{{ site.reztrip_url }}search?selected_room_category=[[selectedRoom.category]]&selected_room=[[selectedRoom.code]]">[[ selectedRoom.todayRate ]]</a></div>
+            </div>
+            <div ng-show="selectedRoom.todayRate == 'CHECK AVAILABILITY'">
+              <div class="room-rate-holder check-avail"><a ng-href="{{ site.reztrip_url }}">Check Availability</a></div>
+            </div>
+            <div class="spacing"><a class="button-common-2" ng-href="[[selectedRoom.todayRate == 'CHECK AVAILABILITY' ? '{{site.reztrip_url}}' : '{{site.reztrip_url}}' + 'search?selected_room_category='+selectedRoom.category+'&selected_room='+selectedRoom.code ]]" target="_blank">Book this room</a></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="r-info">
+    <div class="container no-padding">
+
+      <div class="col-md-6 no-padding -left">
+
+        <div class="con-1">
+          <h2 class="title">Room Information</h2>
+          <h3 class="sub-title">[[ selectedRoom.room_size ]] <span ng-bind-html="selectedRoom.room_size_units | renderHTMLCorrectly"></span></h3>
+          <div class="des-wrap">
+            <p class="des">[[ selectedRoom.description ]]</p>
+            <p class="des bold-text">Need assistance? Our dedicated reservations team is available around the clock:</p>
+            <p class="des">Stewart Hotel | <a href="tel:1-212-563-1800">1.212.563.1800</a> or<br><a href="mailto:info@stewarthotelnyc.com">info@stewarthotelnyc.com</a></p>
+          </div>
+          <div class="spacing"><a class="button-common-2" href="/contact/">Contact Us</a></div>
+        </div>
+
+        <div class="con-2"><img src="[[selectedRoom.photos[0].large]]" alt="[[selectedRoom.name]]"></div>
+
+      </div>
+
+      <div class="col-md-6 no-padding -right">
+
+        <div class="con-3">
+          <img src="/assets/images/rooms/guest-room-con-1.jpg" alt="Take a visual Journey">
+          <div class="text">
+            <h2 class="title">Take a visual Journey</h2>
+            <div class="spacing"><a class="button-common-2 -white" href="/gallery/">View Gallery</a></div>
+          </div>
+        </div>
+
+        <div class="con-4">
+
+          <div class="col-sm-6 con-4-1">
+            <ul class="list">
+              <li>Internet</li>
+              <li>Pillow-top Mattress</li>
+              <li>Coffee Maker</li>
+              <li>Wireless and high-speed internet</li>
+              <li>In-room Safe</li>
+              <li>Ihome Docking Station</li>
+              <li>Alarm Clock</li>
+              <li>Hair Dryer</li>
+              <li>Voicemail</li>
+              <li>Daily Housekeeping Service</li>
+              <li>Wake up service</li>
+            </ul>
+          </div>
+
+          <div class="col-sm-5 con-4-2">
+            <div>
+              <div class="add-1">ENJOY THE FOLLOWING<span class="nl">PRIVILEGES</span></div>
+              <div class="add-2">Room<span class="nl">Amenitites</span></div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="rooms-section">
+    <div class="container">
+
+      <div class="col-md-4 no-padding">
+        <div class="new-caption-area" id="roomscroll" class="carousel slide" data-ride="carousel">
+          <p>VIEW MORE LUXURIOUS ROOMS &amp; SUITES</p>
+          <div class="carousel-controls">
+            <a class="left nav-control" href="#rooms-carousel" data-slide="prev" title="Previous"></a>
+            <a class="right nav-control" href="#rooms-carousel" data-slide="next" title="Next"></a>
+          </div>
+          <div class="carousel-inner ">
+            <div class="item " ng-repeat="room in browser.roomsList" ng-class='{active:$first}'>
+              <h3>[[room.name]]</h3>
+              <div class="links">
+                <a ng-href="/room/#[[room.name | formatNameForLink]]/" class="button-common-2">VIEW THIS ROOM</a><br>
+                <a href="/rooms/" class="button-common-2">VIEW ALL ROOMS</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-8 no-padding">
+        <div class="rooms-carousel">
+          <div id="rooms-carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="item" ng-repeat="room in browser.roomsList" ng-class='{active:$first}'>
+                <img alt="[[room.name]]" ng-src="[[room.photos[0].large]]" class="width-full">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="loc-cta" style="background-image: url(/assets/images/rooms/rooms-cta.jpg);">
+    <div class="container-fluid no-padding">
+      <div class="cta">
+        <h3>PROXIMITY AT ITS BEST</h3>
+        <div class="cta-logo"><a href="/"><img src="/assets/images/logo.svg" alt="The Stewart Hotel"/></a></div>
+        <div class="btn-holder text-center"><a href="https://stewarthotelnyc.reztrip.com/" target="_blank" class="button-common">Book Your Stay</a></div>
+      </div>
+    </div>
+  </section>
+
+  {% include offers-carousel.html %}
+
+</div>

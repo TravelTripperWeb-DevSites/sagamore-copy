@@ -1,2 +1,84 @@
-// Contact Page Elements
-// ==========================================================================
+.contact-details {
+  margin-top: 30px;
+
+  .contact-left {
+    text-align: center;
+    @media screen and (min-width: 768px) {
+      margin: 40px 0 0;
+      text-align: left;
+    }
+  }
+
+  h2 {
+    margin: 20px 0;
+  }
+
+  p {
+    margin-bottom: 20px;
+
+    a {
+      color: $text-color;
+
+      .address {
+        padding: 20px 0;
+      }
+
+      &:hover {
+        color: #c5a900;
+      }
+
+    }
+
+  }
+
+  img {
+    width: 100%;
+  }
+
+}
+
+.contact-form-container {
+  margin-top: 30px;
+  @media (min-width: 1000px) {
+    width: 900px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  input,
+  textarea {
+    margin: 0 0 20px;
+    border: 1px solid #bcbec0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  label {
+    padding-top: 12px;
+    padding-left: 22px;
+    cursor: pointer;
+  }
+
+  input {
+    height: 40px;
+
+    &[type='radio'] {
+      height: auto;
+    }
+
+  }
+
+  textarea {
+    height: 100px;
+  }
+
+  .area-code {
+    padding-right: 0;
+  }
+
+  .required {
+    font-style: italic;
+    color: $text-color;
+  }
+
+}

@@ -1,0 +1,35 @@
+<section class="container save-the-children-include">
+  <div class="row">
+
+    <div class="col-md-3">
+      <img src="/assets/images/save-the-children-logo.png" alt="Save The Children">
+    </div>
+
+    <div class="col-md-6">
+      <div class="description-center">
+        <h5>
+          {% if page.url contains '/pt/' %}
+          DOE HOJE E FAÇA A DIFERENÇA
+          {% elsif page.url contains '/zh/' %}
+          立即捐款。让世界因您而改变
+          {% else %}
+          DONATE TODAY & MAKE A DIFFERENCE
+          {% endif %}
+        </h5>
+        <p>
+          {% if page.url contains '/pt/' %}
+          100% de suas doações beneficiam a Save The Children. Obrigado pelo seu apoio.
+          {% elsif page.url contains '/zh/' %}
+          您的捐款将 100％ 用于 Save The Children。 感谢您的支持。
+            {% else %}
+          100% of your donation benefits Save The Children. Thank you for your support.</p>
+          {% endif %}
+      </div>
+    </div>
+
+    <div class="col-md-3 btn-holder">
+      <a href="/charities/" rel="nofollow" class="btn btn-lg btn-primary button-home">{% if page.url contains '/pt/' %}MAIS INFORMAÇÕES{% elsif page.url contains '/zh/'%}更多信息 {% else %}MORE INFO{% endif %}</a>
+    </div>
+
+  </div>
+</section>
