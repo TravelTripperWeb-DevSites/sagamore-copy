@@ -18,7 +18,8 @@ meta_tags:
 <section class="container">
   <div class="row">
     <div class="rooms-holder">
-      {% for room in site.data._models.rooms %}
+      {% assign rooms = site.data._models.rooms | sort: "order" %}
+      {% for room in rooms %}
         <div class="col-md-4 col-sm-6">
           <div class="rooms-item">
             <figure><img src="{{room.banner_image.url_medium}}" alt="{{room.banner_image.alt}}"></figure>
