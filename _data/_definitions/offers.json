@@ -1,8 +1,7 @@
 {
   "title": {
     "label": "Offer Name",
-    "required": true,
-    "localizable": true
+    "required": true
   },
   "url_friendly_name": {
     "type": "url_slug",
@@ -17,20 +16,17 @@
   "short_info": {
     "label": "Short Description",
     "type": "text",
-    "required": true,
-    "localizable": true
+    "required": true
   },
   "book_now_link": {
     "type": "text",
     "required": true,
-    "label": "Book Now Link",
-    "localizable": true
+    "label": "Book Now Link"
   },
   "long_info":{
 		"label": "Description",
 		"required": true,
-		"type": "richtext",
-    "localizable": true
+		"type": "richtext"
 	},
   "order": {
     "type": "integer"
