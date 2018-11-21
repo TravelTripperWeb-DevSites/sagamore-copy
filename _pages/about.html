@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Stewart Hotel in Midtown Manhattan | New York Center Hotels
+title: Sagamore Miami Beach Hotel | New York Center Hotels
 meta_description: Just right for those who love the thrill of Broadway life and live performances, the Stewart Hotel captures the spirit of a buzzing pre-show Broadway theater.
 permalink: /about/
 meta_tags:
@@ -124,7 +124,51 @@ meta_tags:
 
 </section>
 
-{% include offers-carousel.html %}
+<section class="rooms-section">
+  <div class="container no-padding">
+
+    <div class="col-md-4 no-padding">
+      <div class="new-caption-area" id="roomscroll" class="carousel slide" data-ride="carousel">
+
+        <p>DISCOVER EXCITING<br>SPECIAL OFFERS</p>
+
+        <div class="carousel-controls">
+          <a class="left nav-control" href="#rooms-carousel"  data-slide="prev" title="Previous"></a>
+          <a class="right nav-control" href="#rooms-carousel"  data-slide="next" title="Next"></a>
+        </div>
+
+        <div class="carousel-inner">
+          {% assign offers = site.data._models.offers | sort: "order" %}
+          {% for singleoffer in offers %}
+            <div class="item {% if forloop.first %} active {% endif %}" >
+              <h3>{{singleoffer.title}}</h3>
+              <div class="links">
+                <a href="/offers/{{singleroom.url_friendly_name}}" class="button-common-2">VIEW THIS Offer</a><br>
+                <a href="/offers/" class="button-common-2">VIEW ALL Offers</a>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col-md-8 no-padding">
+      <div class="rooms-carousel home-special-carousel">
+        <div id="rooms-carousel" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner m-t-20">
+            {% for singleoffer in offers %}
+              <div class="item {% if forloop.index == 1 %} active {% endif %}">
+                <img alt="{{singleoffer.title}}" src="{{singleoffer.banner_image.url}}" class="width-full">
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 <section class="loc-cta about-cta" style="background-image: url('/assets/images/about/cta-about.jpg');">
   <div class="container-fluid no-padding">

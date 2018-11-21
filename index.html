@@ -101,7 +101,7 @@ meta_tags:
   </div>
 </section>
 
-<section class="rooms-section" rt3-special-rates="offers">
+<section class="rooms-section">
   <div class="container-fluid no-padding">
 
     <div class="col-md-4 no-padding">
@@ -115,13 +115,16 @@ meta_tags:
         </div>
 
         <div class="carousel-inner">
-          <div class="item" ng-repeat="offer in offers.special_rates" ng-class='{active:$first}'>
-            <h3 ng-bind-html="offer.rate_plan_name | renderHTMLCorrectly"></h3>
-            <div class="links">
-              <a ng-href="/offer/#[[offer.rate_plan_name | formatNameForLink]]" class="button-common-2">View this Offer</a><br>
-              <a href="/offers/" class="button-common-2">View all Offers</a>
+          {% assign offers = site.data._models.offers | sort: "order" %}
+          {% for singleoffer in offers %}
+            <div class="item {% if forloop.first %} active {% endif %}" >
+              <h3>{{singleoffer.title}}</h3>
+              <div class="links">
+                <a href="/offers/{{singleroom.url_friendly_name}}" class="button-common-2">VIEW THIS Offer</a><br>
+                <a href="/offers/" class="button-common-2">VIEW ALL Offers</a>
+              </div>
             </div>
-          </div>
+          {% endfor %}
         </div>
 
       </div>
@@ -131,7 +134,11 @@ meta_tags:
       <div class="rooms-carousel home-special-carousel">
         <div id="rooms-carousel" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner m-t-20">
-            <div class="item" ng-repeat="offer in offers.special_rates" ng-class='{active:$first}' style="background-image:url('[[offer.lead_photo_url.yankee_large]]');"></div>
+            {% for singleoffer in offers %}
+              <div class="item {% if forloop.index == 1 %} active {% endif %}">
+                <img alt="{{singleoffer.title}}" src="{{singleoffer.banner_image.url}}" class="width-full">
+              </div>
+            {% endfor %}
           </div>
         </div>
       </div>
@@ -143,23 +150,28 @@ meta_tags:
 <section class="animatedParent">
   <div id="rooms-carousel-home" class="carousel rooms-carousel slide wow fadeInUp" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
+      {% assign rooms = site.data._models.rooms | sort: "order" %}
+      {% for singleroom in rooms | limit: 5 %}
 
-      <div class="item" ng-repeat="room in browser.roomsList | limitTo: 5" ng-class='{active:$first}'>
+        <div class="item {% if forloop.first %} active {% endif %}">
 
-        <img ng-src="[[room.photos[0].large]]" alt="[[room.name]]">
+          <img src="{{singleroom.banner_image.url}}" alt="{{singleroom.title}}">
 
-        <div class="container">
-          <div class="carousel-caption">
-            <h3>[[room.name]]</h3>
-            <p>[[room.short_description | limitTo: 100]][[room.short_description.length > 100 ? '...' : '']]</p>
-            <p><a class="btn btn-lg btn-primary button-home" href="/room/#[[room.name | formatNameForLink]]/">View This Room</a></p>
+          <div class="container">
+            <div class="carousel-caption">
+              <h3>{{singleroom.title}}</h3>
+              <p>{{singleroom.short_info}}</p>
+              <p><a class="btn btn-lg btn-primary button-home" href="/rooms/{{singleroom.url_friendly_name}}/">View This Room</a></p>
+            </div>
           </div>
+
         </div>
-
-      </div>
-
+      {% endfor %}
       <ol class="carousel-indicators">
-        <li data-target="#rooms-carousel-home" ng-repeat="room in browser.roomsList | limitTo: 5" data-slide-to="[[$index]]">[[room.name]]</li>
+        {% assign rooms = site.data._models.rooms | sort: "order" %}
+        {% for singleroom in rooms | limit: 5 %}
+          <li data-target="#rooms-carousel-home" data-slide-to="{{singleroom.index0}}">{{singleroom.title}}</li>
+        {% endfor %}
       </ol>
 
       <a class="left carousel-control" href="#rooms-carousel-home"  data-slide="prev" title="Previous"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span class="sr-only">Previous</span></a>
@@ -181,7 +193,7 @@ meta_tags:
           <h5>The City That Never Sleeps</h5> {% endregionblock %} {% regionblock location_body_text, type:text %}
           <p>Stewart Hotel's high-energy <a title="Hotel near Times Square" href="/location/">Midtown location</a> puts you at the crossroads of the city's most iconic neighborhood districts—across from Pennsylvania Station and Madison Square Garden. You'll
             be staying in <a title="Stewart Hotel location in NYC" href="/location/">North Chelsea</a>, just steps from Times Square and Fifth Avenue shopping.</p>
-          <p>371 7TH AVENUE AT 31ST STREET NEW YORK NY 10001</p>
+          <p>1671 Collins Ave Miami Beach, FL 33139</p>
           {% endregionblock %} {% regionblock location_button, type:text %}
           <a class="btn btn-lg btn-primary button-home" href="location/">Discover More</a> {% endregionblock %}
         </div>
