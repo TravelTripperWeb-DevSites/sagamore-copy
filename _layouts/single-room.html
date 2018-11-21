@@ -109,7 +109,6 @@ layout: default
 
 <section class="rooms-section">
   <div class="container">
-
     <div class="col-md-4 no-padding">
       <div class="new-caption-area" id="roomscroll" class="carousel slide" data-ride="carousel">
         <p>VIEW MORE LUXURIOUS ROOMS &amp; SUITES</p>
@@ -118,13 +117,17 @@ layout: default
           <a class="right nav-control" href="#rooms-carousel" data-slide="next" title="Next"></a>
         </div>
         <div class="carousel-inner ">
-          <div class="item " ng-repeat="room in browser.roomsList" ng-class='{active:$first}'>
-            <h3>[[room.name]]</h3>
-            <div class="links">
-              <a ng-href="/room/#[[room.name | formatNameForLink]]/" class="button-common-2">VIEW THIS ROOM</a><br>
-              <a href="/rooms/" class="button-common-2">VIEW ALL ROOMS</a>
+          {% assign rooms = site.data._models.rooms | sort: "order" %}
+          {% for singleroom in rooms %}
+            <div class="item {% if forloop.first %} active {% endif %}" >
+              <h3>{{singleroom.title}}</h3>
+              <div class="links">
+                <a ng-href="rooms/{{singleroom.url_friendly_name}}" class="button-common-2">VIEW THIS ROOM</a><br>
+                <a href="/rooms/" class="button-common-2">VIEW ALL ROOMS</a>
+              </div>
             </div>
-          </div>
+          {% endfor %}
+
         </div>
       </div>
     </div>
@@ -133,9 +136,11 @@ layout: default
       <div class="rooms-carousel">
         <div id="rooms-carousel" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
-            <div class="item" ng-repeat="room in browser.roomsList" ng-class='{active:$first}'>
-              <img alt="[[room.name]]" ng-src="[[room.photos[0].large]]" class="width-full">
-            </div>
+            {% for singleroom in rooms %}
+              <div class="item {% if forloop.index == 1 %} active {% endif %}">
+                <img alt="{{singleroom.title}}" src="{{singleroom.banner_image.url}}" class="width-full">
+              </div>
+            {% endfor %}
           </div>
         </div>
       </div>
