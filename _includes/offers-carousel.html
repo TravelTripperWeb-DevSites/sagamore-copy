@@ -1,29 +1,25 @@
-<section class="rooms-section" rt3-special-rates="offers">
+<section class="rooms-section">
   <div class="container">
-
     <div class="col-md-4 no-padding">
       <div class="new-caption-area" id="offerscroll" class="carousel slide" data-ride="carousel">
-
-        <p>{% if page.url contains '/pt/' %}VISUALIZE MAIS OFERTAS ESPECIAIS LUXUOSAS{% elsif page.url contains '/zh/' %}查看更多精彩特别优惠{% else %}VIEW MORE LUXURIOUS SPECIAL OFFERS{% endif %}</p>
-
+        <p>VIEW MORE LUXURIOUS SPECIAL OFFERS</p>
         <div class="carousel-controls">
-          <a class="left nav-control" href="#offers-carousel"  data-slide="prev" title="Previous"></a>
-          <a class="right nav-control" href="#offers-carousel"  data-slide="next" title="Next"></a>
+          <a class="left nav-control" href="#offers-carousel" data-slide="prev" title="Previous"></a>
+          <a class="right nav-control" href="#offers-carousel" data-slide="next" title="Next"></a>
         </div>
-
-        <div class="carousel-inner">
-          <div class="item" ng-repeat="offer in offers.special_rates" ng-class='{active:$first}'>
-
-            <h3 ng-bind-html="offer.rate_plan_name | renderHTMLCorrectly"></h3>
-
-            <div class="links">
-              <a ng-href="{% if page.url contains '/pt/' %}/pt{% elsif page.url contains '/zh/' %}/zh{% endif %}/offer/#[[offer.rate_plan_code ]]" class="button-common-2">{% if page.url contains '/pt/' %}Visualizar esta oferta{% elsif page.url contains '/zh/' %}查看此优惠{% else %}View this Offer{% endif %}</a><br>
-              <a href="{% if page.url contains '/pt/' %}/pt{% elsif page.url contains '/zh/' %}/zh{% endif %}/offers/" class="button-common-2">{% if page.url contains '/pt/' %}Visualizar todas as ofertas{% elsif page.url contains '/zh/' %}查看所有优惠{% else %}View all Offers{% endif %}</a>
+        <div class="carousel-inner ">
+          {% assign offers = site.data._models.offers | sort: "order" %}
+          {% for singleoffer in offers %}
+            <div class="item {% if forloop.first %} active {% endif %}" >
+              <h3>{{singleoffer.title}}</h3>
+              <div class="links">
+                <a href="/offers/{{singleroom.url_friendly_name}}" class="button-common-2">VIEW THIS Offer</a><br>
+                <a href="/offers/" class="button-common-2">VIEW ALL Offers</a>
+              </div>
             </div>
+          {% endfor %}
 
-          </div>
         </div>
-
       </div>
     </div>
 
@@ -31,9 +27,11 @@
       <div class="rooms-carousel">
         <div id="offers-carousel" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
-            <div class="item" ng-repeat="offer in offers.special_rates" ng-class='{active:$first}'>
-              <img alt="Special Offers" ng-src="[[offer.lead_photo_url.yankee_large]]" class="width-full">
-            </div>
+            {% for singleoffer in offers %}
+              <div class="item {% if forloop.index == 1 %} active {% endif %}">
+                <img alt="{{singleoffer.title}}" src="{{singleoffer.banner_image.url}}" class="width-full">
+              </div>
+            {% endfor %}
           </div>
         </div>
       </div>
