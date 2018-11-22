@@ -3,65 +3,57 @@
    ========================================================================== */
 
 $(document)
-  .ready(function () {
+  .ready(function() {
 
-    $(".language-selector")
-      .hover(function () {
-        $(this)
-          .find("ul")
-          .slideDown(300);
-      }, function () {
-        $(this)
-          .find("ul")
-          .slideUp(300);
-      });
+    // Light Gallery
+  $('#lightgallery').lightGallery({
+    selector: '.gallery-wrapper .image',
+    exThumbImage: 'data-exthumbimage',
+    counter: false,
+    download: false,
+    fullScreen: false
+  });
+  // Gallery Filter Function
+  $(".gallery-wrapper li a").on("click", function() {
+
+    // Remove active class from everything
+    $(".gallery-wrapper li a").each(function() {
+      $(this).removeClass('active');
+    });
+
+    // Add active class to selected option
+    $(this).addClass('active');
+
+    // Assign filter variable
+    var $filter = $(this).attr("data-filter");
+
+    // If we select "All," show all
+    if ($filter == 'all') {
+      $(".fancybox").attr("data-fancybox-group", "gallery").not(":visible").fadeIn();
+    } else {
+      $(".fancybox").fadeOut(0).filter(function() {
+        // set data-filter value as the data-rel value of selected
+        return $(this).data("filter") == $filter;
+      }).attr("data-fancybox-group", $filter).fadeIn(1000); // set data-fancybox-group and show filtered elements
+    }
+
+  });
+
 
     $('#rd-carousel, #myCarousel')
       .carousel({
         interval: false
       });
 
-    $(".filter")
-      .on("click", function () {
-        var $this = $(this);
-        // if we click the active tab, do nothing
-        if (!$this.hasClass("active")) {
-          $(".filter")
-            .removeClass("active");
-          $this.addClass("active"); // set the active tab
-          var $filter = $this.data("rel"); // get the data-rel value from selected tab and set as filter
-          $filter == 'all' ? // if we select "view all", return to initial settings and show all
-            $(".fancybox")
-            .attr("data-fancybox-group", "gallery")
-            .not(":visible")
-            .fadeIn() : // otherwise
-            $(".fancybox")
-            .fadeOut(0)
-            .filter(function () {
-              return $(this)
-                .data("filter") == $filter; // set data-filter value as the data-rel value of selected tab
-            })
-            .attr("data-fancybox-group", $filter)
-            .fadeIn(1000); // set data-fancybox-group and show filtered elements
-        } // if
-      }); // on
-
     //* Toggle mobile nav menu
     $(".menu-toggle")
-      .click(function () {
+      .click(function() {
         $(".nav-header")
           .slideToggle(300);
       });
 
-    $('#lightgallery')
-      .lightGallery({
-        selector: '.item',
-        counter: false,
-        fullScreen: false,
-        controls: true
-      });
     $(".room-rate-holder")
-      .on("click", function () {
+      .on("click", function() {
         $(".booking-widget form")
           .submit();
       });
@@ -74,7 +66,7 @@ $(document)
       });
 
     // move caption area out of carousel for rooms
-    setTimeout(function () {
+    setTimeout(function() {
       $('#rooms-carousel, #offers-carousel ')
         .carousel({
           interval: 5000,
@@ -89,7 +81,7 @@ $(document)
         });
 
       $('#rooms-carousel, #offers-carousel ')
-        .on('slide.bs.carousel', function (ev) {
+        .on('slide.bs.carousel', function(ev) {
           var direction = ev.direction == 'right' ? 'prev' : 'next';
           $('#roomscroll, #offerscroll')
             .carousel(direction);
@@ -97,7 +89,7 @@ $(document)
 
     }, 2000);
 
-    setTimeout(function () {
+    setTimeout(function() {
       $('#offers-carousel ')
         .carousel({
           interval: 5000,
@@ -112,7 +104,7 @@ $(document)
         });
 
       $('#offers-carousel ')
-        .on('slide.bs.carousel', function (ev) {
+        .on('slide.bs.carousel', function(ev) {
           var direction = ev.direction == 'right' ? 'prev' : 'next';
           $('#offerscroll')
             .carousel(direction);
@@ -142,7 +134,7 @@ $(document)
     captionlinks.css('display', 'none');
 
     $("#specials-carousel")
-      .on('slide.bs.carousel', function (evt) {
+      .on('slide.bs.carousel', function(evt) {
         var caption = $('#specials-carousel')
           .find('div.item:nth-child(' + ($(evt.relatedTarget)
             .index() + 1) + ') .carousel-caption h3');
@@ -173,7 +165,7 @@ $(document)
 
 //* Add class for sticky nav menu on scroll
 $(window)
-  .on('load scroll resize', function () {
+  .on('load scroll resize', function() {
 
     var pageTop = $(window)
       .scrollTop();
@@ -194,7 +186,7 @@ $(window)
 
 // title equal heights
 $(window)
-  .on('load resize', function () {
+  .on('load resize', function() {
     var maxHeight = 0;
 
     var viewWidth = $(window)
@@ -203,7 +195,7 @@ $(window)
       // Home specials title equal heights
 
       $(".home-specials-item h3")
-        .each(function () {
+        .each(function() {
           if ($(this)
             .height() > maxHeight) {
             maxHeight = $(this)
@@ -216,7 +208,7 @@ $(window)
 
       // Home specials description equal heights
       $(".home-specials-item h3")
-        .each(function () {
+        .each(function() {
           if ($(this)
             .height() > maxHeight) {
             maxHeight = $(this)
@@ -230,7 +222,7 @@ $(window)
       // Rooms title equal heights
 
       $(".rooms-item h2")
-        .each(function () {
+        .each(function() {
           if ($(this)
             .height() > maxHeight) {
             maxHeight = $(this)
@@ -244,7 +236,7 @@ $(window)
       // Rooms title equal heights
 
       $(".rooms-item p")
-        .each(function () {
+        .each(function() {
           if ($(this)
             .height() > maxHeight) {
             maxHeight = $(this)
@@ -262,7 +254,7 @@ $(window)
 //Mobile Redirect Popover
 
 $(document)
-  .ready(function () {
+  .ready(function() {
     var viewWidth = $(window)
       .width();
     if (viewWidth < 480) {
@@ -273,7 +265,7 @@ $(document)
           expires: 0.0115,
           path: "/"
         }); // need to set the path to fix a FF bug
-        setTimeout(function () {
+        setTimeout(function() {
           var map2 = new google.maps.Map(document.getElementById('popmap'), {
             zoom: 15,
             center: {
@@ -282,16 +274,12 @@ $(document)
             },
             disableDefaultUI: true
           });
-          var noPoi = [
-            {
-              featureType: "poi",
-              stylers: [
-                {
-                  visibility: "off"
-                }
-                    ]
-                  }
-                ];
+          var noPoi = [{
+            featureType: "poi",
+            stylers: [{
+              visibility: "off"
+            }]
+          }];
 
           map2.setOptions({
             styles: noPoi
@@ -313,7 +301,7 @@ $(document)
     }
 
 
-      // Restrict form submission by disabling submit button until all required fields are filled (W.r.t GDPR Guidelines)
+    // Restrict form submission by disabling submit button until all required fields are filled (W.r.t GDPR Guidelines)
 
     function checkForm() {
       // here, "this" is an input element
