@@ -1,7 +1,25 @@
 {
   "name": "Rooms",
   "photos": [
-
+    {
+      "name": "room1",
+      "file_name": "room1.jpg",
+      "url": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073758/room1.jpg",
+      "tags": "",
+      "description": "",
+      "date_added": "2018-11-22-073758",
+      "file_type": "image/jpeg",
+      "width": 1200,
+      "height": 900,
+      "file_size": 569621,
+      "url_large": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073758/large_room1.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073758/medium_room1.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073758/small_room1.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073758/xsmall_room1.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073758/thumb_room1.jpg",
+      "path": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073758/room1.jpg",
+      "alt": "room1"
+    }
   ],
   "description": ""
 }
