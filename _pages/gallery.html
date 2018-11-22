@@ -21,51 +21,27 @@ meta_tags:
 
 <section class="gallery-wrapper">
   <div class="gallery-listing">
-
+    {% assign categories = site.data._galleries | sort: sort_order %}
     <div class="container">
       <ul class="gallery-nav">
-        <li><a href="javascript:;" data-rel="all" class="filter active" data-filter="all">All</a></li>
-        <li><a href="javascript:;" data-rel="area" class="filter">Area</a></li>
-        <li><a href="javascript:;" data-rel="exterior" class="filter">Exteriors</a></li>
-        <li><a href="javascript:;" data-rel="hotel" class="filter">Interiors</a></li>
-        <li><a href="javascript:;" data-rel="rooms" class="filter">Rooms</a></li>
-        <li><a href="javascript:;" data-rel="attractions" class="filter">NYC</a></li>
+        <li><a href="javascript:void(0);" class="filter active" data-filter="all">All</a></li>
+        {% for category in categories %}
+          {% assign catname = category[0] %}
+          <li><a href="javascript:void(0);" class="filter" data-filter="{{ catname }}">{{ site.data._galleries[catname].name  }}</a></li>
+        {% endfor %}
       </ul>
     </div>
 
-    <div class="container gallery-wrap" id="lightgallery">
-      <ul class="row">
-        {% assign hotel_images = site.data._models.gallery_hotel_images | sort: "sort_order" %}
-        {% for hotel_gallery in hotel_images %}
-          <li class="col-md-4 col-sm-4 fancybox" data-filter="hotel">
-            <div class="item" data-src="{{ hotel_gallery.large_image.url }}"><img src="{{ hotel_gallery.thumb_image.url }}" class="img-responsive" alt="{{ hotel_gallery.large_image.alt }}"></div>
-          </li>
+    {% assign categories = site.data._galleries %}
+    <div class="container" id="lightgallery">
+      {% for category in categories %}
+        {% assign catname = category[0] %}
+        {% for photo in site.data._galleries[catname].photos %}
+          <div class="image col-md-4 col-sm-4 fancybox" data-filter="{{ catname }}" data-src="{% if photo.url_large %}{{ photo.url_large }}{% else %}{{ photo.url }}{% endif %}" data-exthumbimage="{% if photo.url_medium %}{{ photo.url_medium }}{% else %}{{ photo.url }}{% endif %}">
+            <div class="img-block bg-styles" style="background-image:url('{{ photo.url_small }}');"></div>
+          </div>
         {% endfor %}
-        {% assign area_images = site.data._models.gallery_area_images | sort: "sort_order" %}
-        {% for area_gallery in area_images %}
-          <li class="col-md-4 col-sm-4 fancybox" data-filter="area">
-            <div class="item" data-src="{{ area_gallery.large_image.url }}"><img src="{{ area_gallery.thumb_image.url }}" class="img-responsive" alt="{{ area_gallery.large_image.alt }}"></div>
-          </li>
-        {% endfor %}
-        {% assign exterior_images = site.data._models.gallery_exterior_images | sort: "sort_order" %}
-        {% for exterior_gallery in exterior_images %}
-          <li class="col-md-4 col-sm-4 fancybox" data-filter="exterior">
-            <div class="item" data-src="{{ exterior_gallery.large_image.url }}"><img src="{{ exterior_gallery.thumb_image.url }}" class="img-responsive" alt="{{ exterior_gallery.large_image.alt }}"></div>
-          </li>
-        {% endfor %}
-        {% assign roomsnsuites_images = site.data._models.gallery_roomsnsuites_images | sort: "sort_order" %}
-        {% for roomsnsuites_gallery in roomsnsuites_images %}
-          <li class="col-md-4 col-sm-4 fancybox" data-filter="rooms">
-            <div class="item" data-src="{{ roomsnsuites_gallery.large_image.url }}"><img src="{{ roomsnsuites_gallery.thumb_image.url }}" class="img-responsive" alt="{{ roomsnsuites_gallery.large_image.alt }}"></div>
-          </li>
-        {% endfor %}
-        {% assign attractions_images = site.data._models.gallery_attractions_images | sort: "sort_order" %}
-        {% for attractions_gallery in attractions_images %}
-          <li class="col-md-4 col-sm-4 fancybox" data-filter="attractions">
-            <div class="item" data-src="{{ attractions_gallery.large_image.url }}"><img src="{{ attractions_gallery.thumb_image.url }}" class="img-responsive" alt="{{ attractions_gallery.large_image.alt }}"></div>
-          </li>
-        {% endfor %}
-      </ul>
+      {% endfor %}
     </div>
 
   </div>

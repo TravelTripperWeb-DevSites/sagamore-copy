@@ -3,15 +3,12 @@
   @media (min-width: $screen-md-min) {
     padding: 0;
   }
-
-  .gallery-listing {
-    padding: 0 0 10px;
-    @media (min-width: $screen-md-min) {
-      padding: 0 0 30px;
+  .image {
+    margin-bottom: 30px;
+    .img-block {
+      min-height: 300px;
     }
-
   }
-
   .button-common {
     padding: 8px 19px;
     font-family: $main-font-medium;
