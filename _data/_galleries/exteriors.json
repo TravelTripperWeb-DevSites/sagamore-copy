@@ -1,7 +1,44 @@
 {
   "name": "Exteriors",
   "photos": [
-
+    {
+      "name": "exterior1",
+      "file_name": "exterior1.jpg",
+      "url": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073210/exterior1.jpg",
+      "tags": "",
+      "description": "",
+      "date_added": "2018-11-22-073210",
+      "file_type": "image/jpeg",
+      "width": 1200,
+      "height": 900,
+      "file_size": 730627,
+      "url_large": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073210/large_exterior1.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073210/medium_exterior1.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073210/small_exterior1.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073210/xsmall_exterior1.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073210/thumb_exterior1.jpg",
+      "path": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073210/exterior1.jpg",
+      "alt": "exterior1"
+    },
+    {
+      "name": "exterior2",
+      "file_name": "exterior2.jpg",
+      "url": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073324/exterior2.jpg",
+      "tags": "",
+      "description": "",
+      "date_added": "2018-11-22-073324",
+      "file_type": "image/jpeg",
+      "width": 1200,
+      "height": 900,
+      "file_size": 718913,
+      "url_large": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073324/large_exterior2.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073324/medium_exterior2.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073324/small_exterior2.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073324/xsmall_exterior2.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073324/thumb_exterior2.jpg",
+      "path": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073324/exterior2.jpg",
+      "alt": "exterior2"
+    }
   ],
   "description": ""
 }
