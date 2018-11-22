@@ -38,6 +38,25 @@
       "url_thumb": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073839/thumb_room2.jpg",
       "path": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073839/room2.jpg",
       "alt": "room2"
+    },
+    {
+      "name": "room3",
+      "file_name": "room3.jpg",
+      "url": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073849/room3.jpg",
+      "tags": "",
+      "description": "",
+      "date_added": "2018-11-22-073849",
+      "file_type": "image/jpeg",
+      "width": 1200,
+      "height": 900,
+      "file_size": 813086,
+      "url_large": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073849/large_room3.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073849/medium_room3.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073849/small_room3.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073849/xsmall_room3.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073849/thumb_room3.jpg",
+      "path": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073849/room3.jpg",
+      "alt": "room3"
     }
   ],
   "description": ""
