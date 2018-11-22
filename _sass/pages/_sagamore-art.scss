@@ -1,3 +1,17 @@
+
+.art-intro {
+  max-width: 700px;
+  margin: auto;
+  padding: 15px;
+  p {
+    font-family: $main-font-light;
+    font-size: 16px;
+    line-height: 24px;
+    color: $text-color;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+}
 .saga-art {
   display: block;
   @media (min-width: $screen-md-min) {
@@ -54,8 +68,23 @@
       margin-top: 40px;
     }
   }
-
+  &.family {
+    .content {
+      h1 {
+        padding-bottom: 20px;
+        font-size: 30px;
+      }
+      position: relative;
+      width: 100%;
+      margin: 1% auto;
+      @media (min-width: $screen-md-min) {
+        width: 98%;
+        margin: 3% auto;
+      }
+  }
 }
+}
+
 
 .art-events {
   padding: 55px 0 0;
