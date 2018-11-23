@@ -354,3 +354,24 @@ $(document)
 
 
   });
+
+  //iframe hotel champ
+  var iframehotelchamp = setInterval(function() {
+      console.log("not found");
+      if ($("iframe[src='https://lumen.hotelchamp.com/relay.html']").length > 0) {
+          $("iframe[src='https://lumen.hotelchamp.com/relay.html']").attr("title", "hotel champ");
+          clearInterval(iframehotelchamp);
+      }
+  }, 60);
+
+  setTimeout(function(){
+
+    //wyndow-carousel
+    var iframewyndow = setInterval(function() {
+      console.log("not found");
+      if ($("#iFrameResizer0").length > 0) {
+        $("#iFrameResizer0").attr("title", "wyndow");
+        clearInterval(iframewyndow);
+      }
+    }, 60);
+  }, 2000);

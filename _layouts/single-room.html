@@ -22,18 +22,18 @@ layout: default
 
 <section class="container-fluid no-padding">
   <div class="page-banner" style="background-image: url('/assets/images/rooms/guest-room-banner.jpg')">
-    <h1 class="page-title">Luxury Redefined</h1>
+    <h1 class="page-title" tabindex="0">Luxury Redefined</h1>
   </div>
 </section>
 
 <section>
   <ul class="gallery-nav">
     {% if prevItemUrl %}
-      <li><a ng-href="/rooms/{{prevItemUrl}}/">Previous Room</a></li>
+      <li><a href="/rooms/{{prevItemUrl}}/">Previous Room</a></li>
     {% endif %}
-    <li><a ng-href="/rooms/" class="active">{{room.title}}</a></li>
+    <li><a href="/rooms/" class="active">{{room.title}}</a></li>
     {% if nextItemUrl %}
-      <li><a ng-href="/rooms/{{nextItemUrl}}">Next Room</a></li>
+      <li><a href="/rooms/{{nextItemUrl}}">Next Room</a></li>
     {% endif %}
   </ul>
 </section>
@@ -43,10 +43,10 @@ layout: default
     <div class="carousel-inner" role="listbox">
       {% assign room_images = room.room_images %}
       {% for image in room_images %}
-        <div class="item {% if forloop.index == 1 %} active {% endif %}" style="background-image: url('{{image.url_large}}')">
+        <div class="item {% if forloop.index == 1 %} active {% endif %}" role="option" style="background-image: url('{{image.url_large}}')">
           <div class="rdc-car-con">
-            <h3 class="sub-title">Luxury Redefined</h3>
-            <h2 class="title">{{room.title}}</h2>
+            <h3 class="sub-title" tabindex="0">Luxury Redefined</h3>
+            <h2 class="title" tabindex="0">{{room.title}}</h2>
             <div class="spacing"><a class="button-common-2" href="{{room.book_now_link}}" target="_blank">Book this room</a></div>
           </div>
         </div>
@@ -61,13 +61,13 @@ layout: default
     <div class="col-md-6 no-padding -left">
 
       <div class="con-1">
-        <h2 class="title">Room Information</h2>
-        <h3 class="sub-title">{{room.room_size}} <span>FT<sup>2</sup></span></h3>
+        <h2 class="title" tabindex="0">Room Information</h2>
+        <h3 class="sub-title" tabindex="0">{{room.room_size}} <span>FT<sup>2</sup></span></h3>
         <div class="des-wrap">
-          <div class="details-page-description">
+          <div class="details-page-description" tabindex="0">
             {{room.long_info}}
           </div>
-          <p class="des bold-text">Need assistance? Our dedicated reservations team is available around the clock:</p>
+          <p class="des bold-text" tabindex="0">Need assistance? Our dedicated reservations team is available around the clock:</p>
           <p class="des">Sagamore Miami Beach | <a href="tel:8772426673">(877) 242-6673</a> or <a href="mailto:reservations@sagamoresouthbeach.com">reservations@sagamoresouthbeach.com</a></p>
         </div>
         <div class="spacing"><a class="button-common-2" href="/contact/">Contact Us</a></div>
@@ -82,7 +82,7 @@ layout: default
       <div class="con-3">
         <img src="/assets/images/rooms/guest-room-con-1.jpg" alt="Take a visual Journey">
         <div class="text">
-          <h2 class="title">Take a visual Journey</h2>
+          <h2 class="title" tabindex="0">Take a visual Journey</h2>
           <div class="spacing"><a class="button-common-2 -white" href="/gallery/">View Gallery</a></div>
         </div>
       </div>
@@ -90,15 +90,15 @@ layout: default
       <div class="con-4">
 
         <div class="col-sm-6 con-4-1">
-          <div class="list">
+          <div class="list" tabindex="0">
             {{room.amenities}}
           </div>
         </div>
 
         <div class="col-sm-5 con-4-2">
           <div>
-            <div class="add-1">ENJOY THE FOLLOWING<span class="nl">PRIVILEGES</span></div>
-            <div class="add-2">Room<span class="nl">Amenitites</span></div>
+            <div class="add-1" tabindex="0">ENJOY THE FOLLOWING<span class="nl">PRIVILEGES</span></div>
+            <div class="add-2" tabindex="0">Room<span class="nl">Amenitites</span></div>
           </div>
         </div>
 
@@ -113,16 +113,16 @@ layout: default
   <div class="container">
     <div class="col-md-4 no-padding">
       <div class="new-caption-area" id="roomscroll" class="carousel slide" data-ride="carousel">
-        <p>VIEW MORE LUXURIOUS ROOMS &amp; SUITES</p>
+        <p tabindex="0">VIEW MORE LUXURIOUS ROOMS &amp; SUITES</p>
         <div class="carousel-controls">
           <a class="left nav-control" href="#rooms-carousel" data-slide="prev" title="Previous"></a>
           <a class="right nav-control" href="#rooms-carousel" data-slide="next" title="Next"></a>
         </div>
-        <div class="carousel-inner ">
+        <div class="carousel-inner" role="listbox">
           {% assign rooms = site.data._models.rooms | sort: "order" %}
           {% for singleroom in rooms %}
-            <div class="item {% if forloop.first %} active {% endif %}" >
-              <h3>{{singleroom.title}}</h3>
+            <div class="item {% if forloop.first %} active {% endif %}" role="option">
+              <h3 tabindex="0" tabindex="0" >{{singleroom.title}}</h3>
               <div class="links">
                 <a ng-href="rooms/{{singleroom.url_friendly_name}}" class="button-common-2">VIEW THIS ROOM</a><br>
                 <a href="/rooms/" class="button-common-2">VIEW ALL ROOMS</a>
@@ -154,9 +154,9 @@ layout: default
 <section class="loc-cta" style="background-image: url(/assets/images/rooms/rooms-cta.jpg);">
   <div class="container-fluid no-padding">
     <div class="cta">
-      <h3>PROXIMITY AT ITS BEST</h3>
+      <h3 tabindex="0">PROXIMITY AT ITS BEST</h3>
       <div class="cta-logo"><a href="/"><img src="/assets/images/logo.png" alt="The Stewart Hotel"/></a></div>
-      <div class="btn-holder text-center"><a href="https://stewarthotelnyc.reztrip.com/" target="_blank" class="button-common">Book Your Stay</a></div>
+      <div class="btn-holder text-center"><a href="https://www.myhotelreservation.net/b/hamiasag/HAMIASAG/" target="_blank" class="button-common">Book Your Stay</a></div>
     </div>
   </div>
 </section>

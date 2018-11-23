@@ -10,7 +10,7 @@ meta_tags:
 <section class="container-fluid no-padding">
   <div class="page-banner location-banner" style="background-image: url('/assets/images/meetings/meetings-banner-2.jpg')">
     {% regionblock page_title, type:header %}
-      <h1 class="page-title">World-Class Events</h1>
+      <h1 class="page-title" tabindex="0">World-Class Events</h1>
     {% endregionblock %}
     <div class="banner-btn">
       <a href="/contact/" class="button-common">Contact Us</a>
@@ -26,14 +26,18 @@ meta_tags:
     <div class="col-sm-6 no-padding">
       <div class="con-one">
         {% regionblock meetings_title, type:header %}
-          <h2 class="title-head">Meetings &amp; Events in Nyc</h2>
+          <h2 class="title-head" tabindex="0">Meetings &amp; Events in Nyc</h2>
         {% endregionblock %}
+        <div tabindex="0">
         {% regionblock meetings_body, type:text %}
           <p class="des">Up to 325 guests can be accommodated in the Stewart's versatile event space. A historic, yet modern hotel, its appeal is both classic and contemporary. From a palatial ballroom for opulent weddings to a VIP boardroom for corporate meetings, there are nine distinctive, multi-purpose rooms in total. Each space has unique features, and all are outfitted with cutting-edge audio/visual equipment. Customizable catering menus and resourceful event planners are available as well.</p>
           <p class="des">Stewart Hotel provides you with everything - from premier business services and <a title="Boutique NYC hotel amenities" href="https://www.stewarthotelnyc.com/about/">amenities</a> to corporate function space - for your next business meeting, convention, conference, event or reception in New York City.</p>
         {% endregionblock %}
+        </div>
         <div class="btn-holder">
-          <a class="button-common outline" href="https://cdn.traveltripper.io/site-assets/192_552_2444/media/2017-05-10-133426/Stewart-Fact-Sheet-Meeting-Space-2017.pdf">View Capacity Chart</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="button-common outline" href="request-for-proposal/">Request for Proposal</a>
+          {% regionblock meetings_links, type:text %}
+          <a class="button-common outline" href="https://cdn.traveltripper.io/site-assets/192_552_2444/media/2017-05-10-133426/Stewart-Fact-Sheet-Meeting-Space-2017.pdf">View Capacity Chart</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="button-common outline" href="/request-for-proposal/">Request for Proposal</a>
+          {% endregionblock %}
         </div>
       </div>
     </div>
@@ -76,10 +80,10 @@ meta_tags:
     <div class="col-md-6 no-padding prox">
       <div class="prox-content">
         {% regionblock meetings_amenity_list_title, type:header %}
-          <h2>The Perfect Venue</h2>
+          <h2 tabindex="0">The Perfect Venue</h2>
         {% endregionblock %}
         {% regionblock meetings_amenity_list_body, type:text %}
-          <ul class="about-list">
+          <ul class="about-list" tabindex="0">
             <li>10,000 square feet of flexible space</li>
             <li>State-of-the-art technology</li>
             <li>Audio/visual equipment</li>
@@ -101,15 +105,17 @@ meta_tags:
     <div class="col-sm-6 no-padding">
       <div class="con-one meeting-one">
         {% regionblock weddings_title, type:header %}
-          <h2 class="title-head">Weddings &amp;<br>Special Events in nyc</h2>
+          <h2 class="title-head" tabindex="0">Weddings &amp;<br>Special Events in nyc</h2>
         {% endregionblock %}
         {% regionblock weddings_subtitle, type:header %}
-          <h3>Celebrate your special event with opulence</h3>
+          <h3 tabindex="0">Celebrate your special event with opulence</h3>
         {% endregionblock %}
+        <div tabindex="0">
         {% regionblock weddings_body, type:text %}
           <p class="des">Perfect for a wedding reception, rehearsal dinners, Bar/Bat Mitzvahs, sweet 16 celebration or a pre-function meet-up space. Our Manhattan event venues are an ideal setting for intimate gatherings or large-scale events with up to 325 guests.</p>
           <p class="des">Stewart Hotel also adds a signature touch to your wedding or special event with customizable menu options suited for every occasion by our creative chefs. The dedicated catering staff and culinary team will design a delightful menu to match the setting, utilizing fresh ingredients to create cuisine that is as delicious as it is visually appealing.</p>
         {% endregionblock %}
+        </div>
       </div>
     </div>
     <div class="col-sm-6 no-padding">
@@ -147,7 +153,7 @@ meta_tags:
         </div>
         <div class="col-sm-7 no-padding att-con">
           {% regionblock weddings_contact_title, type:header %}
-            <div class="add-1">Start planning Your<span class="nl">Special event now</span></div>
+            <div class="add-1" tabindex="0">Start planning Your<span class="nl">Special event now</span></div>
           {% endregionblock %}
           <div class="add-2">
             <div class="btn-holder"><a href="/contact/" class="button-common outline wide">Contact Us</a></div>
@@ -162,7 +168,7 @@ meta_tags:
 
 <section class="loc-cta about-cta" style="background-image: url('/assets/images/meetings/meetings-cta.jpg');">
   <div class="container-fluid no-padding">
-    <div class="cta">
+    <div class="cta" tabindex="0">
       {% regionblock cta_title, type:header %}
         <h3>FOREVER MOMENTS</h3>
       {% endregionblock %}
