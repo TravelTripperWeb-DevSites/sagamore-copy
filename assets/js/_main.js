@@ -363,11 +363,15 @@ $(document)
           clearInterval(iframehotelchamp);
       }
   }, 60);
-//wyndow-carousel
-var iframewyndow = setInterval(function() {
-  console.log("not found");
-  if ($("#iFrameResizer0").length > 0) {
-    $("#iFrameResizer0").attr("title", "wyndow");
-    clearInterval(iframewyndow);
-  }
-}, 60);
+
+  setTimeout(function(){
+
+    //wyndow-carousel
+    var iframewyndow = setInterval(function() {
+      console.log("not found");
+      if ($("#iFrameResizer0").length > 0) {
+        $("#iFrameResizer0").attr("title", "wyndow");
+        clearInterval(iframewyndow);
+      }
+    }, 60);
+  }, 2000);
