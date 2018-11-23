@@ -6,9 +6,7 @@
   {% include head/custom.html %}
 </head>
 
-<body id="top" ng-app="rezTrip" rt3-hotel-info="hotelInfo" rt3-rooms-browser="browser" ng-cloak>
-
-  <input type="hidden" id="siteLang" value="{% if page.url contains '/es/' %}es{% elsif page.url contains '/fr/' %}fr{% elsif page.url contains '/zh/' %}zh-CN{% elsif page.url contains '/pt/' %}pt{% else %}en{% endif %}">
+<body id="top">
 
   {% if site.data.tracking.analytics.provider and page.analytics != false %}
     {% case site.data.tracking.analytics.provider %}
@@ -18,11 +16,11 @@
   {% endif %}
 
   {% include analytics/bing-body.html %}
-
+  <a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
   {% include header.html %}
-
+  <div id="main">
   {{ content }}
-
+  </div>
     {% unless page.url == '/room/' or page.url == '/rooms/' or page.url == '/offers/' or page.url == '/offer/' or page.url == '/gallery/' %}
       {% include instagram.html %}
     {% endunless %}

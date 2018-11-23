@@ -12,7 +12,7 @@ meta_tags:
   <section class="container-fluid no-padding">
     <div class="page-banner" style="background-image: url('/assets/images/meetings/rfp-banner.jpg')">
       {% regionblock page_title, type:header %}
-        <h1 class="page-title">Request for Proposal</h1>
+        <h1 class="page-title" tabindex="0">Request for Proposal</h1>
       {% endregionblock %}
     </div>
   </section>
@@ -24,7 +24,7 @@ meta_tags:
 
         <div class="contact-form">
 
-          <p class="rfp-label">Please fill in the form below</p>
+          <p class="rfp-label" tabindex="0">Please fill in the form below</p>
 
           <form class="jotform-form" action="https://submit.jotform.me/submit/83243753541456/" method="post" name="form_83243753541456" id="83243753541456" accept-charset="utf-8" enctype="multipart/form-data">
 
@@ -106,7 +106,7 @@ meta_tags:
               <textarea class="form-control m-textarea" rows="5" name="q35_others" placeholder="Comments" aria-label="Comments"></textarea>
             </div>
             <div class="form-group agree">
-              <input type="checkbox" class="form-check-input" id="agree" name="q38_iAgree[]" value="agree" required>
+              <input type="checkbox" class="form-check-input"  aria-label="agree" name="q38_iAgree[]" value="agree" required>
               <label class="form-check-label" for="agree">I agree to the <a href="/terms/" target="_blank">Terms of Service</a> and <a href="/privacy-policy/" target="_blank">Privacy Policy</a>.</label>
             </div>
             <div class="clearfix"></div>

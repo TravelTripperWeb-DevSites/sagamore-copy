@@ -2,6 +2,7 @@
 
 .mobile-redirect-popover {
     background: $bg-white;
+    display: none!important;
     height: 100vh;
     .wrapper {
         height:55vh;

@@ -10,7 +10,7 @@ meta_tags:
 <section class="container-fluid no-padding">
   <div class="page-banner" style="background-image: url('/assets/images/location/location-banner.jpg')">
     {% regionblock page_title, type:header %}
-      <h1 class="page-title">Location</h1>
+      <h1 class="page-title" tabindex="0">Location</h1>
     {% endregionblock %}
   </div>
 </section>
@@ -22,11 +22,13 @@ meta_tags:
     <div class="col-sm-6 no-padding">
       <div class="con-one">
         {% regionblock section_1_title, type:header %}
-          <h2 class="title-head">Hotel Near Penn Station, NYC</h2>
+          <h2 class="title-head" tabindex="0">Hotel Near Penn Station, NYC</h2>
         {% endregionblock %}
+        <div tabindex="0">
         {% regionblock section_1_body, type:text %}
           <p class="des">Uptown affluence and downtown style come together in Times Square and North Chelsea. Cutting-edge art galleries, broadway shows and trendy bars mingle with sought-after high-rises and converted warehouses in these ultra-fashionable and ultra-busy, neighborhoods.</p>
         {% endregionblock %}
+        </div>
       </div>
     </div>
 
@@ -71,13 +73,13 @@ meta_tags:
           </div>
           <div class="col-sm-6 no-padding att-con">
             {% regionblock section_1_address_1, type:header %}
-              <div class="add-1">ENJOY THE FOLLOWING<span class="nl">PRIVILEGES</span></div>
+              <div class="add-1" tabindex="0">ENJOY THE FOLLOWING<span class="nl">PRIVILEGES</span></div>
             {% endregionblock %}
             {% regionblock section_1_address_2, type:header %}
-              <div class="add-2">Our<span class="nl">Address</span></div>
+              <div class="add-2" tabindex="0">Our<span class="nl">Address</span></div>
             {% endregionblock %}
             {% regionblock section_1_address_3, type:header %}
-              <div class="add-3">Sagamore Miami Beach Hotel<br>1671 Collins Ave<br>FL 33139<br>United States</div>
+              <div class="add-3" tabindex="0">Sagamore Miami Beach Hotel<br>1671 Collins Ave<br>FL 33139<br>United States</div>
             {% endregionblock %}
           </div>
         </div>
@@ -88,7 +90,7 @@ meta_tags:
 
       <div class="loc-tabs">
         <ul class="nav nav-pills gallery-nav">
-          <li><a data-toggle="pill" href="#restaurants">Restaurants</a></li>
+          <li><a data-toggle="pill" href="#restaurants" >Restaurants</a></li>
           <li class="active"><a data-toggle="pill" href="#attractions">Sites & Attractions</a></li>
           <li><a data-toggle="pill" href="#bars">Bars</a></li>
         </ul>
@@ -98,7 +100,7 @@ meta_tags:
 
         <div class="con-five tab-pane" id="restaurants">
           {% regionblock attractions_restaurants_title, type:header %}
-            <h2 class="title-head">Top Restaurants</h2>
+            <h2 class="title-head" tabindex="0">Top Restaurants</h2>
           {% endregionblock %}
           {% regionblock attractions_restaurants_body, type:text %}
             <ul class="con-five-list">
@@ -114,7 +116,7 @@ meta_tags:
 
         <div class="con-five tab-pane fade in active" id="attractions">
           {% regionblock attractions_nearby_title, type:header %}
-            <h2 class="title-head">Top Sites &amp; Attractions</h2>
+            <h2 class="title-head" tabindex="0">Top Sites &amp; Attractions</h2>
           {% endregionblock %}
           {% regionblock attractions_nearby_body, type:text %}
             <ul class="con-five-list">
@@ -134,7 +136,7 @@ meta_tags:
 
         <div class="con-five tab-pane" id="bars">
           {% regionblock attractions_bars_title, type:header %}
-            <h2 class="title-head">Top Bars</h2>
+            <h2 class="title-head" tabindex="0">Top Bars</h2>
           {% endregionblock %}
           {% regionblock attractions_bars_body, type:text %}
             <ul class="con-five-list">
@@ -157,7 +159,7 @@ meta_tags:
 <section class="loc-con-one">
   <div class="container no-padding">
     {% regionblock map_section_title, type:header %}
-      <h3 class="text-center discover-title">Discover the Best of NYC</h3>
+      <h3 class="text-center discover-title" tabindex="0">Discover the Best of NYC</h3>
     {% endregionblock %}
     <a class="wyndow-carousel" href="https://wyndow.com" data-embed-id="45">Find more great events at Wyndow!</a>
     <script>
@@ -176,7 +178,7 @@ meta_tags:
 </section>
 
 <section class="map-holder">
-  <div class="map-inner" id="map"></div>
+  <div class="map-inner" id="map" tabindex="-1"></div>
 </section>
 
 <section class="loc-gal">
@@ -192,10 +194,10 @@ meta_tags:
   <div class="container-fluid no-padding">
     <div class="cta">
       {% regionblock cta_title, type:header %}
-        <h3>MODERN MANHATTAN</h3>
+        <h3 tabindex="0">MODERN MANHATTAN</h3>
       {% endregionblock %}
       <div class="cta-logo"><a href="/"><img src="/assets/images/logo.png" alt="The Stewart Hotel"/></a></div>
-      <div class="btn-holder text-center"><a href="{{ site.reztrip_url }}" target="_blank" class="button-common">Book Your Stay</a></div>
+      <div class="btn-holder text-center"><a href="https://www.myhotelreservation.net/b/hamiasag/HAMIASAG/" target="_blank" class="button-common">Book Your Stay</a></div>
     </div>
   </div>
 </section>
