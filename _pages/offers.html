@@ -11,7 +11,7 @@ meta_tags:
   <div class="container-fluid no-padding">
     <div class="page-banner" style="background-image:url('/assets/images/offers/offers-banner.jpg');">
       {% regionblock page_title, type:header %}
-        <h1 class="page-title">Special Offers</h1>
+        <h1 class="page-title" tabindex="0">Special Offers</h1>
       {% endregionblock %}
     </div>
   </div>
@@ -27,7 +27,7 @@ meta_tags:
             <div class="row no-gutters">
               <div class="col-sm-6 sp-img v-center" style="background-image:url({{offer.banner_image.url}});"></div>
               <div class="col-sm-6 sp-content v-center">
-                <p class="title">{{offer.title}}</p>
+                <p class="title" tabindex="0">{{offer.title}}</p>
                 <p class="desp">{{offer.short_info}}</p>
                 <div class="btn-holder btn-offerlist">
                   <a class="button-common" href="/offers/{{offer.url_friendly_name}}/">View this offer</a>

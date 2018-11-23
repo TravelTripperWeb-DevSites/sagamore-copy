@@ -4,7 +4,7 @@
 
       <div class="col-md-4 col-sm-2 no-padding v-top">
         <div class="footer-logo">
-          <a href="/"><img src="/assets/images/logo-black.png" alt="Stewart Hotel NYC"></a>
+          <a href="/"><img src="/assets/images/logo-black.png" alt="Sagamore"></a>
         </div>
       </div>
 
@@ -14,7 +14,7 @@
 
             <div class="col-md-3 col-sm-3 no-padding v-top">
               <div class="footer-grid">
-                <h2>Contact</h2>
+                <h2 tabindex="0">Contact</h2>
                 <p>
                   <a href="https://goo.gl/maps/g8E9mVQmJkq" target="_blank"><span class="block-element company-name">The Sagamore Hotel Miami Beach</span><span class="block-element address">1671 Collins Ave <br>Miami Beach, FL 33139<br>United States</span></a>
                   <span class="block-element">Property: <a href="tel:3055358088">(305) 535-8088</a></span>
@@ -25,7 +25,7 @@
             </div>
             <div class="col-md-3 col-sm-3 no-padding v-top">
               <div class="footer-grid">
-                <h2>Learn More</h2>
+                <h2 tabindex="0">Learn More</h2>
                 <ul class="block-element company-name links">
                   {% for link in site.data.navigation.footer %}
                   <li><a href="{{ link.url }}">{{ link.title }}</a></li>
@@ -35,7 +35,7 @@
             </div>
             <div class="col-md-6 col-sm-6 no-padding v-top  no-border">
               <div class="footer-grid">
-                <h2>Newsletter Sign-up</h2>
+                <h2 tabindex="0">Newsletter Sign-up</h2>
                 <form class="jotform-form" action="https://submit.jotform.me/submit/83243432437454/" method="post" name="form_83243432437454" id="83243432437454" accept-charset="utf-8">
                   <input type="hidden" name="formID" value="83243432437454">
                   <div class="form-holder ">
@@ -45,7 +45,7 @@
                   <div class="form-holder form-check tnc">
                     <input type="checkbox" class="form-check-input" id="agree" name="q4_iAgree[]" value="agree" required>
 
-                    <label class="form-check-label" for="agree">I agree to the <a href="/terms/" target="_blank">Terms of Service</a> and <a href="/privacy-policy/" target="_blank">Privacy Policy</a>.</label>
+                    <label class="form-check-label" for="agree" tabindex="0">I agree to the <a href="/terms/" target="_blank">Terms of Service</a> and <a href="/privacy-policy/" target="_blank">Privacy Policy</a>.</label>
 
                   </div>
                   <input type="hidden" id="simple_spc" name="simple_spc" value="83243432437454">
@@ -55,9 +55,9 @@
                 </div>
                 <div class="social-icons-footer">
                   <h2>Follow</h2>
-                  <a href="https://www.facebook.com/Sagamorehotel/" rel="nofollow" target="blank" title="facebook"><i class="fa fa-facebook"></i></a>
-                  <a href="https://www.twitter.com/sagamorehotel/" rel="nofollow" target="blank" title="twitter"><i class="fa fa-twitter"></i></a>
-                  <a href="https://www.instagram.com/sagamorehotel/" rel="nofollow" target="blank" title="instagram"><i class="fa fa-instagram"></i></a>
+                  <a href="https://www.facebook.com/Sagamorehotel/" rel="nofollow" target="blank" title="facebook" tabindex="-1"><i class="fa fa-facebook"></i></a>
+                  <a href="https://www.twitter.com/sagamorehotel/" rel="nofollow" target="blank" title="twitter" tabindex="-1"><i class="fa fa-twitter"></i></a>
+                  <a href="https://www.instagram.com/sagamorehotel/" rel="nofollow" target="blank" title="instagram" tabindex="-1"><i class="fa fa-instagram"></i></a>
                 </div>
               </div>
             </div>
@@ -69,7 +69,7 @@
   </div>
   <div class="footer-copyright">
     <div class="container">
-      <p>&copy; <a href="/" title="Stewart Hotel in NYC">Sagamore Miami Beach</a> {{ site.time | date: '%Y' }} All Rights Reserved</p>
+      <p tabindex="0">&copy; <a href="/" title="Sagamore Miami Beach">Sagamore Miami Beach</a> {{ site.time | date: '%Y' }} All Rights Reserved</p>
     </div>
   </div>
 </footer>

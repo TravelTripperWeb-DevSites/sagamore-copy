@@ -22,7 +22,7 @@ layout: default
 <section>
   <div class="container-fluid no-padding">
     <div class="page-banner" style="background-image: url('/assets/images/offers/buy-three-get-four-banner.jpg')">
-      <h1 class="page-title">Special Offers</h1>
+      <h1 class="page-title" tabindex="0">Special Offers</h1>
     </div>
   </div>
 </section>
@@ -43,10 +43,10 @@ layout: default
   <div id="rd-carousel" class="carousel slide" data-ride="carousel">
 
     <div class="carousel-inner" role="listbox">
-      <div class="item active" style="background-image:url('{{offer.banner_image.url}}');">
+      <div class="item active" role="option" style="background-image:url('{{offer.banner_image.url}}');">
         <div class="rdc-car-con">
-          <h3 class="sub-title">Special Offer</h3>
-          <h2 class="title">{{offer.title}}</h2>
+          <h3 class="sub-title" tabindex="0">Special Offer</h3>
+          <h2 class="title" tabindex="0">{{offer.title}}</h2>
           <div><a class="button-common-2" href="{{offer.book_now_link}}" target="_blank">Book this offer</a></div>
         </div>
       </div>
@@ -60,17 +60,17 @@ layout: default
 
     <div class="col-md-6 no-padding -left off-det-cont">
       <div class="con-1 off-det-pd">
-        <h2 class="title">All in the details</h2>
-        <h3 class="sub-title off-det"> Book in advance for best offers</h3>
+        <h2 class="title" tabindex="0">All in the details</h2>
+        <h3 class="sub-title off-det" tabindex="0"> Book in advance for best offers</h3>
         <div class="des-wrap off-det-text">
-          <div class="details-page-description">
+          <div class="details-page-description" tabindex="0">
             {{offer.long_info}}
           </div>
-          <p class="des">Need assistance? Our dedicated reservations team is available around the clock:</p>
-          <p class="des">Sagamore Miami Beach | <a href="tel:8772426673">(877) 242-6673</a> or <a href="mailto:reservations@sagamoresouthbeach.com">reservations@sagamoresouthbeach.com</a></p>
+          <p class="des" tabindex="0">Need assistance? Our dedicated reservations team is available around the clock:</p>
+          <p class="des" v>Sagamore Miami Beach | <a href="tel:8772426673">(877) 242-6673</a> or <a href="mailto:reservations@sagamoresouthbeach.com">reservations@sagamoresouthbeach.com</a></p>
         </div>
         <div class="spacing"><a id="tracking_offer_booknow" class="button-common-2" href="{{offer.book_now_link}}" target="_blank">Book this offer</a></div>
-        <div class="spacing"><a id="tracking_offer_contactus" class="button-common-2" href="mailto:info@stewarthotel.com">Contact Us</a></div>
+        <div class="spacing"><a id="tracking_offer_contactus" class="button-common-2" href="/contact/">Contact Us</a></div>
       </div>
       <!-- <div class="con-2"><img src="/assets/images/offers/od-pic-1.jpg" alt=""></div> -->
     </div>
@@ -85,27 +85,6 @@ layout: default
         </div>
       </div>
 
-      <!-- <div class="con-4">
-          <div class="col-sm-6 con-4-2">
-            <div class="add-2">Offer<span class="nl">Features</span></div>
-            <div class="add-1">ENJOY THE FOLLOWING<span class="nl">PRIVILEGES</span></div>
-          </div>
-          <div class="col-sm-6 con-4-1">
-            <ul class="list">
-              <li>Business workspace with desk</li>
-              <li>Two phone lines with voicemail</li>
-              <li>Wireless and high-speed internet access</li>
-              <li>Flat-screen HDTV's with web browser</li>
-              <li>iHome docking station</li>
-              <li>Comfort Zone eco-friendly bath amenities</li>
-            </ul>
-          </div>
-          <div class="col-sm-6 con-4-2">
-            <div class="add-1">ENJOY THE FOLLOWING<span class="nl">PRIVILEGES</span></div>
-            <div class="add-2">Offer<span class="nl">Features</span></div>
-          </div>
-        </div> -->
-
     </div>
 
   </div>
@@ -119,9 +98,9 @@ layout: default
 <section class="loc-cta" style="background-image: url('/assets/images/offers/offers-cta.jpg');">
   <div class="container-fluid no-padding">
     <div class="cta">
-      <h3>MODERN MANHATTAN</h3>
+      <h3 tabindex="0">MODERN MANHATTAN</h3>
       <div class="cta-logo"><a href="/"><img src="/assets/images/logo.png" alt="The Stewart Hotel" /></a></div>
-      <div class="btn-holder text-center"><a href="https://stewarthotelnyc.reztrip.com/classic/en/searches/592d7885ac7fa973d0d5a55a/hotels/NYCSTW/rooms?action=show&controller=landings#?category=" target="_blank" class="button-common">Book Your Stay</a></div>
+      <div class="btn-holder text-center"><a href="https://www.myhotelreservation.net/b/hamiasag/HAMIASAG/" target="_blank" class="button-common">Book Your Stay</a></div>
     </div>
   </div>
 </section>

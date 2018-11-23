@@ -10,7 +10,7 @@ meta_tags:
 <section class="container-fluid no-padding">
   <div class="page-banner" style="background-image:url('/assets/images/rooms/rooms-banner.jpg');">
     {% regionblock page_title, type:header %}
-      <h1 class="page-title">Comfort &amp; Style</h1>
+      <h1 class="page-title" tabindex="0">Comfort &amp; Style</h1>
     {% endregionblock %}
   </div>
 </section>
@@ -23,7 +23,7 @@ meta_tags:
         <div class="col-md-4 col-sm-6">
           <div class="rooms-item">
             <figure><img src="{{room.banner_image.url_medium}}" alt="{{room.banner_image.alt}}"></figure>
-            <h2>{{room.title}}</h2>
+            <h2 tabindex="0">{{room.title}}</h2>
             <p>{{room.short_info}}</p>
             <div class="extra-padding">
               <a class="button-common btn-blue" href="/rooms/{{room.url_friendly_name}}/">View room</a>
