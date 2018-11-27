@@ -1,9 +1,26 @@
 {
   "title": "Perfect Stay",
   "image": {
-    "url": "//cdn.traveltripper.io/site-assets/192_552_3091/media/2017-05-12-074113/perfectstay.jpg"
+    "name": "room",
+    "file_name": "room.jpg",
+    "url": "//cdn.traveltripper.io/site-assets/192_936_21467/media/2018-11-27-044326/room.jpg",
+    "tags": "",
+    "description": "",
+    "date_added": "2018-11-27-044326",
+    "file_type": "image/jpeg",
+    "width": 1200,
+    "height": 800,
+    "file_size": 189870,
+    "url_large": "//cdn.traveltripper.io/site-assets/192_936_21467/media/2018-11-27-044326/large_room.jpg",
+    "url_medium": "//cdn.traveltripper.io/site-assets/192_936_21467/media/2018-11-27-044326/medium_room.jpg",
+    "url_small": "//cdn.traveltripper.io/site-assets/192_936_21467/media/2018-11-27-044326/small_room.jpg",
+    "url_xsmall": "//cdn.traveltripper.io/site-assets/192_936_21467/media/2018-11-27-044326/xsmall_room.jpg",
+    "url_thumb": "//cdn.traveltripper.io/site-assets/192_936_21467/media/2018-11-27-044326/thumb_room.jpg",
+    "path": "//cdn.traveltripper.io/site-assets/192_936_21467/media/2018-11-27-044326/room.jpg",
+    "alt": "room",
+    "caption": ""
   },
-  "button_text": "View Gallery",
-  "button_link": "/rooms/",
+  "button_text": "View Rooms",
+  "button_link": "rooms",
   "sort_order": 3
 }
