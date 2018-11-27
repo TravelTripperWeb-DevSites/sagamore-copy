@@ -7,13 +7,9 @@ meta_tags:
   robots: noindex, nofollow
 ---
 
-<style>
-  .img-responsive { max-width: 394px; }
-</style>
-
 <section>
   <div class="container-fluid no-padding">
-    <div class="page-banner" style="background-image: url('//cdn.traveltripper.io/site-assets/192_552_3091/media/2017-05-12-072727/STEW-Exterior-Night-Web.jpg')">
+    <div class="page-banner" style="background-image: url('//cdn.traveltripper.io/site-assets/192_936_21467/media/2018-11-27-051250/sagamore-exter.jpg')">
       <h1 class="page-title" tabindex="0">404 error <br>page not found</h1>
     </div>
   </div>
@@ -25,13 +21,8 @@ Please view the Sitemap below or go back to the <a href="/"> Homepage</a>.</h3>
 <div class="space">
   <h2 class="title-error">sitemap</h2>
   <ul class="container site">
-    <li> <a href="/"><span>home</span></a></li>
-    <li> <a href="/about/"><span>about</span></a></li>
-    <li> <a href="/rooms/"><span>rooms</span></a></li>
-    <li> <a href="/offers/"><span>offers</span></a></li>
-    <li> <a href="/location/"><span>location</span></a></li>
-    <li> <a href="/experiences/"><span>experiences</span></a></li>
-    <li> <a href="/gallery/"><span>gallery</span></a></li>
-    <li><a href="/contact/">Contact</a></li>
+    {% for link in site.data.navigation.main %}
+    <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+    {% endfor %}
   </ul>
 </div>

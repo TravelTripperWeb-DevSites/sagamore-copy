@@ -2,7 +2,6 @@
 
 .mobile-redirect-popover {
     background: $bg-white;
-    display: none!important;
     height: 100vh;
     .wrapper {
         height:55vh;
@@ -37,7 +36,7 @@
     }
     .popmap {
         height:45vh;
-        background: url('/assets/images/static-map.png') no-repeat #dfdfdf;
+        background: url('/assets/images/static-map.jpg') no-repeat #dfdfdf;
         background-size: cover;
     }
 }
