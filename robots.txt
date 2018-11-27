@@ -1,8 +1,14 @@
+---
+layout: null
+sitemap:
+  exclude: true
+---
+
 # Disallowed and allowed directories and files
 
 User-agent: *
-Disallow: 
+Disallow:
 
 # Define website sitemaps
 
-Sitemap: https://www.stewarthotelnyc.com/sitemap.xml
+Sitemap: {{ site.url }}/sitemap.xml
