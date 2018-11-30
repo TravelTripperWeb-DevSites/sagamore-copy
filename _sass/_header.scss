@@ -1,28 +1,35 @@
 .site-header {
-
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  width: 100%;
   .top {
+    @include global-transition(.3s);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-       -ms-flex-align: center;
-          align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: justify;
-       -ms-flex-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
-    height: 120px;
+    height: 70px;
+    @media (min-width: 768px) {
+      height: 100px;
+    }
     padding: 0 15px;
     background-color: $bg-black;
 
-    &:before,
-    &:after {
+    &:after,
+    &:before {
       content: none;
     }
-
   }
 
   .logo {
     width: 186px;
+    @include global-transition(.3s);
     @media (max-width: 1240px) {
       width: 160px;
     }
@@ -38,11 +45,9 @@
       width: 100%;
       height: auto;
     }
-
   }
 
   &.navbar-fixed-top {
-
     .top {
       height: 68px;
     }
@@ -50,9 +55,7 @@
     .logo {
       width: 130px;
     }
-
   }
-
 }
 
 .lang-switcher {
@@ -72,7 +75,6 @@
   &:focus {
     outline: #c5a900;
   }
-
 }
 
 .btn-header {
@@ -87,8 +89,8 @@
   background-color: transparent;
   border: solid 1px #fff;
   border-radius: 0;
-  -webkit-transition: all .1s;
-          transition: all .1s;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
   @media (max-width: 767px) {
     padding: 7px 10px;
     font-size: 10px;
@@ -99,10 +101,10 @@
     color: #fff;
     background-color: #232525;
   }
-
 }
-.language-selector{
-  ul{
+
+.language-selector {
+  ul {
     position: absolute;
     display: none;
     font-size: 12px;
@@ -114,20 +116,22 @@
     width: 162px;
     border: 1px solid $bg-white;
     padding-top: 5px;
-    border-top: 0px;
-     @media (max-width: 767px) {
-     width: 100px;
-     }
+    border-top: 0;
+    @media (max-width: 767px) {
+      width: 100px;
+    }
   }
-  li{
-  padding-bottom: 4px;
+
+  li {
+    padding-bottom: 4px;
   }
-  a{
+
+  a {
     color: $bg-white !important;
   }
 }
 
-.selected-language{
+.selected-language {
   @extend .lang-switcher;
   padding: 15px 21px 12px;
   min-width: 162px;
@@ -136,6 +140,5 @@
     font-size: 10px;
     letter-spacing: 1px;
     min-width: 100px;
-
   }
 }
