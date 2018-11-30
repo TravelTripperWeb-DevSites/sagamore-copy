@@ -11,17 +11,18 @@ main:
     url: /weddings-events/
   - title: Sagamore is Art
     url: /sagamore-art/
-    dropdown:
-        - title: Art Talks
-          url: /art-talks/
-        - title: Sagamore Salon
-          url: /art-talks/
-        - title: Peace 70
-          url: /peace-70/
-        - title: Past Art Events
-          url: /past-events/
-        - title: Art Advisor - Sebastien Laboureau
-          url: /art-advisor/
+    submenu: 'true'
+    submenuitems:
+      - title: Art Talks
+        url: /art-talks/
+      - title: Sagamore Salon
+        url: /art-talks/
+      - title: Peace 70
+        url: /peace-70/
+      - title: Past Art Events
+        url: /past-events/
+      - title: Art Advisor - Sebastien Laboureau
+        url: /art-advisor/
   - title: Gallery
     url: /gallery/
   - title: Contact
