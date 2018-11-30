@@ -1,6 +1,6 @@
 [
   {
-    "content": "<p class=\"des\">Spend a lively night watching your favorite sporting event or catching up with friends in this modern and initimate space</p>\n<ul class=\"about-list\" style=\"background-color: #f1f1f1;\" tabindex=\"0\">\n<li style=\"padding-top: 0px; padding-bottom: 0px; padding-left: 32px;\">Breakfast: 7:00am - 11:00am</li>\n<li style=\"padding-top: 0px; padding-bottom: 0px; padding-left: 32px;\">Lunch Service: 11:30am - 6:00pm</li>\n<li style=\"padding-top: 0px; padding-bottom: 0px; padding-left: 32px;\">Beverage Service: 11:00am - 10:00pm</li>\n<li style=\"padding-top: 0px; padding-bottom: 0px; padding-left: 32px;\">Dinner Service: Thursdays, Fridays, and Saturdays 6:00pm-Midnight</li>\n</ul>",
+    "content": "<p class=\"des\">Spend a lively night watching your favorite sporting event or catching up with friends in this modern and initimate space</p>\n<ul class=\"about-list\" tabindex=\"0\">\n<li style=\"padding-top: 0px; padding-bottom: 0px; padding-left: 32px;\">Breakfast: 7:00am - 11:00am</li>\n<li style=\"padding-top: 0px; padding-bottom: 0px; padding-left: 32px;\">Lunch Service: 11:30am - 6:00pm</li>\n<li style=\"padding-top: 0px; padding-bottom: 0px; padding-left: 32px;\">Beverage Service: 11:00am - 10:00pm</li>\n<li style=\"padding-top: 0px; padding-bottom: 0px; padding-left: 32px;\">Dinner Service: Thursdays, Fridays, and Saturdays 6:00pm-Midnight</li>\n<li style=\"padding-top: 0px; padding-bottom: 0px; padding-left: 32px;\"></li>\n</ul>",
     "_template": "html"
   }
 ]
