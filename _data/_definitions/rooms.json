@@ -20,8 +20,7 @@
   },
   "short_info": {
     "label": "Short Description",
-    "type": "text",
-    "required": true
+    "type": "text"
   },
   "book_now_link": {
     "type": "text",
@@ -30,7 +29,6 @@
   },
   "long_info":{
 		"label": "Description",
-		"required": true,
 		"type": "richtext"
 	},
   "room_size":{
