@@ -1,7 +1,7 @@
-# Analytics
+---
 analytics:
-  provider: gtm # false (default), "google", "gtm", "custom"
+  provider: gtm
   google:
-    tracking_id:
+    tracking_id: 
   gtm:
-    tracking_id:
+    tracking_id: GTM-KRL26WX
