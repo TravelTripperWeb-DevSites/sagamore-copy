@@ -1,36 +1,41 @@
 main:
-  - title: Home
-    url: /
   - title: About
     url: /about/
+  - title: Rooms & Suites
+    url: /rooms/
+  - title: Offers
+    url: /offers/
+  - title: Eat & Drink
+    url: /dine-drink/
+  - title: Weddings & Events
+    url: /weddings-events/
   - title: Sagamore is Art
     url: /sagamore-art/
-  - title: Rooms
-    url: /rooms/
-  - title: Offers
-    url: /offers/
-  - title: Location
-    url: /location/
-  - title: Experiences
-    url: /experiences/
+    dropdown:
+        - title: Art Talks
+          url: /art-talks/
+        - title: Sagamore Salon
+          url: /art-talks/
+        - title: Peace 70
+          url: /peace-70/
+        - title: Past Art Events
+          url: /past-events/
+        - title: Art Advisor - Sebastien Laboureau
+          url: /art-advisor/
   - title: Gallery
     url: /gallery/
-  - title: Meetings
-    url: /meetings/
+  - title: Contact
+    url: /contact/
+
+
 
 footer:
-  - title: Home
-    url: /
   - title: About
     url: /about/
   - title: Rooms
     url: /rooms/
   - title: Offers
     url: /offers/
-  - title: Location
-    url: /location/
-  - title: Experiences
-    url: /experiences/
   - title: Gallery
     url: /gallery/
   - title: Meetings
