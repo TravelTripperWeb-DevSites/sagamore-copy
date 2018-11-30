@@ -5,6 +5,12 @@
 $(document)
   .ready(function() {
 
+    $("#startDate").datepicker();
+    $("#arrivalDate").datepicker();
+    $("#departureDate").datepicker();
+    $("#whenWill").datepicker();
+    $("#endDate").datepicker();
+
   if(window.innerWidth >= 992) {
     $(".nav-header .dropdown").hover(function(){
       $(this).find(".dropdown-items").slideDown(300);
