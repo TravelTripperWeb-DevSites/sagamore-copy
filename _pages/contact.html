@@ -1,28 +1,112 @@
 ---
 layout: default
-title: Contact
-meta_description:
-permalink: /contact/
+title: Contact Us | Sagamore Miami Beach Hotel in Manhattan
+meta_description: Sagamore Miami Beach Hotel is located just a few steps from Penn
+  Station NYC, in the heart of Midtown Manhattan. Close to Times Square and many other
+  New York attractions!
+permalink: "/contact/"
 meta_tags:
-  robots:
+  robots: 
+published_localized:
+  en: true
+title_localized:
+  en: Contact Details | The Sagamore Hotel South Beach
+meta_description_localized:
+  en: Get in touch with Sagamore Miami Beach Hotel at 1671 Collins Ave, Miami Beach,
+    FL 33139. Call the hotel on 305-535-8088, email reservations@sagamorehote.com
+    or fill in this form.
+layout_localized:
+  en: default
+label: Contact
+permalink_localized:
+  en: "/contact/"
+
 ---
 
-{% comment %}
+<section class="container-fluid no-padding">
+  <div class="page-banner" style="background-image: url('/assets/images/contact/contact-banner.jpg')">
+    {% regionblock page_title, type:header %}
+      <h1 class="page-title">Contact Us</h1>
+    {% endregionblock %}
+  </div>
+</section>
 
-  Name:
+<section class="contact-details">
+  <div class="container">
+    <div class="row">
 
-    Contact Page
+      <div class="col-sm-5 contact-left">
+        {% regionblock contact_details_title, type:header %}
+          <h2 class="title-head" tabindex="0">Contact Sagamore Miami Beach Hotel</h2>
+        {% endregionblock %}
+        <div class="contact">
+          {% regionblock contact_details_address, type:text %}
+            <p class="address"><a href="https://goo.gl/maps/g8E9mVQmJkq" target="_blank">1671 Collins Ave <br>Miami Beach,<br>FL 33139 <br>United States</a></p>
+          {% endregionblock %}
+          {% regionblock contact_details_phone, type:text %}
+            <p><a href="tel:8772426673">(877) 242-6673</a></p>
+          {% endregionblock %}
+          {% regionblock contact_details_email, type:text %}
+            <p><a href="mailto:reservations@sagamorehotel.com">reservations@sagamorehotel.com</a></p>
+          {% endregionblock %}
+        </div>
+      </div>
 
-  Description:
+      <div class="col-sm-7">
+        {% regionblock contact_details_image, type:image %}
+          <img src="/assets/images/contact/contact-img.jpg" alt="Hotel Sagamore">
+        {% endregionblock %}
+      </div>
 
-    Static content that can be modified by editable regions.
+    </div>
+  </div>
+</section>
 
-  Usage:
+<section class="contact-section">
+  <div class="container">
+    <div class="contact-form-container auto-margin m-b-50">
 
-    Text   - {% regionblock region_name, type:text %}{% endregionblock %}
+      {% regionblock contact_form_title, type:header %}
+        <h2 class="text-center m-t-20 m-b-0" tabindex="0">We're at your service</h2>
+      {% endregionblock %}
 
-    Header - {% regionblock region_name, type:header %}{% endregionblock %}
+      {% regionblock contact_form_required_note, type:header %}
+        <p class="required text-center m-b-20" tabindex="0">Required fields are marked *</p>
+      {% endregionblock %}
 
-    Image  - {% regionblock region_name, type:image %}{% endregionblock %}
+      <form class="contact-form" action="https://submit.jotform.me/submit/83243775469469/" method="post" name="form_83243775469469" id="83243775469469" accept-charset="utf-8">
+        <input type="hidden" name="formID" value="83243775469469">
+        <div class="row">
+          <div class="col-sm-6 ">
+            <input aria-label="first Name" type="text" class="form-control" name="q1_firstName" placeholder="First Name *" required="" aria-label="First Name">
+          </div>
+          <div class="col-sm-6 ">
+            <input aria-label="last Name" type="text" class="form-control"  name="q11_lastName" placeholder="Last Name *" required="" aria-label="last Name">
+          </div>
+          <div class="col-sm-6 ">
+            <input type="email" aria-label="email" class="form-control" name="q3_email" placeholder="Email *" required="" aria-label="Email">
+          </div>
+          <div class="col-sm-6 ">
+            <input type="text" aria-label="Phone Number" class="form-control" name="q14_phoneNumber" placeholder="Phone Number *" aria-label="Phone Number">
+          </div>
+          <div class="col-sm-12 ">
+            <input type="text" aria-label="subject" class="form-control" name="q13_subject13" placeholder="Subject *" aria-label="Subject" required="">
+          </div>
+          <div class="col-sm-12 ">
+            <textarea aria-label="your Message" class="message-box form-control" placeholder="Your Message *" aria-label="Your Message" required=""></textarea>
+          </div>
+        </div>
+        <div class="agree">
+          <input type="checkbox" class="form-check-input" aria-label="agree" name="q15_iAgree[]" value="agree"  required>
+          <label class="form-check-label" for="agree" tabindex="0">I agree to the <a href="/terms/" target="_blank">Terms of Service</a> and <a href="/privacy-policy/" target="_blank">Privacy Policy</a>.</label>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 ">
+            <button type="submit" aria-label="submit" class="btn btn-lg btn-primary button-home" id="contact-btn">Submit <i class="fa fa-angle-right"></i></button>
+          </div>
+        </div>
+      </form>
 
-{% endcomment %}
+    </div>
+  </div>
+</section>

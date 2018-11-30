@@ -1,32 +1,64 @@
 ---
 layout: default
-title: Gallery
-meta_description:
-permalink: /gallery/
+title: New York City Hotel Photos | Sagamore Hotel NYC Gallery
+meta_description: Enjoy a stunning visual tour of the Sagamore Miami Beach with our
+  photo gallery, featuring stunning Manhattan accommodation and various New York City
+  attractions.
+permalink: "/gallery/"
 meta_tags:
-  robots:
+  robots: 
+published_localized:
+  en: true
+title_localized:
+  en: Miami Beach Hotel Photos | The Sagamore Hotel South Beach
+meta_description_localized:
+  en: Take a look at the boutique Sagamore South Beach Hotel with our stunning range
+    of photos. From the incredible views across South Beach to our spacious, comfortable
+    rooms.
+layout_localized:
+  en: default
+label: Gallery
+permalink_localized:
+  en: "/gallery/"
+
 ---
 
-{% comment %}
+<style>
+  .img-responsive { max-width: 394px; }
+</style>
 
-  Name:
+<section class="container-fluid no-padding">
+  <div class="page-banner" style="background-image: url('/assets/images/gallery/gallery-banner.jpg')">
+    {% regionblock page_title, type:header %}
+      <h1 class="page-title" tabindex="0">Visual Tour</h1>
+    {% endregionblock %}
+  </div>
+</section>
 
-    Gallery Page
-
-  Description:
-
-    Display gallery images from the media library.
-
-  Usage:
-
-    Create a new gallery from the 'manage galleries' tab, then display the
-    images by looping over the gallery items, referenced by the gallery name.
-
-    eg. {% for photo in site.data._galleries.GALLERY_NAME.photos %}
-          <img src="{{ photo.url }}" alt="{{ photo.description }}">
+<section class="gallery-wrapper">
+  <div class="gallery-listing">
+    {% assign categories = site.data._galleries | sort: sort_order %}
+    <div class="container">
+      <ul class="gallery-nav">
+        <li><a href="javascript:void(0);" class="filter active" data-filter="all">All</a></li>
+        {% for category in categories %}
+          {% assign catname = category[0] %}
+          <li><a href="javascript:void(0);" class="filter" data-filter="{{ catname }}">{{ site.data._galleries[catname].name  }}</a></li>
         {% endfor %}
+      </ul>
+    </div>
 
-{% endcomment %}
+    {% assign categories = site.data._galleries %}
+    <div class="container" id="lightgallery">
+      {% for category in categories %}
+        {% assign catname = category[0] %}
+        {% for photo in site.data._galleries[catname].photos %}
+          <div class="image col-md-4 col-sm-4 fancybox" data-filter="{{ catname }}" data-src="{% if photo.url_large %}{{ photo.url_large }}{% else %}{{ photo.url }}{% endif %}" data-exthumbimage="{% if photo.url_medium %}{{ photo.url_medium }}{% else %}{{ photo.url }}{% endif %}">
+            <div class="img-block bg-styles" style="background-image:url('{{ photo.url_small }}');"></div>
+          </div>
+        {% endfor %}
+      {% endfor %}
+    </div>
 
-
-{% include components/gallery gallery=site.data._galleries.stock_images %}
+  </div>
+</section>

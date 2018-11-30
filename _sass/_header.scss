@@ -1,2 +1,144 @@
-// Header Elements
-// ==========================================================================
+.site-header {
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  width: 100%;
+  .top {
+    @include global-transition(.3s);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: 70px;
+    @media (min-width: 768px) {
+      height: 100px;
+    }
+    padding: 0 15px;
+    background-color: $bg-black;
+
+    &:after,
+    &:before {
+      content: none;
+    }
+  }
+
+  .logo {
+    width: 186px;
+    @include global-transition(.3s);
+    @media (max-width: 1240px) {
+      width: 160px;
+    }
+    @media (min-width: 768px) and (max-width: 1180px) {
+      width: 110px;
+    }
+    @media (max-width: 767px) {
+      display: inline-block;
+      width: 80px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &.navbar-fixed-top {
+    .top {
+      height: 68px;
+    }
+
+    .logo {
+      width: 130px;
+    }
+  }
+}
+
+.lang-switcher {
+  padding: 15px 30px 12px;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3.5px;
+  background-color: #000;
+  border: solid 1px #fff;
+  @media (max-width: 767px) {
+    padding: 7px 10px;
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  &:focus {
+    outline: #c5a900;
+  }
+}
+
+.btn-header {
+  display: inline-block;
+  padding: 15px 30px 12px;
+  font-family: $main-font-medium;
+  font-size: 12px;
+  color: #fff;
+  text-shadow: none;
+  text-transform: uppercase;
+  letter-spacing: 3.5px;
+  background-color: transparent;
+  border: solid 1px #fff;
+  border-radius: 0;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  @media (max-width: 767px) {
+    padding: 7px 10px;
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: #232525;
+  }
+}
+
+.language-selector {
+  ul {
+    position: absolute;
+    display: none;
+    font-size: 12px;
+    letter-spacing: 2px !important;
+    text-transform: uppercase;
+    padding-left: 20px;
+    list-style-type: none;
+    background-color: $bg-black;
+    width: 162px;
+    border: 1px solid $bg-white;
+    padding-top: 5px;
+    border-top: 0;
+    @media (max-width: 767px) {
+      width: 100px;
+    }
+  }
+
+  li {
+    padding-bottom: 4px;
+  }
+
+  a {
+    color: $bg-white !important;
+  }
+}
+
+.selected-language {
+  @extend .lang-switcher;
+  padding: 15px 21px 12px;
+  min-width: 162px;
+  @media (max-width: 767px) {
+    padding: 7px 10px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    min-width: 100px;
+  }
+}

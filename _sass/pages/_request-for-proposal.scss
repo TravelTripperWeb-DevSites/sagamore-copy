@@ -1,0 +1,276 @@
+.rfp {
+  .page-banner {
+    margin-bottom: 0;
+    padding: 5% 0;
+
+    &.rooms-banner {
+      background: url('/images/rfp-banner.jpg') no-repeat center center;
+      background-size: cover;
+    }
+
+    .page-title {
+      padding: 40px 0;
+      font-size: 48px;
+    }
+  }
+
+  .desp {
+    padding: 50px 0 30px;
+    font-family: $main-font-book;
+    font-size: 14px;
+    color: #232525;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  h2 {
+    margin: 0 !important;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    font-family: 'brandon_grotesquelight';
+    font-size: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    @media(min-width: $screen-xs-min) and (max-width: $screen-sm-max) {
+      padding-top: 35px;
+      padding-bottom: 10px;
+      font-size: 20px;
+    }
+    @media(min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+      padding-top: 35px;
+    }
+  }
+
+  .rfp-wrapper {
+    max-width: 570px;
+    margin: 60px auto 50px;
+    @media(max-width: 767px) {
+      margin: 0 auto 30px;
+      padding: 0 15px;
+    }
+
+    .contact-form {
+      .form-control {
+        height: 58px;
+        font-size: 16px;
+        font-weight: 400;
+        color: #232525;
+        letter-spacing: 1px;
+        border-color: #dbdbdb;
+        border-width: 1px;
+        border-radius: 0;
+        box-shadow: none;
+        @media(max-width: 767px) {
+          height: 48px;
+          font-size: 14px;
+          font-weight: 400;
+        }
+
+        &:focus {
+          border-color: #232525;
+          box-shadow: none;
+
+          &::-webkit-input-placeholder {
+            text-transform: uppercase;
+            font-size: 12px;
+            font-style: normal;
+            color: #bfbfbf;
+          }
+
+          &:-moz-placeholder {
+            /* Firefox 18- */
+            text-transform: uppercase;
+            font-size: 12px;
+            font-style: normal;
+            color: #bfbfbf;
+          }
+
+          &::-moz-placeholder {
+            /* Firefox 19+ */
+            text-transform: uppercase;
+            font-size: 12px;
+            font-style: normal;
+            color: #bfbfbf;
+          }
+
+          &:-ms-input-placeholder {
+            text-transform: uppercase;
+            font-size: 12px;
+            font-style: normal;
+            color: #bfbfbf;
+          }
+        }
+
+        &::-webkit-input-placeholder {
+          text-transform: uppercase;
+          font-size: 12px;
+          font-style: normal;
+          color: #bfbfbf;
+        }
+
+        &:-moz-placeholder {
+          /* Firefox 18- */
+          text-transform: uppercase;
+          font-size: 12px;
+          font-style: normal;
+          color: #bfbfbf;
+        }
+
+        &::-moz-placeholder {
+          /* Firefox 19+ */
+          text-transform: uppercase;
+          font-size: 12px;
+          font-style: normal;
+          color: #bfbfbf;
+        }
+
+        &:-ms-input-placeholder {
+          text-transform: uppercase;
+          font-size: 12px;
+          font-style: normal;
+          color: #bfbfbf;
+        }
+      }
+
+      .btn {
+        width: 170px;
+        height: 50px;
+        font-family: 'brandon_grotesquemedium';
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        border: 0;
+        border-radius: 0;
+        -webkit-transition: all ease .5s;
+           -moz-transition: all ease .5s;
+                transition: all ease .5s;
+        @media(max-width: 767px) {
+          width: 150px;
+          height: 48px;
+          transition: all .3s;
+        }
+
+        &.btn-default {
+          color: #fff;
+          background-color: #1f4552;
+        }
+
+        &:hover {
+          color: #fff;
+          background-color: #231f20;
+          -webkit-transition: all ease .5s;
+             -moz-transition: all ease .5s;
+                  transition: all ease .5s;
+        }
+      }
+
+      textarea.form-control {
+        height: 200px;
+        resize: none;
+        @media(max-width: 767px) {
+          height: 100px;
+        }
+
+        &.m-textarea {
+          height: 130px;
+          @media(max-width: 767px) {
+            height: 100px;
+          }
+        }
+      }
+
+      .checkbox {
+        padding: 0 0 10px;
+        @media(max-width: 767px) {
+          padding: 0 0 10px;
+        }
+
+        label {
+          font-family: ''brandon_grotesquelight'';
+          font-size: 12px;
+          line-height: 22px;
+          letter-spacing: 1px;
+        }
+      }
+    }
+
+    .right-space {
+      padding-right: 8px;
+      @media(max-width: 767px) {
+        padding-right: 0;
+      }
+    }
+
+    .left-space {
+      padding-left: 8px;
+      @media(max-width: 767px) {
+        padding-left: 0;
+      }
+    }
+
+    .form-title {
+      text-align: center;
+    }
+
+    .two-fields-holder {
+      overflow: hidden;
+    }
+
+    .checkbox-inline {
+      font-family: $main-font-bold;
+      font-size: 12px;
+      line-height: 20px;
+      letter-spacing: 1px;
+    }
+
+    .checkbox-holder {
+      padding: 15px 0;
+      overflow: hidden;
+
+      .option-label {
+        padding-bottom: 15px;
+        font-size: 16px;
+        @media(max-width: 767px) {
+          padding-bottom: 15px;
+        }
+      }
+    }
+  }
+
+  .btn-lt-blue {
+    display: inline-block;
+    padding: 13px 30px;
+    font-family: $main-font-light;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    background-color: #232525;
+    border: solid 1px #232525;
+    -webkit-transition: all .2s;
+            transition: all .2s;
+
+    &:hover {
+      color: #232525;
+      background-color: #fff;
+    }
+    &:disabled{
+      cursor: not-allowed;
+      opacity: .5;
+    }
+  }
+}
+
+.rfp-label {
+  margin: 0;
+  padding: 0 0 50px;
+  font-family: $main-font-book;
+  font-size: 14px;
+  color: #232525;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}

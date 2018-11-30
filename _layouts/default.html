@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+  {% include head.html %}
+  {% include head/custom.html %}
+</head>
+
+<body id="top">
+
+  {% if site.data.tracking.analytics.provider and page.analytics != false %}
+    {% case site.data.tracking.analytics.provider %}
+    {% when "gtm" %}
+      {% include analytics/gtm-body.html %}
+    {% endcase %}
+  {% endif %}
+
+  {% include analytics/bing-body.html %}
+  <a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
+  {% include header.html %}
+  <div id="main">
+  {{ content }}
+  </div>
+    {% unless page.url == '/room/' or page.url == '/rooms/' or page.url == '/offers/' or page.url == '/offer/' or page.url == '/gallery/' %}
+      {% include instagram.html %}
+    {% endunless %}
+
+  {% unless page.url == "/charities/" %}
+    {% include save-the-children.html %}
+  {% endunless %}
+
+  {% include footer.html %}
+  {% include scripts.html %}
+
+</body>
+
+</html>

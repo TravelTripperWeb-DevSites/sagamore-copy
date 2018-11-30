@@ -18,15 +18,14 @@ meta_tags:
     Dynamically generated content from navigation.yml file.
 
   Usage:
-
     {% assign links = site.data.navigation.main %}
-
-    <ul>
+    
+    <ul>  
       {% for link in links %}
         <li>
           <a href="{{ link.url | absolute_url }}">{{ link.title }}</a>
         </li>
       {% endfor %}
-    </ul>
+    </ul>  
 
 {% endcomment %}

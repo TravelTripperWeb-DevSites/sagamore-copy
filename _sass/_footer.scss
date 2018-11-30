@@ -1,4 +1,304 @@
-// Footer Elements
-// ==========================================================================
+.footer-wrapper {
+  @media (max-width: 767px) {
+    padding: 50px 0 40px;
+    text-align: center;
+  }
+  width: auto;
+  font-family: $main-font-book;
+  font-size: 12px;
+  color: $text-color;
+  letter-spacing: 1.2px;
+  border-top: solid 1px #c8c9c7;
 
-// For sticky footer see https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
+  a {
+    color: $text-color;
+    @media (max-width: 767px) {
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    &:hover {
+      color: #c5a900;
+    }
+  }
+
+  .company-name {
+    text-transform: uppercase;
+
+    &.links {
+      a {
+        padding: 5px 0;
+        color: $text-color;
+
+        &:hover {
+          color: $bg-blue-1;
+        }
+      }
+    }
+  }
+
+  .address {
+    padding: 20px 0;
+  }
+
+  h2 {
+    padding-bottom: 20px;
+    font-family: $main-font-bold;
+    font-size: 12px;
+    color: #232525;
+    text-transform: uppercase;
+  }
+
+  p {
+    line-height: 22px;
+  }
+
+  .footer-logo {
+    width: 60%;
+    margin: 106px auto 107px;
+    @media (max-width: 767px) {
+      margin: 0 auto 40px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
+.footer-right {
+  @media (min-width: 767px) {
+    padding: 50px 0 40px;
+  }
+}
+.footer-grid {
+  padding: 5px 32px;
+
+  &.no-padding-left {
+    padding-left: 0;
+  }
+
+  &.no-padding-right {
+    padding-right: 0;
+  }
+
+  a {
+    &:hover {
+      color: #c5a900;
+    }
+  }
+  @media (max-width: 1237px) {
+    padding: 5px 15px;
+  }
+  @media (max-width: 991px) {
+    padding: 15px 0;
+  }
+
+  ul {
+    li {
+      list-style-type: none;
+
+      a {
+        display: inline-block;
+        padding: 1px 0;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.input-text {
+  width: 100%;
+  padding: 15px 14px;
+  font-family: $main-font-medium;
+  font-size: 12px;
+  color: #232525;
+  letter-spacing: 3px;
+  background-color: transparent;
+  border: solid 1px #232525;
+  border-radius: 0;
+  @media (max-width: 767px) {
+    text-align: center;
+  }
+}
+
+.input-text::-webkit-input-placeholder {
+  color: #232525;
+}
+
+.input-text:-moz-placeholder {
+  /* Firefox 18- */
+  color: #232525;
+}
+
+.input-text::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #232525;
+}
+
+.input-text:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #232525;
+}
+
+.input-text::-ms-input-placeholder {
+  /* Edge */
+  color: #232525;
+}
+
+.input-text:placeholder-shown {
+  /* Standard one last! */
+  color: #232525;
+}
+
+.input-text:focus {
+  outline: none;
+}
+
+.form-holder {
+  position: relative;
+  width: 80%;
+  @media (max-width: 992px) {
+    width: 280px;
+  }
+  @media (max-width: 767px) {
+    width: 270px;
+    margin: 0 auto;
+  }
+
+  .form-button-arrow {
+    position: absolute;
+    top: 14px;
+    right: 1px;
+    padding: 6px 18px 6px 6px;
+    font-family: $main-font-medium;
+    font-size: 0;
+    color: #232525;
+    background: #fff;
+    border: 0;
+
+    &:before {
+      font-family: $main-font-light;
+      font-size: 33px;
+      line-height: 12px;
+      text-shadow: none;
+      content: '\203A';
+    }
+    &:disabled{
+      cursor: not-allowed;
+      opacity: .5;
+    }
+  }
+  &.tnc {
+    margin-top: 10px;
+  }
+}
+
+.form-btn {
+  margin-top: 17px;
+  padding: 12px 50px;
+  font-family: $main-font-medium;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: solid 2px #fff;
+  -webkit-appearance: none;
+          appearance: none;
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .four-coloumn {
+    display: table;
+    width: 100%;
+  }
+  .foot-v-center {
+    text-align: center;
+    vertical-align: middle;
+    border: 0;
+  }
+
+  .no-border {
+    border: 0;
+  }
+}
+
+.footer-bottom-wrapper {
+  color: $bg-black;
+}
+
+.footer-copyright {
+  padding: 21px 10px;
+  font-family: $main-font-book;
+  font-size: 10px;
+  line-height: 18px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-color: $bg-black;
+  @media (max-width: 991px) {
+    padding: 15px 10px;
+    text-align: center;
+  }
+
+  .container {
+    width: auto;
+    max-width: 1237px;
+  }
+
+  a {
+    color: #fff;
+  }
+
+  .hilton-policies {
+    display: block;
+    padding: 20px 0 0;
+    font-size: 11px;
+    text-transform: none;
+    @media (min-width: $screen-md-min) {
+      display: inline-block;
+      float: right;
+      padding: 0;
+    }
+
+    a {
+      display: block;
+      padding: 5px 0;
+      color: #fff;
+      @media (min-width: $screen-sm-min) {
+        display: inline-block;
+        padding: 0 7px;
+      }
+      @media (min-width: $screen-md-min) {
+        padding: 0 0 0 15px;
+      }
+
+    }
+  }
+
+}
+
+.highgate-logo {
+  width: 80%;
+  margin: 20px 0 0;
+  text-align: center;
+  @media (max-width: 840px) {
+    width: 90%;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  a {
+    img {
+      width: auto;
+      border: 0;
+      @media (max-width: $screen-md-min) and (min-width: $screen-sm-min) {
+        width: 60px;
+      }
+    }
+  }
+}

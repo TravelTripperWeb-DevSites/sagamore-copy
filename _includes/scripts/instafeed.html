@@ -1,0 +1,36 @@
+<script type="text/javascript">
+  $(document).ready(function() {
+
+    // Instagram API script
+  var ownerId = '6142505566';
+  var instaurl = 'https://instafeed.traveltripper.io/u/sagamorehotel/';
+  var instaFeedUrl = "https://www.instagram.com/p/";
+  $.ajax({
+    url: instaurl,
+    dataType: "json",
+    success: function(response) {
+      console.log(response);
+      setTimeout(function() {
+        $.each(response.medias, function(i, item) {
+          if (window.innerWidth > 768) {
+            if (i > 4) return false;
+          } else {
+            if (i > 3) return false;
+          }
+
+
+          $('<li style="background-image: url(' + item.thumbnail + ');"><a href="' + instaFeedUrl + item.shortcode +
+            '" target="_blank"><div class="bg"></div><div class="icons"><span><i class="fa fa-heart-o" aria-hidden="true"></i>' + item.like_count + ' <i class="fa fa-comment-o" aria-hidden="true"></i>' + item.comment_count +
+            '</span></div></a></li>')
+            .appendTo('#instafeed');
+        });
+        var heightDIV = $('#instafeed div:first-child')
+          .innerWidth();
+        $('#instafeed')
+          .slideDown('slow');
+      }, 500);
+    }
+  });
+
+  });
+</script>

@@ -1,0 +1,44 @@
+{
+  "name": "Interiors",
+  "photos": [
+    {
+      "name": "interior1",
+      "file_name": "interior1.jpg",
+      "url": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073519/interior1.jpg",
+      "tags": "",
+      "description": "",
+      "date_added": "2018-11-22-073519",
+      "file_type": "image/jpeg",
+      "width": 1200,
+      "height": 900,
+      "file_size": 623300,
+      "url_large": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073519/large_interior1.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073519/medium_interior1.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073519/small_interior1.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073519/xsmall_interior1.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073519/thumb_interior1.jpg",
+      "path": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073519/interior1.jpg",
+      "alt": "interior1"
+    },
+    {
+      "name": "interior2",
+      "file_name": "interior2.jpg",
+      "url": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073530/interior2.jpg",
+      "tags": "",
+      "description": "",
+      "date_added": "2018-11-22-073530",
+      "file_type": "image/jpeg",
+      "width": 1200,
+      "height": 900,
+      "file_size": 643259,
+      "url_large": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073530/large_interior2.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073530/medium_interior2.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073530/small_interior2.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073530/xsmall_interior2.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073530/thumb_interior2.jpg",
+      "path": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073530/interior2.jpg",
+      "alt": "interior2"
+    }
+  ],
+  "description": ""
+}

@@ -1,58 +1,77 @@
-// Base Elements
-// ==========================================================================
-
 body {
-  color: $text-color;
-  font-family: $global-font-family;
+  margin: 0;
+  padding: 0;
+  font-family: $main-font-book;
+  line-height: normal;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: $header-font-family;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
 }
 
-h1 {
-  font-size: $type-size-3;
+a:focus,
+a:hover {
+  text-decoration: none;
 }
 
-h2 {
-  font-size: $type-size-4;
-}
-
-h3 {
-  font-size: $type-size-5;
-}
-
-h4 {
-  font-size: $type-size-6;
-}
-
-h5 {
-  font-size: $type-size-6;
-}
-
-h6 {
-  font-size: $type-size-6;
-}
-
-small, .small {
-  font-size: $type-size-6;
-}
-
-u,
-ins {
-  border-bottom: 1px solid $text-color;
-}
-
-// Links
-
-a {
-  color: $link-color;
-  &:visited {
-    color: $link-color-visited;
+.container {
+  width: 1237px;
+  padding: 0;
+  @media (max-width: 1240px) {
+    width: auto;
+    padding: 0 15px;
   }
-  &:hover,
-  &:active {
-    outline: 0;
-    color: $link-color-hover;
+}
+
+
+.tnc {
+  display: flex;
+  margin-top: 10px;
+  input {
+    margin: 0 10px 0 0;
   }
+  label {
+    font-family: $main-font-book;
+    font-weight: normal;
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+// News letter and forms tnc scss
+
+.agree {
+  display: inline-block;
+  text-align: left;
+  input[type='checkbox'] {
+    height: auto;
+  }
+  .form-check-label {
+    padding-top: 0;
+    padding-left: 10px;
+    font-weight: normal;
+  }
+  a {
+    color: $tc-black;
+    text-decoration: underline;
+    &:hover {
+      color: $bg-blue-1;
+    }
+  }
+}
+
+.bg-styles {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }

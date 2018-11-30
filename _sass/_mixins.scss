@@ -1,12 +1,8 @@
-// Mixins
-// ==========================================================================
-
-
-// Vertical Center (Includes IE9)
-
-@mixin vertical-center {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+//  Mixins   ==========================================================================
+@mixin global-transition($time) {
+  -webkit-transition: all $time;
+  -moz-transition: all $time;
+  -o-transition: all $time;
+  -ms-transition: all $time;
+  transition: all $time;
 }

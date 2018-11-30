@@ -1,37 +1,96 @@
 ---
 ---
-@charset "UTF-8";
 
-@import "../_sass/bootstrap/scss/functions";
-@import "../_sass/bootstrap/scss/variables";
-@import "../_sass/bootstrap/scss/mixins";
+// Core variables and mixins
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
 
-@import "../_ttio_templates/bedrock/_sass/variables";
-// Add any parts of bootstrap needed for template development (mixins, variables ect)
+// Reset and dependencies
+@import "bootstrap/normalize";
+@import "bootstrap/print";
+@import "bootstrap/glyphicons";
 
-{% comment %}
-TODO: Set up a general color library to override base things in "varaibles.css"
-{% endcomment %}
+// Core CSS
+@import "bootstrap/scaffolding";
+@import "bootstrap/type";
+@import "bootstrap/code";
+@import "bootstrap/grid";
+@import "bootstrap/tables";
+@import "bootstrap/forms";
+@import "bootstrap/buttons";
 
-{% if site.data.colors.link-color %}
-  $info-color: {{site.data.colors.link-color }};
-{% endif %}
-@import "variables"; //Overide any variables here
+// Components
+@import "bootstrap/component-animations";
+@import "bootstrap/dropdowns";
+@import "bootstrap/button-groups";
+@import "bootstrap/input-groups";
+@import "bootstrap/navs";
+@import "bootstrap/navbar";
+@import "bootstrap/breadcrumbs";
+@import "bootstrap/pagination";
+@import "bootstrap/pager";
+@import "bootstrap/labels";
+@import "bootstrap/badges";
+@import "bootstrap/jumbotron";
+@import "bootstrap/thumbnails";
+@import "bootstrap/alerts";
+@import "bootstrap/progress-bars";
+@import "bootstrap/media";
+@import "bootstrap/list-group";
+@import "bootstrap/panels";
+@import "bootstrap/responsive-embed";
+@import "bootstrap/wells";
+@import "bootstrap/close";
 
+// Components w/ JavaScript
+@import "bootstrap/modals";
+@import "bootstrap/tooltip";
+@import "bootstrap/popovers";
+@import "bootstrap/carousel";
 
+// Utility classes
+@import "bootstrap/utilities";
+@import "bootstrap/responsive-utilities";
+
+// Bedrock components
+@import "variables";
 @import "mixins";
+@import "utilities";
+@import "fonts";
 @import "base";
+@import "navigation";
 @import "header";
 @import "footer";
-@import "utilities";
-@import "carousel";
-@import "pages/shared";
+
+// Site-wide components
+@import "conversion-plus";
+@import "datepicker";
+@import "instagram";
+@import "save-the-children";
+@import "mobile-redirect";
+
+// Page specific components
 @import "pages/about";
 @import "pages/contact";
-@import "pages/dining";
-@import "pages/events";
+@import "pages/experiences";
 @import "pages/gallery";
+@import "pages/home";
 @import "pages/location";
+@import "pages/meetings";
 @import "pages/offers";
-@import "pages/rooms";
-@import "shame";
+@import "pages/request-for-proposal";
+@import "pages/room";
+@import "pages/privacy";
+@import "pages/sagamore-art";
+
+// Shameful, shameful things that need changed
+@import "layout";
+
+// Files from the root CSS directory that I've added via Sass
+@import "animations";
+@import "lightgallery";
+@import "owl.carousel";
+@import "owl.theme";
+@import "owl.transitions";
+@import "slick";
+@import "slick.theme";

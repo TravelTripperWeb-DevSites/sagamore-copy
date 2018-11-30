@@ -1,0 +1,105 @@
+---
+layout: default
+---
+{% assign offer = page %}
+{% assign item = site.data._models.offers %}
+{% for p in item %}
+{% if p.url_friendly_name == offer.url_friendly_name %}
+{% assign pInd = forloop.index0 | minus: 1 %}
+{% assign nInd = forloop.index0 | plus: 1 %}
+{% if forloop.first != true %}
+{% assign prevItemTitle = item[pInd].title %}
+{% assign prevItemUrl = item[pInd].url_friendly_name %}
+{% endif %}
+{% if forloop.last != true %}
+{% assign nextItemTitle = item[nInd].title %}
+{% assign nextItemUrl = item[nInd].url_friendly_name %}
+{% endif %}
+
+{% endif %}
+{% endfor %}
+
+<section>
+  <div class="container-fluid no-padding">
+    <div class="page-banner" style="background-image: url('/assets/images/offers/offer-details-banner.jpg')">
+      <h1 class="page-title" tabindex="0">Exclusive Offers</h1>
+    </div>
+  </div>
+</section>
+
+<section ng-controller="offerDetail">
+  <ul class="gallery-nav">
+    {% if prevItemUrl %}
+    <li><a href="/offers/{{prevItemUrl}}">Previous Offer</a></li>
+    {% endif %}
+    <li><a href="/offers/{{offer.url_friendly_name}}" class="active">{{offer.title}}</span></a></li>
+    {% if nextItemUrl %}
+    <li><a href="/offers/{{nextItemUrl}}">Next Offer</a></li>
+    {% endif %}
+  </ul>
+</section>
+
+<section class="rd-row-1">
+  <div id="rd-carousel" class="carousel slide" data-ride="carousel">
+
+    <div class="carousel-inner" role="listbox">
+      <div class="item active" role="option" style="background-image:url('{{offer.banner_image.url}}');">
+        <div class="rdc-car-con">
+          <h3 class="sub-title" tabindex="0">Special Offer</h3>
+          <h2 class="title" tabindex="0">{{offer.title}}</h2>
+          <div><a class="button-common-2" href="{{offer.book_now_link}}" target="_blank">Book this offer</a></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="r-info">
+  <div class="container no-padding">
+
+    <div class="col-md-6 no-padding -left off-det-cont">
+      <div class="con-1 off-det-pd">
+        <h2 class="title" tabindex="0">All in the details</h2>
+        <h3 class="sub-title off-det" tabindex="0"> Book in advance for best offers</h3>
+        <div class="des-wrap off-det-text">
+          <div class="details-page-description" tabindex="0">
+            {{offer.long_info}}
+          </div>
+          <p class="des" tabindex="0">Need assistance? Our dedicated reservations team is available around the clock:</p>
+          <p class="des" v>Sagamore Miami Beach | <a href="tel:8772426673">(877) 242-6673</a> or <a href="mailto:reservations@sagamoresouthbeach.com">reservations@sagamoresouthbeach.com</a></p>
+        </div>
+        <div class="spacing"><a id="tracking_offer_booknow" class="button-common-2" href="{{offer.book_now_link}}" target="_blank">Book this offer</a></div>
+        <div class="spacing"><a id="tracking_offer_contactus" class="button-common-2" href="/contact/">Contact Us</a></div>
+      </div>
+      <!-- <div class="con-2"><img src="/assets/images/offers/od-pic-1.jpg" alt=""></div> -->
+    </div>
+
+    <div class="col-md-6 no-padding -right">
+
+      <div class="con-3">
+        <img src="/assets/images/offers/visual-gallery.jpg" alt="Guest Room">
+        <div class="text">
+          <h2 class="title">Take a visual Journey</h2>
+          <div class="spacing"><a class="button-common-2 -white" href="/gallery/">View Gallery</a></div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="container no-padding">
+    <img class="img-responsive f-w" src="/assets/images/offers/offers-image.jpg" alt="Offers">
+  </div>
+</section>
+{% include offers-carousel.html %}
+
+<section class="loc-cta" style="background-image: url('/assets/images/offers/offers-cta.jpg');">
+  <div class="container-fluid no-padding">
+    <div class="cta">
+      <h3 tabindex="0">MODERN MANHATTAN</h3>
+      <div class="cta-logo"><a href="/"><img src="/assets/images/logo.png" alt="The Sagamore Miami Beach Hotel" /></a></div>
+      <div class="btn-holder text-center"><a href="https://www.myhotelreservation.net/b/hamiasag/HAMIASAG/" target="_blank" class="button-common">Book Your Stay</a></div>
+    </div>
+  </div>
+</section>

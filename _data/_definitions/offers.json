@@ -1,0 +1,34 @@
+{
+  "title": {
+    "label": "Offer Name",
+    "required": true
+  },
+  "url_friendly_name": {
+    "type": "url_slug",
+    "label": "URL Friendly Name",
+    "required": true
+  },
+  "banner_image": {
+    "label": "Offer Banner image",
+    "type": "image",
+    "required": true
+  },
+  "short_info": {
+    "label": "Short Description",
+    "type": "text",
+    "required": true
+  },
+  "book_now_link": {
+    "type": "text",
+    "required": true,
+    "label": "Book Now Link"
+  },
+  "long_info":{
+		"label": "Description",
+		"required": true,
+		"type": "richtext"
+	},
+  "order": {
+    "type": "integer"
+  }
+}

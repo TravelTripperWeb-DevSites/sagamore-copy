@@ -1,28 +1,139 @@
 ---
 layout: default
-title: About
-meta_description:
-permalink: /about/
+title: Sagamore Miami Beach Hotel | New York Center Hotels
+meta_description: Just right for those who love the thrill of Broadway life and live
+  performances, the Sagamore Miami Beach Hotel captures the spirit of a buzzing pre-show
+  Broadway theater.
+permalink: "/about/"
 meta_tags:
-  robots:
+  robots: 
+published_localized:
+  en: true
+title_localized:
+  en: Boutique Miami Beach Hotel | About The Sagamore Hotel
+meta_description_localized:
+  en: The iconic and legendary Sagamore Hotel on Miami Beach offers deluxe accommodations,
+    an array of amenities, and a unique glimpse into the art culture of Miami.
+layout_localized:
+  en: default
+label: About
+permalink_localized:
+  en: "/about/"
+
 ---
 
-{% comment %}
+<section class="container-fluid no-padding">
+  <div class="page-banner" style="background-image: url('/assets/images/about/about-banner.jpg')">
+    {% regionblock page_title, type:header %}
+      <h1 class="page-title" tabindex="0">Iconic Destination</h1>
+    {% endregionblock %}
+  </div>
+</section>
 
-  Name:
+<section class="loc-con-one about">
+  <div class="container no-padding">
+    <div class="col-sm-6 no-padding">
+      <div class="con-two">
+        <div class="abt">
+          {% regionblock section_1_image, type:image %}
+            <img src="/assets/images/about/about-1.jpg" alt="Modern Manhattan">
+          {% endregionblock %}
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 no-padding">
+      <div class="con-one">
+        {% regionblock section_1_title, type:header %}
+          <h2 class="title-head" tabindex="0">Modern Manhattan</h2>
+        {% endregionblock %}
+        {% regionblock section_1_body, type:text %}
+          <p class="des" tabindex="0">Just right for those who love the thrill of Broadway life and live performances, Sagamore Miami Beach Hotel captures the spirit of a buzzing pre-show Broadway theater. Guests gather under high ceilings and flow between its New York-inspired lobby, stunning ballroom, designer <a title="Meeting space in NYC" href="/meetings/">event space</a> and, <a title="Spacious hotel in central NYC" href="/rooms/">spacious suites</a>.</p>
+        {% endregionblock %}
+      </div>
+    </div>
+  </div>
+</section>
 
-    About Page
+<section class="loc-con-one about">
 
-  Description:
+  <div class="container no-padding">
+    <div class="col-sm-6 no-padding">
+      <div class="con-one">
+        {% regionblock section_2_title, type:header %}
+          <h2 class="title-head" tabindex="0">Midtown's Best Kept Secret</h2>
+        {% endregionblock %}
+        {% regionblock section_2_body, type:text %}
+          <p class="des"  tabindex="0">It's not every day you find a meal you'd want to come back for in Midtown Manhattan. But it is at <a href="http://www.nilesnyc.com/" target="_blank">Niles Restaurant</a>. Specializing in New American fare, Niles Restaurant matches its modern menu with impeccable service for a stand-out dining experience in the heart of Manhattan.</p>
+        {% endregionblock %}
+      </div>
+    </div>
+    <div class="col-sm-6 no-padding">
+      <div class="con-two">
+        <div class="abt">
+          {% regionblock section_2_image, type:image %}
+            <img src="/assets/images/about/amenities.jpg" alt="amenities">
+          {% endregionblock %}
+        </div>
+      </div>
+    </div>
+  </div>
 
-    Static content that can be modified by editable regions.
 
-  Usage:
 
-    Text   - {% regionblock region_name, type:text %}{% endregionblock %}
+</section>
 
-    Header - {% regionblock region_name, type:header %}{% endregionblock %}
+<section class="rooms-section">
+  <div class="container no-padding">
 
-    Image  - {% regionblock region_name, type:image %}{% endregionblock %}
+    <div class="col-md-4 no-padding">
+      <div class="new-caption-area" id="roomscroll" class="carousel slide" data-ride="carousel">
 
-{% endcomment %}
+        <p tabindex="0">DISCOVER EXCITING<br>SPECIAL OFFERS</p>
+
+        <div class="carousel-controls">
+          <a class="left nav-control" href="#rooms-carousel"  data-slide="prev" title="Previous"></a>
+          <a class="right nav-control" href="#rooms-carousel"  data-slide="next" title="Next"></a>
+        </div>
+
+        <div class="carousel-inner">
+          {% assign offers = site.data._models.offers | sort: "order" %}
+          {% for singleoffer in offers %}
+            <div class="item {% if forloop.first %} active {% endif %}" >
+              <h3  tabindex="0">{{singleoffer.title}}</h3>
+              <div class="links">
+                <a href="/offers/{{singleroom.url_friendly_name}}" class="button-common-2">VIEW THIS Offer</a><br>
+                <a href="/offers/" class="button-common-2">VIEW ALL Offers</a>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col-md-8 no-padding">
+      <div class="rooms-carousel home-special-carousel">
+        <div id="rooms-carousel" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner m-t-20">
+            {% for singleoffer in offers %}
+              <div class="item {% if forloop.index == 1 %} active {% endif %}">
+                <img alt="{{singleoffer.title}}" src="{{singleoffer.banner_image.url}}" class="width-full">
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="loc-cta about-cta" style="background-image: url('/assets/images/about/cta-about.jpg');">
+  <div class="container-fluid no-padding">
+    <div class="cta">
+      <h3  tabindex="0">THE PERFECT STAY</h3>
+      <div class="cta-logo"><img src="/assets/images/logo.png" alt="The Sagamore Miami Beach Hotel"></div>
+      <div class="btn-holder text-center"><a href="https://www.myhotelreservation.net/b/hamiasag/HAMIASAG/" target="_blank" class="button-common" rel="nofollow">Book Now</a></div>
+    </div>
+  </div>
+</section>

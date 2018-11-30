@@ -1,0 +1,204 @@
+.special-banner-bar {
+    margin: 0px auto;
+    text-align: center;
+    .content, &__brg {
+      background-color: #161515;
+      padding: 15px;
+    }
+    padding: 0 65px;
+    @media (max-width: 1180px) {
+      padding: 0 50px;
+    }
+    @media (max-width: 767px) {
+      padding: 0;
+    }
+    
+    
+    h2,a {
+        display: inline-block;
+        margin: 0 15px 0;
+        vertical-align: middle;
+    }
+    h2 {
+        text-transform: uppercase;
+        color: #ffffff;
+        font-size: 22px;
+    }
+    a {
+        background-color: transparent;
+        border: solid 1px #ffffff;
+        padding: 14px 23px;
+        text-transform: uppercase;
+        letter-spacing: 0.17em;
+        font-size: 13px;
+        display: inline-block;
+        color: #ffffff;
+        border-radius: 0px;
+        text-shadow: none;
+        transition: all 0.3s ease;
+        &:hover{
+            background-color: #cd9134;
+            color: #fff;
+            border-color: #bd832a;
+            text-shadow: 0px 1px 0px #bd832a;
+        }
+    }
+}
+
+
+
+
+
+
+.special-banner-bar__brg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: left;
+  margin: 0px auto;
+  
+  
+  .cp-top {
+   width: 285px;
+ }
+ .ttweb-rate-compare {
+    width: 300px;
+    margin: 0 20px;
+    padding: 0 20px;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    @media (max-width: 650px) {
+      padding: 0;
+      margin: 0;
+    }
+    
+ }
+  .ttweb-rate-compare__row {
+    color:white;
+    margin-right: 10px;
+    float: left;
+    width: calc(50% - 10px);
+    white-space: nowrap;
+    @media (min-width: 650px) and (max-width: 900px) {
+      float: none;
+      width: auto;
+    }
+  }
+  a { 
+    padding: 12px 16px 8px 16px;
+    line-height: 1em;
+    margin: 0
+  }
+  .ttweb-rate-compare__label, .ttweb-rate-compare__cost {
+    display: inline-block;
+  }
+  
+  
+  @media(max-width: 650px) {
+    flex-wrap: wrap;
+    .cp-top {
+      width: 90%;
+    }
+    .ttweb-rate-compare {
+      width: 90%;
+      border: none;
+      border-top: 1px solid #3e3e3e;
+      padding-top: 5px;
+      margin-top: 5px;
+      .ttweb-rate-compare__label, .ttweb-rate-compare__cost {
+        line-height: 12px;
+      }
+    }
+    
+    .button {
+      display: none;
+    }
+  }
+  
+}
+.cp-header {
+  font-size: 24px;
+  line-height: 24px;
+  font-family: "DIN Condensed";
+  font-weight: bold;
+  width: 70%;
+  @media(min-width: 374px) and (max-width: 560px) {
+    font-size: 28px;
+  }
+}
+.cp-subheader {
+  font-size: 12px;
+  font-weight: 300;
+}
+.cp-lowestrate {
+  float: right;
+  width: 30%;
+  text-align: right;
+  .ttweb-resume-search-widget__lowestcost__crossout {
+    @media(min-width: 374px) and (max-width: 560px) {
+      font-size: 20px;
+    }
+  }
+  .ttweb-resume-search-widget__lowestcost__actual {
+    @media(min-width: 374px) and (max-width: 560px){
+      font-size: 20px;
+    }
+  }
+}
+
+.ttweb-rate-compare {
+  font-size: 14px;
+}
+
+.ttweb-resume-search-widget__date-row {
+  cursor: pointer;
+}
+.ttweb-resume-search-widget__change-dates-row {
+  text-align: center;
+  margin: .5em 0;
+ 
+}
+
+.ttweb-resume-search-widget__lowestcost__crossout {
+  margin-right: 5px;
+}
+.ttweb-gradient-modal__header {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: .5em;
+  margin-bottom: .5em;
+}
+.ttweb-resume-search-widget--no-resume {
+  border-top: 1px solid #ccc;
+  padding-top: .5em;
+  margin-top: .5em;    
+}
+.ttweb-resume-search-widget__title {
+  display: none;
+}
+.ttweb-resume-search-widget__rate {
+  display: none;
+}
+.ttweb-resume-search-widget__tonight-rates {
+  display: none;
+}
+.ttweb-gradient-modal__footer {
+  display: block;
+}
+.ttweb-gradient-modal .button {
+  display: block;
+  background: #0f73cc;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  padding: 14px 15px 12px;
+  margin: 20px auto;
+  text-align: center;
+  width: 50%;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1em;
+}
+
+
+

@@ -1,14 +1,75 @@
-<div class="container d-flex justify-content-between">
-  <div class="social-icons">
-    {% if site.data.ui-text[site.default_lang].follow_label %}
-      <strong>{{ site.data.ui-text[site.default_lang].follow_label }}</strong>
-    {% endif %}
-    {% if site.data.social.twitter.username %}
-      <a href="https://twitter.com/{{ site.data.social.twitter.username }}"><i class="fab fa-twitter-square" aria-hidden="true"></i> Twitter</a>
-    {% endif %}
-    {% if site.data.social.facebook.username %}
-      <a href="https://facebook.com/{{ site.data.social.facebook.username }}"><i class="fab fa-facebook-square" aria-hidden="true"></i> Facebook</a>
-    {% endif %}
+<footer class="footer">
+  <div class="footer-wrapper four-coloumn">
+    <div class="container-fluid no-padding">
+
+      <div class="col-md-4 col-sm-2 no-padding v-top">
+        <div class="footer-logo">
+          <a href="/"><img src="/assets/images/logo-black.png" alt="Sagamore"></a>
+        </div>
+      </div>
+
+      <div class="col-md-8 col-sm-10 b-l footer-right">
+        <div class="container-fluid p-l-70">
+          <div class="row center">
+
+            <div class="col-md-3 col-sm-3 no-padding v-top">
+              <div class="footer-grid">
+                <h2 tabindex="0">Contact</h2>
+                <p>
+                  <a href="https://goo.gl/maps/g8E9mVQmJkq" target="_blank"><span class="block-element company-name">The Sagamore Hotel Miami Beach</span><span class="block-element address">1671 Collins Ave <br>Miami Beach, FL 33139<br>United States</span></a>
+                  <span class="block-element">Property: <a href="tel:3055358088">(305) 535-8088</a></span>
+                  <span class="block-element">Reservations: <a href="tel:8772426673">(877) 242-6673</a></span>
+                  <span class="block-element"><a href="mailto:reservations@sagamorehotel.com">reservations@sagamorehotel.com</a></span>
+                </p>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-3 no-padding v-top">
+              <div class="footer-grid">
+                <h2 tabindex="0">Learn More</h2>
+                <ul class="block-element company-name links">
+                  {% for link in site.data.navigation.footer %}
+                  <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6 no-padding v-top  no-border">
+              <div class="footer-grid">
+                <h2 tabindex="0">Newsletter Sign-up</h2>
+                <form class="jotform-form" action="https://submit.jotform.me/submit/83243432437454/" method="post" name="form_83243432437454" id="83243432437454" accept-charset="utf-8">
+                  <input type="hidden" name="formID" value="83243432437454">
+                  <div class="form-holder ">
+                    <input type="email" class=" form-textbox validate[required] input-text" data-type="input-textbox" title="YOUR EMAIL" aria-label="YOUR EMAIL" id="input_3" name="q3_email" size="21" value="" placeholder="YOUR EMAIL" required="required">
+                    <button id="subscribe" type="submit" class="form-button-arrow">Submit</button>
+                  </div>
+                  <div class="form-holder form-check tnc">
+                    <input type="checkbox" class="form-check-input" aria-label="agree" name="q4_iAgree[]" value="agree" aria-label="agreed" required>
+
+                    <label class="form-check-label" for="agree" tabindex="0">I agree to the <a href="/terms/" target="_blank">Terms of Service</a> and <a href="/privacy-policy/" target="_blank">Privacy Policy</a>.</label>
+
+                  </div>
+                  <input type="hidden" id="simple_spc" name="simple_spc" value="83243432437454">
+                </form>
+                <div class="highgate-logo">
+                  <a href="http://www.highgate.com/" target="_blank"><img src="/assets/images/highgate-logo-black.jpg" alt="Highgate"></a>
+                </div>
+                <div class="social-icons-footer">
+                  <h2>Follow</h2>
+                  <a href="https://www.facebook.com/Sagamorehotel/" rel="nofollow" target="blank" title="facebook" tabindex="-1"><i class="fa fa-facebook"></i></a>
+                  <a href="https://www.twitter.com/sagamorehotel/" rel="nofollow" target="blank" title="twitter" tabindex="-1"><i class="fa fa-twitter"></i></a>
+                  <a href="https://www.instagram.com/sagamorehotel/" rel="nofollow" target="blank" title="instagram" tabindex="-1"><i class="fa fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
-  <span class="text-muted">&copy; {{ site.time | date: '%Y' }} {{ site.data.hotel_settings.name | default: site.data.seo.default_title }}</span>
-</div>
+  <div class="footer-copyright">
+    <div class="container">
+      <p tabindex="0">&copy; <a href="/" title="Sagamore Miami Beach">Sagamore Miami Beach</a> {{ site.time | date: '%Y' }} All Rights Reserved</p>
+    </div>
+  </div>
+</footer>

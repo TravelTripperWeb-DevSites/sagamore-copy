@@ -1,24 +1,58 @@
 ---
 layout: default
-title: Rooms
-meta_description:
-permalink: /rooms/
+title: New York Hotel Rooms | Midtown Manhattan Hotel Rooms & Suites
+meta_description: Relax in style during your trip to New York City with a wide range
+  of luxurious hotel rooms and suites available to choose from only at the Sagamore
+  Miami Beach.
+permalink: "/rooms/"
 meta_tags:
-  robots:
+  robots: 
+published_localized:
+  en: true
+title_localized:
+  en: Art Hotel on Miami South Beach | Rooms at The Sagamore Hotel
+meta_description_localized:
+  en: Our hotel boasts some of the largest rooms in South Beach. Whether you’re travelling
+    for business or leisure, you’ll love our spacious suites & breathtaking views.
+layout_localized:
+  en: default
+label: Rooms
+permalink_localized:
+  en: "/rooms/"
+
 ---
 
-{% comment %}
+<section class="container-fluid no-padding">
+  <div class="page-banner" style="background-image:url('/assets/images/rooms/rooms-banner.jpg');">
+    {% regionblock page_title, type:header %}
+      <h1 class="page-title" tabindex="0">Boutique Accommodations</h1>
+    {% endregionblock %}
+  </div>
+</section>
 
-  Name:
+<section class="listing-intro container">
+  {% regionblock rooms_intro, type:text %}
+    <p>The iconic and legendary Sagamore Hotel on Miami Beach offers deluxe accommodations, an array of amenities, and a unique glimpse into the art culture that embodies the very essence of the property. Our 93-room hotel, with an ample number of suites, boasts some of the largest standard rooms throughout South Beach. Each room offers the comforts of home while drawing decorative inspiration from the Art Deco style that embodies the region. Whether you’re traveling for business or leisure, we’re sure you’re going to love our spacious suites, breathtaking views, and prime location.</p>
+  {% endregionblock %}
+</section>
 
-    Rooms Listing Page
-
-  Description:
-
-    Display room list from RezTrip.
-
-{% endcomment %}
-
-{% for room in site.data._models.rooms %}
-  {% include components/room %}
-{% endfor %}
+<section class="container">
+  <div class="row">
+    <div class="rooms-holder">
+      {% assign rooms = site.data._models.rooms | sort: "order" %}
+      {% for room in rooms %}
+        <div class="col-md-4 col-sm-6">
+          <div class="rooms-item">
+            <figure><img src="{{room.banner_image.url_medium}}" alt="{{room.banner_image.alt}}"></figure>
+            <h2 tabindex="0">{{room.title}}</h2>
+            <p>{{room.short_info}}</p>
+            <div class="extra-padding">
+              <a class="button-common btn-blue" href="/rooms/{{room.url_friendly_name}}/">View room</a>
+              <a class="button-common btn-blue btn-rooms" target="_blank" href="{{room.book_now_link}}">Book Room</a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
