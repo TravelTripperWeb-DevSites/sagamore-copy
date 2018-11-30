@@ -11,33 +11,35 @@ meta_tags:
   <div class="container-fluid no-padding">
     <div class="page-banner" style="background-image:url('/assets/images/offers/offers-banner.jpg');">
       {% regionblock page_title, type:header %}
-        <h1 class="page-title" tabindex="0">Special Offers</h1>
+        <h1 class="page-title" tabindex="0">Exclusive Offers</h1>
       {% endregionblock %}
     </div>
   </div>
 </section>
 
-<div rt3-special-rates="offers">
-  {% assign offers = site.data._models.offers | sort: "order" %}
-  {% for offer in offers %}
-    <div class="m-t-60">
-      <section class="models">
-        <div class="container">
-          <div class=" two-col-wrap">
-            <div class="row no-gutters">
-              <div class="col-sm-6 sp-img v-center" style="background-image:url({{offer.banner_image.url}});"></div>
-              <div class="col-sm-6 sp-content v-center">
-                <p class="title" tabindex="0">{{offer.title}}</p>
-                <p class="desp">{{offer.short_info}}</p>
-                <div class="btn-holder btn-offerlist">
-                  <a class="button-common" href="/offers/{{offer.url_friendly_name}}/">View this offer</a>
-                  <a class="button-common" href="{{offer.book_now_link}}" target="_blank" rel="nofollow">BOOK NOW</a>
-                </div>
-              </div>
+<section class="listing-intro container">
+  {% regionblock rooms_intro, type:text %}
+    <p>Choose from our best rates and special offers when you book direct with the Sagamore Hotel, an eye-catching fixture on Miami Beach known for its unique collection of iconic art, accommodating suites, and sought-after location. An Art Deco gem set on Miami’s best beach, the Sagamore Hotel is both on the sand and just steps from many of the city’s favorite spots, such as Lincoln Road Mall, Collins, and the New World Center. Experience Miami as like no other with our exclusive selection of curated packages and offers, proving that that travel is, indeed, art. </p>
+  {% endregionblock %}
+</section>
+
+<section class="models">
+  <div class="container">
+    {% assign offers = site.data._models.offers | sort: "order" %}
+    {% for offer in offers %}
+      <div class="offer-list-item two-col-wrap">
+        <div class="row no-gutters">
+          <div class="col-sm-6 sp-img v-center" style="background-image:url({{offer.banner_image.url}});"></div>
+          <div class="col-sm-6 sp-content v-center">
+            <p class="title" tabindex="0">{{offer.title}}</p>
+            <p class="desp">{{offer.short_info}}</p>
+            <div class="btn-holder btn-offerlist">
+              <a class="button-common" href="/offers/{{offer.url_friendly_name}}/">View this offer</a>
+              <a class="button-common" href="{{offer.book_now_link}}" target="_blank" rel="nofollow">BOOK NOW</a>
             </div>
           </div>
         </div>
-      </section>
-    </div>
-  {% endfor %}
-</div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
