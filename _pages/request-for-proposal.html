@@ -4,7 +4,7 @@ title: Midtown Manhattan Meeting & Events | Sagamore Miami Beach Hotel RFP
 meta_description: Complete a request for proposal with the Sagamore Miami Beach located in the heart of Midtown Manhattan. The ideal location for business events, weddings, and more.
 permalink: /meetings/request-for-proposal/
 meta_tags:
-  robots:
+robots:
 ---
 
 <div class="meetings rfp">
@@ -33,29 +33,29 @@ meta_tags:
             <div class="two-fields-holder">
               <div class="col-sm-6 no-padding">
                 <div class="form-group right-space">
-                  <input type="text" class="form-control validate[required, Alphabetic]" placeholder="First Name *" required aria-label="First Name">
+                  <input type="text" class="form-control validate[required, Alphabetic]" placeholder="First Name *" required aria-label="First Name" name="q39_firstName">
                 </div>
               </div>
               <div class="col-sm-6 no-padding">
                 <div class="form-group left-space">
-                  <input type="text" class="form-control" placeholder="Last Name *" required aria-label="Company Name">
+                  <input type="text" class="form-control" placeholder="Last Name *" required aria-label="last Name" name="q40_lastName">
                 </div>
               </div>
             </div>
 
             <div class="form-group">
-              <textarea class="form-control" style="width:100%" rows="5" placeholder="Address Details *" aria-label="Address Details" required></textarea>
+              <textarea class="form-control" style="width:100%" rows="5" placeholder="Address Details *" aria-label="Address Details" name="q41_addressDetails" required></textarea>
             </div>
 
             <div class="two-fields-holder">
               <div class="col-sm-6 no-padding">
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="City" aria-label="City">
+                  <input type="text" class="form-control" placeholder="City" aria-label="City" name="q42_city">
                 </div>
               </div>
               <div class="col-sm-6 no-padding">
                 <div class="form-group left-space">
-                  <input type="text" class="form-control" placeholder="State / Province / Region" aria-label="State / Province / Region" >
+                  <input type="text" class="form-control" placeholder="State / Province / Region" aria-label="State / Province / Region" name="q43_stateprovince">
                 </div>
               </div>
             </div>
@@ -65,22 +65,22 @@ meta_tags:
             <div class="two-fields-holder">
               <div class="col-sm-6 no-padding">
                 <div class="form-group right-space">
-                  <input type="text" class="form-control main-date-1" placeholder="Postal / Zip Code" aria-label="Postal / Zip Code">
+                  <input type="text" class="form-control main-date-1" placeholder="Postal / Zip Code" aria-label="Postal / Zip Code" name="q44_zipcode">
                 </div>
               </div>
               <div class="col-sm-6 no-padding">
                 <div class="form-group left-space">
-                  <input type="text" class="form-control alternate-date-1" placeholder="Country" aria-label="Country">
+                  <input type="text" class="form-control alternate-date-1" placeholder="Country" aria-label="Country" name="q45_country">
                 </div>
               </div>
             </div>
 
             <div class="form-group">
-              <input class="form-control" placeholder="Primary Email *" aria-label="Primary Email" required>
+              <input class="form-control" placeholder="Primary Email *" aria-label="Primary Email" name="q46_email" required>
             </div>
 
             <div class="form-group">
-              <input class="form-control" placeholder="Primary Phone Number *" aria-label="Primary Phone Number" required>
+              <input class="form-control" placeholder="Primary Phone Number *" name="q47_phoneNumber" aria-label="Primary Phone Number" required>
             </div>
 
             <div class="checkbox-holder">
@@ -90,13 +90,13 @@ meta_tags:
               <div class="col-sm-8">
                 <div class="row">
                   <label class="checkbox-inline">
-                    <input type="checkbox" value="Voice call" aria-label="Voice call ">Voice call </label>
+                    <input type="checkbox" name="q48_methodOf[]" value="Voice call" aria-label="Voice call ">Voice call </label>
                   <label class="checkbox-inline">
-                    <input type="checkbox" value="Text message" aria-label="Text message">Text message </label>
+                    <input type="checkbox" name="q48_methodOf[]" value="Text message" aria-label="Text message">Text message </label>
                   <label class="checkbox-inline">
-                    <input type="checkbox" value="eMail" aria-label="eMail">eMail </label>
+                    <input type="checkbox" name="q48_methodOf[]" value="eMail" aria-label="eMail">eMail </label>
                   <label class="checkbox-inline">
-                    <input type="checkbox" value="U.S. Mail" aria-label="U.S. Mail">U.S. Mail </label>
+                    <input type="checkbox" name="q48_methodOf[]" value="U.S. Mail" aria-label="U.S. Mail">U.S. Mail </label>
                 </div>
               </div>
             </div>
@@ -108,11 +108,11 @@ meta_tags:
               <div class="col-sm-8">
                 <div class="row">
                   <label class="checkbox-inline">
-                    <input type="checkbox" value="Wedding " aria-label="Wedding  ">Wedding</label>
+                    <input type="checkbox" value="Wedding " name="q49_typeOf[]" aria-label="Wedding  ">Wedding</label>
                   <label class="checkbox-inline">
-                    <input type="checkbox" value="Vow Renewal " aria-label="Vow Renewal ">Vow Renewal</label>
+                    <input type="checkbox" value="Vow Renewal " name="q49_typeOf[]" aria-label="Vow Renewal ">Vow Renewal</label>
                   <label class="checkbox-inline">
-                    <input type="checkbox" value="Other " aria-label="Other ">Other</label>
+                    <input type="checkbox" value="Other " name="q49_typeOf[]" aria-label="Other ">Other</label>
                 </div>
               </div>
             </div>
@@ -120,12 +120,12 @@ meta_tags:
             <div class="two-fields-holder">
               <div class="col-sm-6 no-padding">
                 <div class="form-group right-space">
-                  <input type="text" class="form-control" placeholder="Event or Group Name *" aria-label="Event or Group Name" required>
+                  <input type="text" class="form-control" placeholder="Event or Group Name *" aria-label="Event or Group Name" name="q50_eventgroupName" required>
                 </div>
               </div>
               <div class="col-sm-6 no-padding">
                 <div class="form-group left-space">
-                  <input type="text" class="form-control" placeholder="Start Date *" aria-label="Start Date" required>
+                  <input type="text" name="q51_startDate" class="form-control" placeholder="Start Date *" aria-label="Start Date" required>
                 </div>
               </div>
             </div>
@@ -133,12 +133,12 @@ meta_tags:
             <div class="two-fields-holder">
               <div class="col-sm-6 no-padding">
                 <div class="form-group right-space">
-                  <input type="text" class="form-control" placeholder="End Date *" aria-label="End Date" required>
+                  <input type="text" class="form-control" name="q52_endDate" placeholder="End Date *" aria-label="End Date" required>
                 </div>
               </div>
               <div class="col-sm-6 no-padding">
                 <div class="form-group left-space">
-                  <input type="text" class="form-control" placeholder="Arrival Date *" aria-label="Arrival Date" required>
+                  <input type="text" class="form-control" name="q53_arrivalDate" placeholder="Arrival Date *" aria-label="Arrival Date" required>
                 </div>
               </div>
             </div>
@@ -146,18 +146,18 @@ meta_tags:
             <div class="two-fields-holder">
               <div class="col-sm-6 no-padding">
                 <div class="form-group right-space">
-                  <input type="text" class="form-control" placeholder="Departure Date *" aria-label="Departure Date " required>
+                  <input type="text" class="form-control" name="q54_departureDate" placeholder="Departure Date *" aria-label="Departure Date " required>
                 </div>
               </div>
               <div class="col-sm-6 no-padding">
                 <div class="form-group left-space">
-                  <input type="text" class="form-control" placeholder="Estimated # of Attendees *" aria-label="Estimated # of Attendees " required>
+                  <input type="text" name="q55_estimatedAttendees" class="form-control" placeholder="Estimated # of Attendees *" aria-label="Estimated # of Attendees " required>
                 </div>
               </div>
             </div>
 
             <div class="form-group">
-              <input class="form-control" placeholder="Total Budget *" aria-label="Total Budget " required>
+              <input class="form-control" name="q56_totalBudget" placeholder="Total Budget *" aria-label="Total Budget " required>
             </div>
 
             <div class="checkbox-holder">
@@ -167,46 +167,46 @@ meta_tags:
               <div class="col-sm-12">
                 <div class="row">
                   <label class="checkbox-inline">
-                    <input type="checkbox" value="LCD Projector " aria-label="LCD Projector  ">LCD Projector  </label>
+                    <input type="checkbox" name="q57_audioVisual[]" value="LCD Projector " aria-label="LCD Projector  ">LCD Projector </label>
                   <label class="checkbox-inline">
-                    <input type="checkbox" value="Overhead Projector " aria-label="Overhead Projector ">Overhead Projector  </label>
+                    <input type="checkbox" name="q57_audioVisual[]" value="Overhead Projector " aria-label="Overhead Projector ">Overhead Projector </label>
                   <label class="checkbox-inline">
-                    <input type="checkbox" value="Rear Screen Projector " aria-label="Rear Screen Projector ">Rear Screen Projector  </label>
+                    <input type="checkbox" name="q57_audioVisual[]" value="Rear Screen Projector " aria-label="Rear Screen Projector ">Rear Screen Projector </label>
                   <label class="checkbox-inline">
-                    <input type="checkbox" value="Microphone(s) " aria-label="Microphone(s) ">Microphone(s) </label>
+                    <input type="checkbox" name="q57_audioVisual[]" value="Microphone(s) " aria-label="Microphone(s) ">Microphone(s) </label>
                   <label class="checkbox-inline">
-                    <input type="checkbox" value="Screen  " aria-label="Screen  ">Screen  </label>
+                    <input type="checkbox" name="q57_audioVisual[]" value="Screen  " aria-label="Screen  ">Screen </label>
                 </div>
               </div>
             </div>
 
             <div class="form-group">
-              <textarea class="form-control m-textarea" rows="5" placeholder="Food & Beverage Requirements" aria-label="Food & Beverage Requirements"></textarea>
+              <textarea class="form-control m-textarea" rows="5" placeholder="Food & Beverage Requirements" aria-label="Food & Beverage Requirements" name="q58_foodAnd"></textarea>
             </div>
 
             <div class="form-group">
-              <textarea class="form-control m-textarea" rows="5" placeholder="Additional Information / Comments" aria-label="Additional Information / Comments"></textarea>
+              <textarea class="form-control m-textarea" rows="5" placeholder="Additional Information / Comments" aria-label="Additional Information / Comments" name="q59_additionalInformation"></textarea>
             </div>
 
             <div class="form-group">
-              <input class="form-control" placeholder="Are You Considering Another Destination? If So, Where?" aria-label="Are You Considering Another Destination? If So, Where? ">
+              <input class="form-control" placeholder="Are You Considering Another Destination? If So, Where?" aria-label="Are You Considering Another Destination? If So, Where? " name="q60_otherDestination">
             </div>
 
             <div class="two-fields-holder">
               <div class="col-sm-6 no-padding">
                 <div class="form-group right-space">
-                  <input type="text" class="form-control" placeholder="When Will You Be Making A Decision?" aria-label="When Will You Be Making A Decision?">
+                  <input type="text" class="form-control" placeholder="When Will You Be Making A Decision?" aria-label="When Will You Be Making A Decision?" name="q61_whenWill">
                 </div>
               </div>
               <div class="col-sm-6 no-padding">
                 <div class="form-group left-space">
-                  <select class="form-control">
+                  <select class="form-control" name="q62_howDid">
                     <option value="">How Did You Hear About The Sagamore?</option>
                     <option value="Family / Friend">Family / Friend</option>
-        						<option value="Internet">Internet</option>
-        						<option value="Magazine Ad">Magazine Ad</option>
-        						<option value="Social Media">Social Media</option>
-        						<option value="Other">Other</option>
+                    <option value="Internet">Internet</option>
+                    <option value="Magazine Ad">Magazine Ad</option>
+                    <option value="Social Media">Social Media</option>
+                    <option value="Other">Other</option>
                   </select>
                 </div>
               </div>
@@ -219,13 +219,13 @@ meta_tags:
               <div class="col-sm-12">
                 <div class="row">
                   <label class="checkbox-inline">
-                    <input type="checkbox" value="LCD Projector " aria-label="LCD Projector  ">Yes, please send me email regarding exclusive special offers and news from Sagamore Hotels. </label>
+                    <input type="checkbox" value="Yes" name="q63_sendEmails[]" aria-label="LCD Projector  ">Yes, please send me email regarding exclusive special offers and news from Sagamore Hotels. </label>
                 </div>
               </div>
             </div>
 
             <div class="form-group agree">
-              <input type="checkbox" class="form-check-input" aria-label="agree" value="agree" required>
+              <input type="checkbox" name="q38_iAgree[]" class="form-check-input" aria-label="agree" value="agree" required>
               <label class="form-check-label" for="agree">I agree to the <a href="/terms/" target="_blank">Terms of Service</a> and <a href="/privacy-policy/" target="_blank">Privacy Policy</a>.</label>
             </div>
 
