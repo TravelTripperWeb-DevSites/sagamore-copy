@@ -8,7 +8,7 @@ meta_tags:
 ---
 
 <section class="container-fluid no-padding">
-  <div class="page-banner location-banner" style="background-image: url('/assets/images/meetings/meetings-banner-2.jpg')">
+  <div class="page-banner location-banner" style="background-image: url('/assets/images/meetings/hero.jpg')">
     {% regionblock page_title, type:header %}
       <h1 class="page-title" tabindex="0">World-Class Events</h1>
     {% endregionblock %}
@@ -46,7 +46,7 @@ meta_tags:
       <div class="con-two">
         <span class="abt">
           {% regionblock meetings_image_1, type:image %}
-            <img src="/assets/images/meetings/meetings-1.jpg" alt="Meetings">
+            <img src="/assets/images/meetings/intro.jpg" alt="Meetings">
           {% endregionblock %}
         </span>
       </div>
@@ -62,14 +62,14 @@ meta_tags:
           <span class="att default-spacing-minus">
             <div class="sp-right">
               {% regionblock meetings_image_2, type:image %}
-                <img src="/assets/images/meetings/meetings-2.jpg" alt="Meetings">
+                <img src="/assets/images/meetings/kosher-events1.jpg" alt="Meetings">
               {% endregionblock %}
             </div>
           </span>
           <span class="att">
             <div class="sp-left">
               {% regionblock meetings_image_3, type:image %}
-                <img class="img-responsive" src="/assets/images/meetings/meetings-3.jpg" alt="Art Deco Historic District">
+                <img class="img-responsive" src="/assets/images/meetings/kosher-events2.jpg" alt="Art Deco Historic District">
               {% endregionblock %}
             </div>
           </span>
@@ -92,6 +92,13 @@ meta_tags:
             <li>Perfect for corporate events, social gatherings, executive and boardroom meetings</li>
           </ul>
         {% endregionblock %}
+        <div class="btn-holder">
+          {% regionblock meetings_amenity_list_btns, type:text %}
+          <a class="button-common outline" href="/assets/images/meetings/kosher-venues.pdf" target="_blank">Kosher Venues </a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="button-common outline" href="/assets/images/meetings/kosher-menu.pdf" target="_blank">Kosher Menu</a>
+          {% endregionblock %}
+        </div>
+
+
       </div>
     </div>
 
@@ -115,6 +122,11 @@ meta_tags:
           <p class="des">Perfect for a wedding reception, rehearsal dinners, Bar/Bat Mitzvahs, sweet 16 celebration or a pre-function meet-up space. Our Manhattan event venues are an ideal setting for intimate gatherings or large-scale events with up to 325 guests.</p>
           <p class="des">Sagamore Miami Beach Hotel also adds a signature touch to your wedding or special event with customizable menu options suited for every occasion by our creative chefs. The dedicated catering staff and culinary team will design a delightful menu to match the setting, utilizing fresh ingredients to create cuisine that is as delicious as it is visually appealing.</p>
         {% endregionblock %}
+        <div class="btn-holder">
+          {% regionblock weddings_body_btn, type:text %}
+          <a class="button-common outline" href="/assets/images/meetings/wedding-banquet.pdf" target="_blank">Wedding Menu</a>
+          {% endregionblock %}
+        </div>
         </div>
       </div>
     </div>
@@ -122,7 +134,7 @@ meta_tags:
       <div class="con-two">
         <span class="abt">
           {% regionblock weddings_image_1, type:image %}
-            <img src="/assets/images/meetings/meet.jpg" alt="Meetings">
+            <img src="/assets/images/meetings/SagamoreCoupleWedding.jpg" alt="Weddings">
           {% endregionblock %}
         </span>
       </div>
@@ -135,10 +147,10 @@ meta_tags:
       <div class="con-tt">
         <div class="con-three">
           <span class="att meet-grid-1 default-spacing-minus">
-            <div class="sp-right" style="background-image:url('/assets/images/meetings/meetings-4.jpg')"></div>
+            <div class="sp-right" style="background-image:url('/assets/images/meetings/wedding-cake.jpg')"></div>
           </span>
           <span class="att meet-grid-2">
-            <div class="sp-left" style="background-image:url('/assets/images/meetings/meetings-5.jpg')"></div>
+            <div class="sp-left" style="background-image:url('/assets/images/meetings/couple.jpg')"></div>
           </span>
         </div>
       </div>

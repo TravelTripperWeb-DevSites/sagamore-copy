@@ -268,6 +268,8 @@
 }
 
 .banner-btn {
+  position: relative;
+  z-index: 9;
   padding: 20px 0 0;
   @media(min-width: $screen-sm-min) {
     padding: 0 0 40px 0;
