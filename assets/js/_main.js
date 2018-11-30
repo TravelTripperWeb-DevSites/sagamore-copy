@@ -5,6 +5,12 @@
 $(document)
   .ready(function() {
 
+    $("#startDate").datepicker();
+    $("#arrivalDate").datepicker();
+    $("#departureDate").datepicker();
+    $("#whenWill").datepicker();
+    $("#endDate").datepicker();
+
     // Light Gallery
   $('#lightgallery').lightGallery({
     selector: '.gallery-wrapper .image',
