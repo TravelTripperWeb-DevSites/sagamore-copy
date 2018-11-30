@@ -127,16 +127,16 @@
       }
     }
 
-    .con-tt {
-      @media(min-width: $screen-md-min) {
-        top: -60px;
-        margin-bottom: -60px;
-      }
-      @media(min-width: $screen-lg-min) {
-        top: -95px;
-        margin-bottom: -95px;
-      }
-    }
+    // .con-tt {
+    //   @media(min-width: $screen-md-min) {
+    //     top: -60px;
+    //     margin-bottom: -60px;
+    //   }
+    //   @media(min-width: $screen-lg-min) {
+    //     top: -95px;
+    //     margin-bottom: -95px;
+    //   }
+    // }
 
     .meeting-one {
       width: auto;
