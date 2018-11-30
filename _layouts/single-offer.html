@@ -2,27 +2,27 @@
 layout: default
 ---
 {% assign offer = page %}
-{% assign item = site.data._models.offers  %}
+{% assign item = site.data._models.offers %}
 {% for p in item %}
-  {% if p.url_friendly_name == offer.url_friendly_name %}
-    {% assign pInd = forloop.index0 | minus: 1 %}
-    {% assign nInd = forloop.index0 | plus: 1 %}
-    {% if forloop.first != true %}
-      {% assign prevItemTitle = item[pInd].title %}
-      {% assign prevItemUrl = item[pInd].url_friendly_name %}
-    {% endif %}
-    {% if forloop.last != true %}
-      {% assign nextItemTitle = item[nInd].title %}
-      {% assign nextItemUrl = item[nInd].url_friendly_name %}
-    {% endif %}
+{% if p.url_friendly_name == offer.url_friendly_name %}
+{% assign pInd = forloop.index0 | minus: 1 %}
+{% assign nInd = forloop.index0 | plus: 1 %}
+{% if forloop.first != true %}
+{% assign prevItemTitle = item[pInd].title %}
+{% assign prevItemUrl = item[pInd].url_friendly_name %}
+{% endif %}
+{% if forloop.last != true %}
+{% assign nextItemTitle = item[nInd].title %}
+{% assign nextItemUrl = item[nInd].url_friendly_name %}
+{% endif %}
 
-  {% endif %}
+{% endif %}
 {% endfor %}
 
 <section>
   <div class="container-fluid no-padding">
-    <div class="page-banner" style="background-image: url('/assets/images/offers/buy-three-get-four-banner.jpg')">
-      <h1 class="page-title" tabindex="0">Special Offers</h1>
+    <div class="page-banner" style="background-image: url('/assets/images/offers/offer-details-banner.jpg')">
+      <h1 class="page-title" tabindex="0">Exclusive Offers</h1>
     </div>
   </div>
 </section>
@@ -30,11 +30,11 @@ layout: default
 <section ng-controller="offerDetail">
   <ul class="gallery-nav">
     {% if prevItemUrl %}
-      <li><a href="/offers/{{prevItemUrl}}">Previous Offer</a></li>
+    <li><a href="/offers/{{prevItemUrl}}">Previous Offer</a></li>
     {% endif %}
     <li><a href="/offers/{{offer.url_friendly_name}}" class="active">{{offer.title}}</span></a></li>
     {% if nextItemUrl %}
-      <li><a href="/offers/{{nextItemUrl}}">Next Offer</a></li>
+    <li><a href="/offers/{{nextItemUrl}}">Next Offer</a></li>
     {% endif %}
   </ul>
 </section>
@@ -78,7 +78,7 @@ layout: default
     <div class="col-md-6 no-padding -right">
 
       <div class="con-3">
-        <img src="/assets/images/rooms/guest-room-con-3.jpg" alt="Guest Room">
+        <img src="/assets/images/offers/visual-gallery.jpg" alt="Guest Room">
         <div class="text">
           <h2 class="title">Take a visual Journey</h2>
           <div class="spacing"><a class="button-common-2 -white" href="/gallery/">View Gallery</a></div>
@@ -89,10 +89,9 @@ layout: default
 
   </div>
   <div class="container no-padding">
-    <img class="img-responsive f-w" src="/assets/images/about/cta-about.jpg" alt="Offers">
+    <img class="img-responsive f-w" src="/assets/images/offers/offers-image.jpg" alt="Offers">
   </div>
 </section>
-
 {% include offers-carousel.html %}
 
 <section class="loc-cta" style="background-image: url('/assets/images/offers/offers-cta.jpg');">
