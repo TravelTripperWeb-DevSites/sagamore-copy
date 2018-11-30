@@ -1,8 +1,18 @@
 <nav class="nav-header row">
   <ul>
     {% for link in site.data.navigation.main %}
-      <li class="menu-item">
-        <a {% if link.url==page.url %}class="active" {% endif %}href="{{ link.url }}">{{ link.title }}</a>
+      <li class="menu-item {% if link.submenu == 'true' %} dropdown {% endif %}">
+        <a class="{% if link.url==page.url %} active {% endif %}" href="{{ link.url }}">{{ link.title }}</a>
+        {% if link.submenu == 'true' %}
+          <i class="fa fa-caret-right"></i>
+          <ul class="dropdown-items">
+            {% for submenuitem in link.submenuitems %}
+              <li class="submenuitem">
+                <a href="{{submenuitem.url}}"> {{submenuitem.title}} </a>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
       </li>
     {% endfor %}
   </ul>
