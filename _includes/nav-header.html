@@ -2,7 +2,7 @@
   <ul>
     {% for link in site.data.navigation.main %}
       <li class="menu-item {% if link.submenu == 'true' %} dropdown {% endif %}">
-        <a class="{% if link.url==page.url %} active {% endif %}" href="{{ link.url }}">{{ link.title }}</a>
+        <a class="{% if link.url == page.url %} active {% endif %}" href="{{ link.url }}">{{ link.title }}</a>
         {% if link.submenu == 'true' %}
           <i class="fa fa-caret-right"></i>
           <ul class="dropdown-items">
