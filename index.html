@@ -68,7 +68,7 @@ meta_tags:
           {% endregionblock %}
           </div>
           {% regionblock welcome_button, type:text %}
-          <a class="btn btn-lg btn-primary button-home" href="/location/">Discover More</a>
+          <a class="btn btn-lg btn-primary button-home" href="/about/">Discover More</a>
           {% endregionblock %}
         </div>
       </div>
@@ -94,7 +94,7 @@ meta_tags:
             <h5 tabindex="0">World Class Events</h5>
             {% endregionblock %}
             {% regionblock amenities_left_link, type:text %}
-            <a href="/meetings/" class="button-common-2">DISCOVER MORE</a>
+            <a href="/weddings-events/" class="button-common-2">DISCOVER MORE</a>
             {% endregionblock %}
           </div>
         </div>
@@ -112,7 +112,7 @@ meta_tags:
             <h5 tabindex="0">Expert Recommendations</h5>
             {% endregionblock %}
             {% regionblock amenities_right_link, type:text %}
-            <a href="/experiences/" class="button-common-2">DISCOVER MORE</a>
+            <a href="/dine-drink/" class="button-common-2">DISCOVER MORE</a>
             {% endregionblock %}
           </div>
         </div>
@@ -222,7 +222,7 @@ meta_tags:
           {% endregionblock %}
           </div>
           {% regionblock location_button, type:text %}
-          <a class="btn btn-lg btn-primary button-home" href="/location/">Discover More</a>
+          <a class="btn btn-lg btn-primary button-home" href="/sagamore-art/">Discover More</a>
           {% endregionblock %}
         </div>
       </div>
@@ -233,71 +233,6 @@ meta_tags:
         </div>
       </div>
 
-    </div>
-
-    <div class="row no-gutters">
-
-      <div class="col-md-6 p-l-0 p-r-10">
-        <div class="container-fluid no-padding">
-          <div class="row no-gutters no-padding">
-            <div class="col-sm-7 p-l-0 p-r-10 m-n-p">
-              <div class="city-1 img-100">
-                {% regionblock location_image_1, type:image %}
-                <img src="/assets/images/city-1.jpg" alt="City">
-                {% endregionblock %}
-              </div>
-            </div>
-            <div class="col-sm-5 p-r-0 p-l-10 m-n-p">
-              <div class="city-2 img-100">
-                {% regionblock location_image_2, type:image %}
-                <img src="/assets/images/city-3.jpg" alt="City">
-                {% endregionblock %}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 p-r-0 p-l-10">
-        <div class="container-fluid no-padding">
-          <div class="row no-gutters no-padding bg-grey">
-
-            <div class="col-sm-5 p-l-0 p-r-0 m-n-p">
-              <div class="fashion">
-                {% regionblock location_image_3, type:image %}
-                <img src="/assets/images/fashion.jpg" alt="Fashion">
-                {% endregionblock %}
-              </div>
-            </div>
-
-            <div class="col-sm-7 p-l-0 p-r-0 m-n-p">
-              <div id="events-carousel" class="carousel slide offers-carousel align-centre" data-ride="carousel">
-
-                {% regionblock location_slider_title, type:header %}
-                <h5>Central Location & <br> Easy Access</h5>
-                {% endregionblock %}
-
-                <div class="carousel-inner m-t-20">
-                  {% assign locations = site.data._models.homepage_location_carousel %}
-                  {% for location in locations %}
-                  <div class="item{% if forloop.first %} active{% endif %}">
-                    <h4><a href="{{ location.link }}" target="_blank">{{ location.title }}</a></h4>
-                  </div>
-                  {% endfor %}
-                </div>
-
-                <ul class="carousel-indicators">
-                  {% for location in locations %}
-                  <li data-target="#events-carousel" data-slide-to="{{ forloop.index0 }}" {% if forloop.first %} class="active" {% endif %}></li>
-                  {% endfor %}
-                </ul>
-
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </section>

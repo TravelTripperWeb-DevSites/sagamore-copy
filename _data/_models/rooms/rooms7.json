@@ -144,9 +144,9 @@
       "caption": ""
     }
   ],
-  "short_info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas luctus neque nunc, nec auctor massa malesuada nec. Pellentesque congue elit erat. Donec porta lacus et urna volutpat laoreet. Sed eu iaculis ex, ut finibus felis. Praesent eu sem dapibus, tincidunt nisi et, viverra nisi. Sed iaculis sapien eget libero dapibus porta. ",
+  "short_info": "",
   "book_now_link": "https://www.myhotelreservation.net/b/hamiasag/HAMIASAG/?lang=en_US&roc=DS1",
-  "long_info": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas luctus neque nunc, nec auctor massa malesuada nec. Pellentesque congue elit erat. Donec porta lacus et urna volutpat laoreet. Sed eu iaculis ex, ut finibus felis. Praesent eu sem dapibus, tincidunt nisi et, viverra nisi. Sed iaculis sapien eget libero dapibus porta.</p>",
+  "long_info": "",
   "room_size": "1200",
-  "amenities": "<p>King Bed 800 sq. ft. balcony with great views of ocean Spa shower with multiple shower heads Sleeps up to 2</p>"
+  "amenities": "<ul>\n<li>King Bed</li>\n<li>800 sq. ft. balcony with great views of ocean</li>\n<li>Spa shower with multiple shower heads</li>\n<li>Sleeps up to 2</li>\n</ul>"
 }

@@ -235,17 +235,17 @@ $(window)
 
       // Rooms title equal heights
 
-      $(".rooms-item p")
-        .each(function() {
-          if ($(this)
-            .height() > maxHeight) {
-            maxHeight = $(this)
-              .height();
-          }
-        });
-
-      $(".rooms-item p")
-        .height(maxHeight);
+      // $(".rooms-item p")
+      //   .each(function() {
+      //     if ($(this)
+      //       .height() > maxHeight) {
+      //       maxHeight = $(this)
+      //         .height();
+      //     }
+      //   });
+      //
+      // $(".rooms-item p")
+      //   .height(maxHeight);
 
     }
 
