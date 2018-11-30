@@ -1,6 +1,6 @@
 [
   {
-    "content": "<ul class=\"about-list\" tabindex=\"0\">\n<li>Breakfast: 7:00am - 11:00am</li>\n<li><a title=\"Breakfast Menu\" href=\"assets/images/eat-drink/breakfast_menu_as_of_7.28.18.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">Breakfast Menu</a></li>\n<li><a title=\"Breakfast Buffet Menu\" href=\"../assets/images/eat-drink/buffetmenuaug2018.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">Breakfast Buffet Menu</a></li>\n<li><a title=\"Lunch Menu\" href=\"../assets/images/eat-drink/sagamore_menu_as_of_7.28.18.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">Lunch Menu</a></li>\n</ul>",
+    "content": "<ul class=\"about-list\" tabindex=\"0\">\n<li>\n<p>Breakfast: 7:00am - 11:00am</p>\n</li>\n</ul>\n<p><a title=\"Breakfast Menu\" href=\"assets/images/eat-drink/breakfast_menu_as_of_7.28.18.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">Breakfast Menu</a></p>\n<p><a title=\"Breakfast Buffet Menu\" href=\"../assets/images/eat-drink/buffetmenuaug2018.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">Breakfast Buffet Menu</a></p>\n<p><a title=\"Lunch Menu\" href=\"../assets/images/eat-drink/sagamore_menu_as_of_7.28.18.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">Lunch Menu</a></p>",
     "_template": "html"
   }
 ]
