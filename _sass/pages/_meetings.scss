@@ -148,6 +148,12 @@
         padding-right: 0;
         padding-left: 0;
       }
+      ul {
+        li {
+          padding: 10px 0;
+          list-style: none;
+        }
+      }
     }
   }
 }
