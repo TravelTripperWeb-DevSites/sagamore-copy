@@ -36,7 +36,9 @@ meta_tags:
                 <p class="title" tabindex="0">{{event.title}}</p>
                 <p class="desp">{{event.short_info}}</p>
                 <div class="btn-holder btn-offerlist">
+                  {% if event.event_video and event.event_video != '' %}
                   <a class="button-common view-video" data-src="{{ event.event_video }}" data-toggle="modal">View Video</a>
+                  {% endif %}
                 </div>
               </div>
             </div>
@@ -52,7 +54,7 @@ meta_tags:
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-body embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" id="cartoonVideo" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+          <iframe class="embed-responsive-item" id="cartoonVideo" width="560" height="315" src="" frameborder="0" allowfullscreen autoplay></iframe>
         </div>
       </div>
     </div>

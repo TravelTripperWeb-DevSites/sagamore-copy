@@ -66,8 +66,9 @@ $(document)
 			});
 
 		$(document).on('click', '.view-video', function() {
-			var videoUrl = $(this).attr('data-src');
-			$('#eventVideo iframe').attr('src', videoUrl);
+			var videoUrl = $(this).attr('data-src'),
+				videoSRCauto = videoUrl + "?autoplay=1";
+			$('#eventVideo iframe').attr('src', videoSRCauto);
 			$('#eventVideo').modal('show');
 		});
 

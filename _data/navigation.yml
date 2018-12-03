@@ -13,14 +13,8 @@ main:
     url: /sagamore-art/
     # submenu: 'true'
     # submenuitems:
-    #   - title: Art Talks
-    #     url: /art-talks/
-    #   - title: Sagamore Salon
-    #     url: /art-talks/
-    #   - title: Peace 70
-    #     url: /peace-70/
     #   - title: Past Art Events
-    #     url: /past-events/
+    #     url: /art-events/
     #   - title: Art Advisor - Sebastien Laboureau
     #     url: /art-advisor/
   - title: Gallery
