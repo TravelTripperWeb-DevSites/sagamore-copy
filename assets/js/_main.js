@@ -350,9 +350,9 @@ $(document)
           }
         });
 
-      $(this.form)
-        .find('#subscribe, #rfp-btn, #contact-btn') // Button class names should be unique for every form
-        .prop('disabled', !isValidForm);
+      // $(this.form)
+      //   .find('#subscribe, #rfp-btn, #contact-btn') // Button class names should be unique for every form
+      //   .prop('disabled', !isValidForm);
       return isValidForm;
     }
 
@@ -366,9 +366,7 @@ $(document)
       // look for input elements
       .find(':input[required]:visible')
       // bind the handler to input elements
-      .on('change keyup', checkForm)
-      // immediately fire it to initialize buttons state
-      .keyup();
+      .on('change', checkForm);
 
 
   });
