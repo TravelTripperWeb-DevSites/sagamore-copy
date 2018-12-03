@@ -6,18 +6,19 @@ permalink: /rooms/
 meta_tags:
   robots:
 ---
-
 <section class="container-fluid no-padding">
   <div class="page-banner" style="background-image:url('/assets/images/rooms/rooms-banner.jpg');">
     {% regionblock page_title, type:header %}
-      <h1 class="page-title" tabindex="0">Boutique Accommodations</h1>
+    <h1 class="page-title" tabindex="0">Boutique Accommodations</h1>
     {% endregionblock %}
   </div>
 </section>
 
 <section class="listing-intro container">
   {% regionblock rooms_intro, type:text %}
-    <p>The iconic and legendary Sagamore Hotel on Miami Beach offers deluxe accommodations, an array of amenities, and a unique glimpse into the art culture that embodies the very essence of the property. Our 93-room hotel, with an ample number of suites, boasts some of the largest standard rooms throughout South Beach. Each room offers the comforts of home while drawing decorative inspiration from the Art Deco style that embodies the region. Whether you’re traveling for business or leisure, we’re sure you’re going to love our spacious suites, breathtaking views, and prime location.</p>
+  <p>The iconic and legendary Sagamore Hotel on Miami Beach offers deluxe accommodations, an array of amenities, and a unique glimpse into the art culture that embodies the very essence of the property. Our 93-room hotel, with an ample number of
+    suites, boasts some of the largest standard rooms throughout South Beach. Each room offers the comforts of home while drawing decorative inspiration from the Art Deco style that embodies the region. Whether you’re traveling for business or
+    leisure, we’re sure you’re going to love our spacious suites, breathtaking views, and prime location.</p>
   {% endregionblock %}
 </section>
 
@@ -26,17 +27,19 @@ meta_tags:
     <div class="rooms-holder">
       {% assign rooms = site.data._models.rooms | sort: "order" %}
       {% for room in rooms %}
-        <div class="col-md-4 col-sm-6">
-          <div class="rooms-item">
-            <figure><img src="{{room.banner_image.url_medium}}" alt="{{room.banner_image.alt}}"></figure>
-            <h2 tabindex="0">{{room.title}}</h2>
-            <p>{{room.short_info}}</p>
-            <div class="extra-padding">
-              <a class="button-common btn-blue" href="/rooms/{{room.url_friendly_name}}/">View room</a>
-              <a class="button-common btn-blue btn-rooms" target="_blank" href="{{room.book_now_link}}">Book Room</a>
-            </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="rooms-item">
+          <figure><img src="{{room.banner_image.url_medium}}" alt="{{room.banner_image.alt}}"></figure>
+          <h2 tabindex="0">
+            <a href="/rooms/{{room.url_friendly_name}}/">{{room.title}}</a>
+          </h2>
+          <p>{{room.short_info}}</p>
+          <div class="extra-padding">
+            <a class="button-common btn-blue" href="/rooms/{{room.url_friendly_name}}/">View room</a>
+            <a class="button-common btn-blue btn-rooms" target="_blank" href="{{room.book_now_link}}">Book Room</a>
           </div>
         </div>
+      </div>
       {% endfor %}
     </div>
   </div>
