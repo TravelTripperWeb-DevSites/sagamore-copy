@@ -1,0 +1,63 @@
+---
+layout: default
+title: Art Events | Sagamore Miami Beach
+meta_description: The Sagamore ownership, led by Ronit Neuman, is committed to offering a multicultural platform that supports and builds partnerships with local and international organizations that work together to promote the growth of everything Art related. With the city's booming art industry, the hotel showcases a new exhibit every 60 days to bring a plethora of creative activations for your viewing pleasure.
+permalink: /art-events/
+meta_tags:
+  robots:
+---
+
+<section>
+  <div class="container-fluid no-padding">
+    <div class="page-banner" style="background-image:url('/assets/images/art-events/art-banner.jpg');">
+      {% regionblock art_title, type:header %}
+        <h1 class="page-title" tabindex="0">Art Events Hosted at Sagamore Miami Beach Hotel</h1>
+      {% endregionblock %}
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <div class="art-intro mt-40" tabindex="0">
+    <p>The Sagamore ownership, led by <strong>Ronit Neuman</strong>, is committed to offering a multicultural platform that supports and builds partnerships with local and international organizations that work together to promote the growth of everything Art related. With the city's booming art industry, the hotel showcases a new exhibit every 60 days to bring a plethora of creative activations for your viewing pleasure.</p>
+  </div>
+</section>
+
+<section>
+  {% assign events = site.data._models.art-events | sort: "order" %}
+  {% for event in events %}
+    <div class="m-t-60">
+      <section class="models">
+        <div class="container">
+          <div class=" two-col-wrap">
+            <div class="row no-gutters">
+              <div class="col-sm-6 sp-img v-center" style="background-image:url({{event.banner_image.url}});"></div>
+              <div class="col-sm-6 sp-content v-center">
+                <p class="title" tabindex="0">{{event.title}}</p>
+                <p class="desp">{{event.short_info}}</p>
+                <div class="btn-holder btn-offerlist">
+                  {% if event.event_video and event.event_video != '' %}
+                  <a class="button-common view-video" data-src="{{ event.event_video }}" data-toggle="modal">View Video</a>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  {% endfor %}
+
+  <!-- Video to load inside modal -->
+  <div id="eventVideo" class="modal fade">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" id="cartoonVideo" width="560" height="315" src="" frameborder="0" allowfullscreen autoplay></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

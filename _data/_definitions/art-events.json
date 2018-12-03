@@ -1,0 +1,23 @@
+{
+  "title": {
+    "label": "Event Name",
+    "required": true
+  },
+  "banner_image": {
+    "label": "Event Image",
+    "type": "image",
+    "required": true
+  },
+  "short_info": {
+    "label": "Event Description",
+    "type": "text",
+    "required": true
+  },
+  "event_video": {
+    "type": "text",
+    "label": "Event Video URL"
+  },
+  "order": {
+    "type": "integer"
+  }
+}
