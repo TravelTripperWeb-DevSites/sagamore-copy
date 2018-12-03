@@ -1,0 +1,49 @@
+[
+  {
+    "content": {
+      "name": "IMG_5499-3",
+      "file_name": "IMG_5499-3.jpg",
+      "url": "//cdn.traveltripper.io/site-assets/192_936_21671/media/2018-12-03-172024/IMG_5499-3.jpg",
+      "tags": "",
+      "description": "",
+      "date_added": "2018-12-03-172024",
+      "file_type": "image/jpeg",
+      "width": 1200,
+      "height": 800,
+      "file_size": 283558,
+      "url_large": "//cdn.traveltripper.io/site-assets/192_936_21671/media/2018-12-03-172024/large_IMG_5499-3.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/192_936_21671/media/2018-12-03-172024/medium_IMG_5499-3.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/192_936_21671/media/2018-12-03-172024/small_IMG_5499-3.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/192_936_21671/media/2018-12-03-172024/xsmall_IMG_5499-3.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/192_936_21671/media/2018-12-03-172024/thumb_IMG_5499-3.jpg",
+      "path": "//cdn.traveltripper.io/site-assets/192_936_21671/media/2018-12-03-172024/IMG_5499-3.jpg",
+      "alt": "Sagamore South Beach ",
+      "crop": {
+        "origin": {
+          "x": 0,
+          "y": 2
+        },
+        "width": 709,
+        "height": 799
+      },
+      "croppedImage": {
+        "name": "IMG_5499-3",
+        "file_name": "IMG_5499-3.jpg",
+        "url": "//cdn.traveltripper.io/site-assets/192_936_21671/media/2018-12-03-172209/IMG_5499-3.jpg",
+        "tags": "",
+        "description": "",
+        "date_added": "2018-12-03-172209",
+        "file_type": "image/jpeg",
+        "width": 709,
+        "height": 798,
+        "file_size": 166481,
+        "url_large": "//cdn.traveltripper.io/site-assets/192_936_21671/media/2018-12-03-172209/large_IMG_5499-3.jpg",
+        "url_medium": "//cdn.traveltripper.io/site-assets/192_936_21671/media/2018-12-03-172209/medium_IMG_5499-3.jpg",
+        "url_small": "//cdn.traveltripper.io/site-assets/192_936_21671/media/2018-12-03-172209/small_IMG_5499-3.jpg",
+        "url_xsmall": "//cdn.traveltripper.io/site-assets/192_936_21671/media/2018-12-03-172209/xsmall_IMG_5499-3.jpg",
+        "url_thumb": "//cdn.traveltripper.io/site-assets/192_936_21671/media/2018-12-03-172209/thumb_IMG_5499-3.jpg"
+      }
+    },
+    "_template": "image"
+  }
+]
