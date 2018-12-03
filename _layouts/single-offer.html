@@ -22,7 +22,7 @@ layout: default
 <section>
   <div class="container-fluid no-padding">
     <div class="page-banner" style="background-image: url('/assets/images/offers/offer-details-banner.jpg')">
-      <h1 class="page-title" tabindex="0">Exclusive Offers</h1>
+      <h1 class="page-title" tabindex="0">{{offer.title}}</h1>
     </div>
   </div>
 </section>
@@ -30,11 +30,11 @@ layout: default
 <section ng-controller="offerDetail">
   <ul class="gallery-nav">
     {% if prevItemUrl %}
-    <li><a href="/offers/{{prevItemUrl}}">Previous Offer</a></li>
+    <li><a href="/offers/{{prevItemUrl}}/">Previous Offer</a></li>
     {% endif %}
-    <li><a href="/offers/{{offer.url_friendly_name}}" class="active">{{offer.title}}</span></a></li>
+    <li><a href="/offers/{{offer.url_friendly_name}}/" class="active">{{offer.title}}</span></a></li>
     {% if nextItemUrl %}
-    <li><a href="/offers/{{nextItemUrl}}">Next Offer</a></li>
+    <li><a href="/offers/{{nextItemUrl}}/">Next Offer</a></li>
     {% endif %}
   </ul>
 </section>
@@ -66,8 +66,6 @@ layout: default
           <div class="details-page-description" tabindex="0">
             {{offer.long_info}}
           </div>
-          <p class="des" tabindex="0">Need assistance? Our dedicated reservations team is available around the clock:</p>
-          <p class="des" v>Sagamore Miami Beach | <a href="tel:8772426673">(877) 242-6673</a> or <a href="mailto:reservations@sagamoresouthbeach.com">reservations@sagamoresouthbeach.com</a></p>
         </div>
         <div class="spacing"><a id="tracking_offer_booknow" class="button-common-2" href="{{offer.book_now_link}}" target="_blank">Book this offer</a></div>
         <div class="spacing"><a id="tracking_offer_contactus" class="button-common-2" href="/contact/">Contact Us</a></div>

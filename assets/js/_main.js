@@ -370,12 +370,10 @@ $(document)
 				return checkForm.apply($(this)
 					.find(':input')[0]);
 			})
-			// look for input elements
-			.find(':input[required]:visible')
-			// bind the handler to input elements
-			.on('change keyup', checkForm)
-			// immediately fire it to initialize buttons state
-			.keyup();
+      // look for input elements
+      .find(':input[required]:visible')
+      // bind the handler to input elements
+      .on('change', checkForm);
 
 
 	});

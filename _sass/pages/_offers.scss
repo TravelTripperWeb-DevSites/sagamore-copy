@@ -129,6 +129,13 @@ section.models {
           font-size: 21px;
         }
 
+        a {
+          color: inherit;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
       }
 
       .desp {
@@ -513,10 +520,19 @@ section.models {
   }
 }
 
-section.models .container .two-col-wrap .row {
-  display: table-row;
+section {
+  &.models {
+    .container {
+      .two-col-wrap {
+        .row {
+          @media (min-width: $screen-sm-min) {
+            display: table-row;
+          }
+        }
+      }
+    }
+  }
 }
-
 .offer-list-item {
   margin-bottom: 20px;
 }

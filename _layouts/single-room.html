@@ -22,7 +22,7 @@ layout: default
 
 <section class="container-fluid no-padding">
   <div class="page-banner" style="background-image: url('/assets/images/rooms/guest-room-banner.jpg')">
-    <h1 class="page-title" tabindex="0">Boutique Accommodations</h1>
+    <h1 class="page-title" tabindex="0">{{room.title}}</h1>
   </div>
 </section>
 
@@ -33,7 +33,7 @@ layout: default
     {% endif %}
     <li><a href="/rooms/" class="active">{{room.title}}</a></li>
     {% if nextItemUrl %}
-      <li><a href="/rooms/{{nextItemUrl}}">Next Room</a></li>
+      <li><a href="/rooms/{{nextItemUrl}}/">Next Room</a></li>
     {% endif %}
   </ul>
 </section>
@@ -67,8 +67,6 @@ layout: default
           <div class="details-page-description" tabindex="0">
             {{room.long_info}}
           </div>
-          <p class="des bold-text" tabindex="0">Need assistance? Our dedicated reservations team is available around the clock:</p>
-          <p class="des">Sagamore Miami Beach | <a href="tel:8772426673">(877) 242-6673</a> or <a href="mailto:reservations@sagamoresouthbeach.com">reservations@sagamoresouthbeach.com</a></p>
         </div>
         <div class="spacing"><a class="button-common-2" href="/contact/">Contact Us</a></div>
       </div>
@@ -124,7 +122,7 @@ layout: default
             <div class="item {% if forloop.first %} active {% endif %}" role="option">
               <h3 tabindex="0" tabindex="0" >{{singleroom.title}}</h3>
               <div class="links">
-                <a ng-href="rooms/{{singleroom.url_friendly_name}}" class="button-common-2">VIEW THIS ROOM</a><br>
+                <a ng-href="rooms/{{singleroom.url_friendly_name}}/" class="button-common-2">VIEW THIS ROOM</a><br>
                 <a href="/rooms/" class="button-common-2">VIEW ALL ROOMS</a>
               </div>
             </div>

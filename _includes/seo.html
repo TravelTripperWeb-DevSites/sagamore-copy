@@ -130,38 +130,8 @@
   <meta name="yandex-verification" content="{{ site.data.verification..yandex_site_verification }}">
 {% endif %}
 
-<meta http-equiv="Content-Language" content="{{ active_lang }}">
-{% if page.url contains '/es/' %}
-  <link rel="alternate" hreflang="{{ site.default_lang }}" href="{{ site.url }}{{ page.url | remove: '/es' }}">
-  <link rel="alternate" hreflang="{{ active_lang }}" href="{{ site.url }}{{ page.url }}">
-  <link rel="alternate" hreflang="fr" href="{{ site.url }}{{ page.url | remove: '/es' | prepend: '/fr' }}">
-  <link rel="alternate" hreflang="zh-cn" href="{{ site.url }}{{ page.url | remove: '/es' | prepend: '/zh' }}">
-  <link rel="alternate" hreflang="pt-br" href="{{ site.url }}{{ page.url | remove: '/es' | prepend: '/pt' }}">
-{% elsif page.url contains '/fr/' %}
-  <link rel="alternate" hreflang="{{ site.default_lang }}" href="{{ site.url }}{{ page.url | remove: '/fr' }}">
-  <link rel="alternate" hreflang="{{ active_lang }}" href="{{ site.url }}{{ page.url }}">
-  <link rel="alternate" hreflang="es" href="{{ site.url }}{{ page.url | remove: '/fr' | prepend: '/es' }}">
-  <link rel="alternate" hreflang="zh-cn" href="{{ site.url }}{{ page.url | remove: '/fr' | prepend: '/zh' }}">
-  <link rel="alternate" hreflang="pt-br" href="{{ site.url }}{{ page.url | remove: '/fr' | prepend: '/pt' }}">
-{% elsif page.url contains '/zh/' %}
-  <link rel="alternate" hreflang="{{ site.default_lang }}" href="{{ site.url }}{{ page.url | remove: '/zh' }}">
-  <link rel="alternate" hreflang="{{ active_lang }}" href="{{ site.url }}{{ page.url }}">
-  <link rel="alternate" hreflang="es" href="{{ site.url }}{{ page.url | remove: '/zh' | prepend: '/es' }}">
-  <link rel="alternate" hreflang="fr" href="{{ site.url }}{{ page.url | remove: '/zh' | prepend: '/fr' }}">
-  <link rel="alternate" hreflang="pt-br" href="{{ site.url }}{{ page.url | remove: '/zh' | prepend: '/pt' }}">
-{% elsif page.url contains '/pt/' %}
-  <link rel="alternate" hreflang="{{ site.default_lang }}" href="{{ site.url }}{{ page.url | remove: '/pt' }}">
-  <link rel="alternate" hreflang="{{ active_lang }}" href="{{ site.url }}{{ page.url }}">
-  <link rel="alternate" hreflang="es" href="{{ site.url }}{{ page.url | remove: '/pt' | prepend: '/es' }}">
-  <link rel="alternate" hreflang="fr" href="{{ site.url }}{{ page.url | remove: '/pt' | prepend: '/fr' }}">
-  <link rel="alternate" hreflang="zh-cn" href="{{ site.url }}{{ page.url | remove: '/pt' | prepend: '/zh' }}">
-{% else %}
-  <link rel="alternate" hreflang="{{ site.default_lang }}" href="{{ site.url }}{{ page.url }}">
-  <link rel="alternate" hreflang="es" href="{{ site.url }}{{ page.url | prepend: '/es' }}">
-  <link rel="alternate" hreflang="pt-br" href="{{ site.url }}{{ page.url | remove: '/zh' | prepend: '/pt' }}">
-  <link rel="alternate" hreflang="fr" href="{{ site.url }}{{ page.url | prepend: '/fr' }}">
-  <link rel="alternate" hreflang="zh-cn" href="{{ site.url }}{{ page.url | prepend: '/zh' }}">
-{% endif %}
+<meta http-equiv="Content-Language" content="en">
+
 
 {% if page.meta_tags.robots %}
   <meta name="robots" content="{{ page.meta_tags.robots }}">
