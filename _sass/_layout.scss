@@ -3290,6 +3290,40 @@ margin-bottom: 1px;
   }
 }
 
+#eventVideo {
+  .modal-dialog {
+    top: calc(50% - 200px);
+    width: 90%;
+    margin: 0 auto;
+
+    @media (min-width: $screen-md-min) {
+      top: calc(50% - 325px);
+      width: 800px;
+    }
+  }
+
+  .modal-body {
+    height: 350px;
+    padding: 0;
+
+    @media (min-width: $screen-md-min) {
+      height: 650px;
+    }
+  }
+
+  .close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    opacity: .7;
+  }
+}
+
+.modal-backdrop {
+  background-color: #fff;
+  opacity: .95 !important;
+}
+
 .static {
   background-position: center top !important;
 }
