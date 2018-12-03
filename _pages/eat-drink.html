@@ -6,7 +6,6 @@ permalink: /dine-drink/
 meta_tags:
 robots:
 ---
-
 <section class="container-fluid no-padding">
   <div class="page-banner location-banner" style="background-image: url('/assets/images/eat-drink/banner.jpg')">
     {% regionblock page_title, type:header %}
@@ -73,25 +72,27 @@ robots:
 
     <div class="col-md-6 no-padding prox">
       <div class="prox-content">
-        {% regionblock canvas_amenity_list_title, type:header %}
-        <h2 tabindex="0">Canvas</h2>
+        {% regionblock canvas_menu_title, type:header %}
+          <h2 tabindex="0">Canvas</h2>
         {% endregionblock %}
-        <p>Set within the hotel's lobby and its art adorned walls, enjoy multicultural dishes that tell a story through bold and balanced flavors and elegant plating.<br><br> <a class="button-common outline " href="https://www.opentable.com/r/canvas-at-the-sagamore-miami-beach"
+        {% regionblock canvas_menu_text, type:text %}
+          <p>Set within the hotel's lobby and its art adorned walls, enjoy multicultural dishes that tell a story through bold and balanced flavors and elegant plating.<br><br>
+        {% endregionblock %}
+        {% regionblock canvas_menu_cta, type:text %}
+          <a class="button-common outline " href="https://www.opentable.com/r/canvas-at-the-sagamore-miami-beach"
             target="_blank">Make A Reservation</a></p>
-        {% regionblock meetings_amenity_list_body, type:text %}
-        <ul class="about-list" tabindex="0">
-          <li> Breakfast: 7:00am - 11:00am</li>
-          <li> <a href="/assets/images/eat-drink/breakfast_menu_as_of_7.28.18.pdf " target="_blank" title="Breakfast Menu">Breakfast Menu </a></li>
-          <li> <a href="/assets/images/eat-drink/buffetmenuaug2018.pdf  " target="_blank" title="Breakfast Buffet">Breakfast Buffet</a> </li>
-          <li> <a href="/assets/images/eat-drink/sagamore_menu_as_of_7.28.18.pdf" target="_blank" title="Lunch Menu">Lunch Menu </a> </li>
-
-        </ul>
+        {% endregionblock %}
+        {% regionblock canvas_menu_list_items, type:text %}
+          <ul class="about-list" tabindex="0">
+            <li> Breakfast: 7:00am - 11:00am</li>
+            <li> <a href="//cdn.traveltripper.io/site-assets/192_936_21647/media/2018-12-03-043713/canvas-breakfast-menu.pdf " target="_blank" title="Breakfast Menu">Breakfast Menu </a></li>
+            <li> <a href="//cdn.traveltripper.io/site-assets/192_936_21647/media/2018-12-03-043713/canvas-breakfast-buffet.pdf" target="_blank" title="Breakfast Buffet">Breakfast Buffet Menu</a> </li>
+            <li> <a href="//cdn.traveltripper.io/site-assets/192_936_21647/media/2018-12-03-043713/canvas-lunch-menu.pdf" target="_blank" title="Lunch Menu">Lunch Menu </a> </li>
+          </ul>
         {% endregionblock %}
       </div>
     </div>
-
   </div>
-
 </section>
 
 <section class="loc-con-one meetings weddings">
@@ -99,21 +100,26 @@ robots:
   <div class="container no-padding">
     <div class="col-sm-6 no-padding">
       <div class="con-one meeting-one">
-        {% regionblock bar_title, type:header %}
+        {% regionblock bar_menu_title, type:header %}
         <h2 class="title-head" tabindex="0">Video Bar</h2>
         {% endregionblock %}
 
         <div tabindex="0">
-          {% regionblock bar_body, type:text %}
+          {% regionblock bar_menu_body, type:text %}
             <p class="des">Spend a lively night watching your favorite sporting event or catching up with friends in this modern and initimate space</p>
-            <p class="des">Beverage Service: 11:00am - 10:00pm<br>Lunch Service: 11:30am - 6:00pm<br>Dinner Service: 6:00pm-Midnight (Thursday, Friday and Saturday night only)</p>
           {% endregionblock %}
-          {% regionblock bar_menu, type:text %}
+          {% regionblock bar_menu_list_items, type:text %}
             <ul class="about-list" tabindex="0">
-              <li><a href="/assets/images/eat-drink/breakfast_menu_as_of_7.28.18.pdf" target="_blank">Lunch &amp; Dinner&nbsp;Menu</a></li>
-              <li><a href="/assets/images/eat-drink/sagamoremenuaug2018.pdf" target="_blank">Cocktail Menu</a>
+              <li>Breakfast: 7:00am - 11:00am</li>
+              <li>Lunch Service: 11:30am - 6:00pm</li>
+              <li>Beverage Service: 11:00am - 10:00pm</li>
+              <li>Dinner Service: Thursdays, Fridays, and Saturdays 6:00pm-Midnight</li>
+            </ul>
+            <ul class="about-list" tabindex="0">
+              <li><a href="//cdn.traveltripper.io/site-assets/192_936_21647/media/2018-12-03-045042/video-bar-breakfast-menu.pdf" target="_blank">Lunch &amp; Dinner Menu</a></li>
+              <li><a href="//cdn.traveltripper.io/site-assets/192_936_21647/media/2018-12-03-045042/video-bar-cocktail-menu.pdf" target="_blank">Cocktail Menu</a>
               </li>
-              <li><a href="/assets/images/eat-drink/happyhourmenuaug2018.pdf" target="_blank">Happy Hour Wine List</a></li>
+              <li><a href="//cdn.traveltripper.io/site-assets/192_936_21647/media/2018-12-03-045042/video-bar-happy-hour-menu.pdf" target="_blank">Happy Hour Wine List</a></li>
             </ul>
           {% endregionblock %}
         </div>
@@ -123,7 +129,7 @@ robots:
       <div class="con-two">
         <span class="abt">
           {% regionblock bar_image_1, type:image %}
-          <img src="/assets/images/eat-drink/bar.jpg" alt="Meetings">
+            <img src="/assets/images/eat-drink/bar.jpg" alt="Meetings">
           {% endregionblock %}
         </span>
       </div>
@@ -170,20 +176,20 @@ robots:
     <div class="col-sm-6 no-padding">
       <div class="con-one meeting-one">
         {% regionblock inroom_dining_title, type:header %}
-          <h2 class="title-head" tabindex="0">In-Room Dining</h2>
+        <h2 class="title-head" tabindex="0">In-Room Dining</h2>
         {% endregionblock %}
 
         <div tabindex="0">
           {% regionblock inroom_dining_body, type:text %}
-            <p class="des">Treat yourself to a night in with an array of tempting dishes</p>
-            <p class="des">Breakfast: 7:00am - 11:00am<br>Lunch: 11:30am - 3:00pm<br>Dinner: 5:00pm - 11:30pm (Thursday, Friday and Saturday night only)</p>
+          <p class="des">Treat yourself to a night in with an array of tempting dishes</p>
+          <p class="des">Breakfast: 7:00am - 11:00am<br>Lunch: 11:30am - 3:00pm<br>Dinner: 5:00pm - 11:30pm (Thursday, Friday and Saturday night only)</p>
           {% endregionblock %}
           {% regionblock inroom_dining_menu, type:text %}
-            <ul class="about-list" tabindex="0">
-              <li><a href="/assets/images/eat-drink/breakfast_room_service_menu_as_of_7.28.18.pdf" target="_blank">Breakfast Menu</a></li>
-              <li><a href="/assets/images/eat-drink/sagamore_room_service_menu_-_lunch_dinner_-_as_of_7.28-18.pdf" target="_blank">Lunch & Dinner Menu</a>
-              </li>
-            </ul>
+          <ul class="about-list" tabindex="0">
+            <li><a href="//cdn.traveltripper.io/site-assets/192_936_21647/media/2018-12-03-045536/inroom-breakfast-menu.pdf" target="_blank">Breakfast Menu</a></li>
+            <li><a href="//cdn.traveltripper.io/site-assets/192_936_21647/media/2018-12-03-045536/inroom-lunch-dinner-menu.pdf" target="_blank">Lunch & Dinner Menu</a>
+            </li>
+          </ul>
           {% endregionblock %}
         </div>
       </div>
