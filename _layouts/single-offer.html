@@ -30,11 +30,11 @@ layout: default
 <section ng-controller="offerDetail">
   <ul class="gallery-nav">
     {% if prevItemUrl %}
-    <li><a href="/offers/{{prevItemUrl}}">Previous Offer</a></li>
+    <li><a href="/offers/{{prevItemUrl}}/">Previous Offer</a></li>
     {% endif %}
     <li><a href="/offers/{{offer.url_friendly_name}}/" class="active">{{offer.title}}</span></a></li>
     {% if nextItemUrl %}
-    <li><a href="/offers/{{nextItemUrl}}">Next Offer</a></li>
+    <li><a href="/offers/{{nextItemUrl}}/">Next Offer</a></li>
     {% endif %}
   </ul>
 </section>
