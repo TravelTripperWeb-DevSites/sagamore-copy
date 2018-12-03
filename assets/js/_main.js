@@ -13,6 +13,20 @@ $(document)
 			download: false,
 			fullScreen: false
 		});
+
+		if (window.innerWidth >= 992) {
+			$(".nav-header .dropdown").hover(function() {
+				$(this).find(".dropdown-items").slideDown(300);
+			}, function() {
+				$(this).find(".dropdown-items").slideUp(300);
+			});
+		} else {
+			$(".nav-header .dropdown").click(function() {
+				$(this).find(".dropdown-items").slideToggle(300);
+			});
+		}
+
+
 		// Gallery Filter Function
 		$(".gallery-wrapper li a").on("click", function() {
 

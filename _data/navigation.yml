@@ -11,12 +11,12 @@ main:
     url: /weddings-events/
   - title: Sagamore is Art
     url: /sagamore-art/
-    # submenu: 'true'
-    # submenuitems:
-    #   - title: Past Art Events
-    #     url: /art-events/
-    #   - title: Art Advisor - Sebastien Laboureau
-    #     url: /art-advisor/
+    submenu: 'true'
+    submenuitems:
+      - title: Past Art Events
+        url: /art-events/
+      - title: Art Advisor - Sebastien Laboureau
+        url: /art-advisor-sebastien-laboureau/
   - title: Gallery
     url: /gallery/
   - title: Contact

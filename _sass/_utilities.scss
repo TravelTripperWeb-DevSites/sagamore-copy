@@ -5,3 +5,15 @@
 .no-margin {
   margin: 0;
 }
+
+.w-100 {
+  width: 100% !important;
+}
+
+.pl-sm-50 {
+  padding-left: 0 !important;
+
+  @media (min-width: 768px) {
+    padding-left: 50px !important;
+  }
+}
