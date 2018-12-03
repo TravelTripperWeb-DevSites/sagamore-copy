@@ -21,27 +21,27 @@
       "crop": {
         "origin": {
           "x": 0,
-          "y": 0
+          "y": 1
         },
-        "width": 693,
-        "height": 801
+        "width": 721,
+        "height": 800
       },
       "croppedImage": {
         "name": "IMG_5499-3",
         "file_name": "IMG_5499-3.jpg",
-        "url": "//cdn.traveltripper.io/site-assets/192_936_21671/media/2018-12-03-172140/IMG_5499-3.jpg",
+        "url": "//cdn.traveltripper.io/site-assets/192_936_21671/media/2018-12-03-172153/IMG_5499-3.jpg",
         "tags": "",
         "description": "",
-        "date_added": "2018-12-03-172140",
+        "date_added": "2018-12-03-172153",
         "file_type": "image/jpeg",
-        "width": 693,
-        "height": 800,
-        "file_size": 163980,
-        "url_large": "//cdn.traveltripper.io/site-assets/192_936_21671/media/2018-12-03-172140/large_IMG_5499-3.jpg",
-        "url_medium": "//cdn.traveltripper.io/site-assets/192_936_21671/media/2018-12-03-172140/medium_IMG_5499-3.jpg",
-        "url_small": "//cdn.traveltripper.io/site-assets/192_936_21671/media/2018-12-03-172140/small_IMG_5499-3.jpg",
-        "url_xsmall": "//cdn.traveltripper.io/site-assets/192_936_21671/media/2018-12-03-172140/xsmall_IMG_5499-3.jpg",
-        "url_thumb": "//cdn.traveltripper.io/site-assets/192_936_21671/media/2018-12-03-172140/thumb_IMG_5499-3.jpg"
+        "width": 721,
+        "height": 799,
+        "file_size": 168549,
+        "url_large": "//cdn.traveltripper.io/site-assets/192_936_21671/media/2018-12-03-172153/large_IMG_5499-3.jpg",
+        "url_medium": "//cdn.traveltripper.io/site-assets/192_936_21671/media/2018-12-03-172153/medium_IMG_5499-3.jpg",
+        "url_small": "//cdn.traveltripper.io/site-assets/192_936_21671/media/2018-12-03-172153/small_IMG_5499-3.jpg",
+        "url_xsmall": "//cdn.traveltripper.io/site-assets/192_936_21671/media/2018-12-03-172153/xsmall_IMG_5499-3.jpg",
+        "url_thumb": "//cdn.traveltripper.io/site-assets/192_936_21671/media/2018-12-03-172153/thumb_IMG_5499-3.jpg"
       }
     },
     "_template": "image"
