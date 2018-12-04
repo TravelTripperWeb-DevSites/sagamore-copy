@@ -12,7 +12,7 @@
   // Create map object, assign it to the 'map' div, give initial latitude, longitude and zoom values.
   var map = L.map('map', {
     scrollWheelZoom: false
-  }).setView([25.791622, -80.1315017], 16);
+  }).setView([25.79163, -80.12927], 17);
 
   // Add base map tiles from Open Street Map.
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png', {
@@ -28,7 +28,7 @@
   });
 
   // Create a default marker object, pass custom icon as an option, add it to the map.
-  var marker = L.marker([25.791622, -80.1315017], {
+  var marker = L.marker([25.79185, -80.12927], {
     icon: hotelIcon
   }).addTo(map);
 
