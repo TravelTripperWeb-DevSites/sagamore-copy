@@ -3057,3 +3057,11 @@
 .static {
   background-position: center top !important;
 }
+
+body {
+  p {
+    a {
+      color: $nav-active-thick;
+    }
+  }
+}
