@@ -3,6 +3,10 @@
     "label": "Offer Name",
     "required": true
   },
+  "seo_title": {
+  },
+  "seo_description": {
+  },
   "url_friendly_name": {
     "type": "url_slug",
     "label": "URL Friendly Name",
