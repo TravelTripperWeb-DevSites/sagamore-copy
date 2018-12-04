@@ -75,3 +75,30 @@ a:hover {
   background-position: center center;
   background-size: cover;
 }
+.skip-main {
+  position: absolute;
+  top: auto;
+  left: -999px;
+  z-index: -999;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+
+  &:focus, &:active {
+    position: fixed !important;
+    top: auto;
+    left: 47%;
+    z-index: 99999;
+    width: 30%;
+    height: auto;
+    margin: 10px 35%;
+    padding: 5px;
+    overflow: auto;
+    font-size: 1.2em;
+    color: #fff;
+    text-align: center;
+    background-color: #000;
+    border: 4px solid #ffff00;
+    border-radius: 15px;
+  }
+}
