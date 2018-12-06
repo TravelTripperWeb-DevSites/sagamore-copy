@@ -21,7 +21,32 @@
     "git_file_name": "_assets/image_data/Garden-View-Suite-Bedroom.json",
     "path": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-21-052437/Garden_View_Suite_Bedroom.jpg",
     "alt": "Garden View Suite Bedroom",
-    "caption": ""
+    "caption": "",
+    "crop": {
+      "origin": {
+        "x": 0,
+        "y": 0
+      },
+      "width": 1272,
+      "height": 652
+    },
+    "croppedImage": {
+      "name": "Garden_View_Suite_Bedroom",
+      "file_name": "Garden_View_Suite_Bedroom.jpg",
+      "url": "//cdn.traveltripper.io/site-assets/192_936_21764/media/2018-12-06-152653/Garden_View_Suite_Bedroom.jpg",
+      "tags": "",
+      "description": "",
+      "date_added": "2018-12-06-152653",
+      "file_type": "image/jpeg",
+      "width": 1272,
+      "height": 650,
+      "file_size": 79820,
+      "url_large": "//cdn.traveltripper.io/site-assets/192_936_21764/media/2018-12-06-152653/large_Garden_View_Suite_Bedroom.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/192_936_21764/media/2018-12-06-152653/medium_Garden_View_Suite_Bedroom.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/192_936_21764/media/2018-12-06-152653/small_Garden_View_Suite_Bedroom.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/192_936_21764/media/2018-12-06-152653/xsmall_Garden_View_Suite_Bedroom.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/192_936_21764/media/2018-12-06-152653/thumb_Garden_View_Suite_Bedroom.jpg"
+    }
   },
   "room_images": [
     {
