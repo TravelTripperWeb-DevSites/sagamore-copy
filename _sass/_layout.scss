@@ -3067,9 +3067,9 @@ body {
 }
 
 .leaflet-pane {
-  z-index: 4;
+  z-index: 4 !important;
 }
 
 .leaflet-top, .leaflet-bottom {
-  z-index: 5;
+  z-index: 5 !important;
 }
