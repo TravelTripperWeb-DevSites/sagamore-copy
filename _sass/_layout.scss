@@ -1778,7 +1778,7 @@
     width: 1010px;
     margin: -55px auto 0;
     height: 12px;
-
+    z-index: 6;
     &.attractions {
       width: 885px;
     }
@@ -3064,4 +3064,12 @@ body {
       color: $nav-active-thick;
     }
   }
+}
+
+.leaflet-pane {
+  z-index: 4;
+}
+
+.leaflet-top, .leaflet-bottom {
+  z-index: 5;
 }
