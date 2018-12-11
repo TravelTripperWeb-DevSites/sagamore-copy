@@ -5,6 +5,8 @@ meta_description:
 permalink: /sitemap/
 meta_tags:
   robots: noindex, follow
+sitemap:
+  exclude: true  
 ---
 
 {% comment %}
@@ -19,13 +21,30 @@ meta_tags:
 
   Usage:
     {% assign links = site.data.navigation.main %}
-    
-    <ul>  
+
+    <ul>
       {% for link in links %}
         <li>
           <a href="{{ link.url | absolute_url }}">{{ link.title }}</a>
         </li>
       {% endfor %}
-    </ul>  
+    </ul>
 
-{% endcomment %}
+    {% endcomment %}
+
+    <section>
+      <div class="container-fluid no-padding">
+        <div class="page-banner static" style="background-image: url('/assets/images/static/banner.jpg')">
+          <h1 class="page-title" tabindex="0">Sitemap</h1>
+        </div>
+      </div>
+    </section>
+
+    <div class="space">
+      <h2 class="title-error">sitemap</h2>
+      <ul class="container site">
+        {% for link in site.data.navigation.main %}
+        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
