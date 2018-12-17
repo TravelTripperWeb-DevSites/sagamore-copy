@@ -156,7 +156,7 @@ module Jekyll
           when 'html'
             '{{item.content}}'
           when 'image'
-            '{% assign image = item.content.croppedImage %}{% if image == nil %}{% assign image = item.content %}{% endif %}<img src="{{image.url}}" alt="{{item.content.alt}}" class="{{item.content.classes}}"/>'
+            '{% assign image = item.content.croppedImage %}{% if image == nil %}{% assign image = item.content %}{% endif %}<img src="{{image.url_large | default: image.url}}" alt="{{item.content.alt}}" class="{{item.content.classes}}"/>'
           else
             '{{item.content}}'
         end
