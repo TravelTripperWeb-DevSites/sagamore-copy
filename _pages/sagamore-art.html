@@ -16,7 +16,7 @@ permalink_localized:
 ---
 
 <section class="container-fluid no-padding">
-  <div class="page-banner" style="background-image: url('/assets/images/sagamore-art/hero-bg-1.jpg')">
+  <div class="page-banner" style="background-image: url('/assets/images/sagamore-art/art-hero.jpeg')">
     {% regionblock page_title, type:header %}
     <h1 class="page-title" tabindex="0">Art Week lineup 2018</h1>
     {% endregionblock %}
@@ -25,8 +25,14 @@ permalink_localized:
     </div> -->
   </div>
 </section>
+
 <section class="container">
-  <div class="art-intro mt-40" tabindex="0"><p>Known for our rotating experiences of museum-quality art year-round, #SagamoreIsArt presents an immersive experience of ambitious and innovative art programs coordinated by Sébastien Laboureau, Resident Art Advisor of the Sagamore Hotel. The programming, spanning various types of media, will launch <strong>December 3 during Art Week and run through January 4.</strong></p></div></section>
+  <div class="art-intro mt-40" tabindex="0">
+    {% regionblock intro_text, type:html %}
+    <p>Known for our rotating experiences of museum-quality art year-round, #SagamoreIsArt presents an immersive experience of ambitious and innovative art programs coordinated by Sébastien Laboureau, Resident Art Advisor of the Sagamore Hotel. The programming, spanning various types of media, will launch <strong>December 3 during Art Week and run through January 4.</strong></p>
+    {% endregionblock %}
+  </div>
+</section>
 
   <section class="container mt-40">
     <div class="row no-gutters  saga-art">
@@ -106,32 +112,6 @@ permalink_localized:
       </div>
     </div>
   </section>
-
-  <section class="container ">
-    <div class="row no-gutters saga-art">
-      <div class="col-sm-6 no-padding col-sm-push-6">
-        {% regionblock reo_image, type:image %}
-        <img class="width-full" src="/assets/images/sagamore-art/reo.jpg" alt="Reo">
-        {% endregionblock %}
-      </div>
-      <div class="col-sm-6 col-sm-pull-6  text-center-align">
-        <div class="content">
-          {% regionblock reo_title, type:header %}
-          <h1 tabindex="0">Reo</h1>
-          {% endregionblock %}
-          {% regionblock reo_subtitle, type:header %}
-          <h5 tabindex="0">PRESENTED BY ART REPUBLIC</h5>
-          {% endregionblock %}
-          <div tabindex="0">
-          {% regionblock reo_body_text, type:text %}
-          <p>The world of art, music and technology collide with <strong>REO</strong> presented by ART REPUBLIC, a collaboration of graphic design, animation, video and visual projections. <strong>REO</strong>’s portfolio includes music videos and live performances by Beyoncé, Jay-Z, Travis Scott and other musicians. At The Sagamore Hotel, he’ll create digital video imaging for Art Week using mixed digital media to immerse the public in a transformative experience. <strong>REO</strong>’s particular edge and ability to elicit emotion though free-flowing movements will create a sense of freedom and sensuality that deeply connects with viewers.</p>
-          {% endregionblock %}
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <section class="container art-events">
   <div class="row no-gutters">
