@@ -9,7 +9,7 @@
     "label": "Publication Name"
   },
   "url_read_more": {
-    "type": "url_slug",
+    "type": "text",
     "label": "Read More Link",
     "required": true
   },
