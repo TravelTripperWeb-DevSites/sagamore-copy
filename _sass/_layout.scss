@@ -552,6 +552,13 @@
 
 .block-element {
   display: block;
+  .email-id {
+    @media (max-width: 1400px) and (min-width: 768px) {
+      // display: block;
+      // width: 90px;
+      word-break: break-word;
+    }
+  }
 }
 
 .home-black {
