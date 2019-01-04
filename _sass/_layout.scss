@@ -552,6 +552,13 @@
 
 .block-element {
   display: block;
+  .email-id {
+    @media (max-width: 1400px) and (min-width: 768px) {
+      // display: block;
+      // width: 90px;
+      word-break: break-word;
+    }
+  }
 }
 
 .home-black {
@@ -2470,7 +2477,7 @@
 .align-centre {
   text-align: center;
 }
-@media (max-width: 767px) {
+@media (max-width: $screen-sm-max) {
   .b-l {
     border: 0;
   }
