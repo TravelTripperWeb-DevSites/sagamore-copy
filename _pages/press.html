@@ -1,0 +1,50 @@
+---
+layout: default
+title: Art Hotel on Miami South Beach | Press at The Sagamore Hotel
+meta_description: Press
+permalink: "/press/"
+meta_tags:
+  robots:
+published_localized:
+  en: true
+layout_localized:
+  en: default
+label: Press
+permalink_localized:
+  en: "/press/"
+
+---
+
+<section class="container-fluid no-padding">
+  <div class="page-banner" style="background-image:url('/assets/images/sagamore-art/art-hero.jpeg');">
+    {% regionblock page_title, type:header %}
+    <h1 class="page-title" tabindex="0">Press</h1>
+    {% endregionblock %}
+    <h5></h5>
+  </div>
+</section>
+
+<section class="listing-intro container" tabindex="0">
+  {% regionblock press_intro, type:text %}
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris euismod ex a nisi convallis iaculis. Aliquam in posuere metus. Phasellus ex orci, congue sit amet accumsan volutpat, pellentesque eget felis. Curabitur hendrerit vestibulum leo, non ultrices ex euismod sed. Sed non augue non augue tempus egestas. Vivamus mollis bibendum nisi. Mauris pretium aliquam velit. Ut facilisis, turpis id luctus placerat, diam est mollis magna, placerat imperdiet est est vel ex. Aliquam dapibus augue mi, a semper ante maximus sed. Ut ornare justo quis purus sollicitudin elementum.</p>
+  {% endregionblock %}
+</section>
+
+<section class="container">
+  <div class="row">
+    <div class="press-holder">
+      {% assign pressItem = site.data._models.press | sort: "order" %}
+      {% for press in pressItem %}
+      <div class="col-md-4 col-sm-6">
+        <div class="press-item">
+          <h5>{{ press.publication }}</h5>
+          <h2 tabindex="0">{{ press.title }}</h2>
+          <div class="extra-padding">
+            <a class="button-common btn-blue" href="{{ press.url_read_more }}/" target="_blank">Read More</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

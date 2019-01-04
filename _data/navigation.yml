@@ -19,8 +19,8 @@ main:
         url: /sagamore-is-art/art-advisor-sebastien-laboureau/
   - title: Gallery
     url: /gallery/
-  - title: Contact
-    url: /contact/
+  - title: Press
+    url: /press/
 
 
 
@@ -33,6 +33,8 @@ footer:
   #   url: /offers/
   - title: Gallery
     url: /gallery/
+  - title: Press
+    url: /press/
   - title: Weddings & Events
     url: /weddings-events/
   - title: Privacy Policy
