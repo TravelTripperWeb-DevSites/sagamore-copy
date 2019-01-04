@@ -54,14 +54,23 @@
   }
 
   .footer-logo {
-    width: 60%;
-    margin: 106px auto 107px;
-    @media (max-width: 767px) {
-      margin: 0 auto 40px;
+    width: 200px;
+    margin: 40px auto 0;
+    @media (min-width: $screen-md-min) {
+      width: 80%;
+      margin: 106px auto 107px;
+    }
+    @media (min-width: $screen-lg-min) {
+      width: 60%;
     }
 
     img {
       width: 100%;
+    }
+  }
+  .pl-lg-70 {
+    @media (min-width: $screen-lg-min) {
+      padding-left: 70px;
     }
   }
 }
@@ -159,7 +168,7 @@
   width: 80%;
   margin-bottom: 10px;
   @media (max-width: 992px) {
-    width: 280px;
+    width: 220px;
   }
   @media (max-width: 767px) {
     width: 270px;

@@ -2477,7 +2477,7 @@
 .align-centre {
   text-align: center;
 }
-@media (max-width: 767px) {
+@media (max-width: $screen-sm-max) {
   .b-l {
     border: 0;
   }
