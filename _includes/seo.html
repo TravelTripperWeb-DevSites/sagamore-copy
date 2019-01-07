@@ -145,17 +145,15 @@
 {% if page.meta_tags.robots %}
   <meta name="robots" content="{{ page.meta_tags.robots }}">
 {% endif %}
-<!-- end SEO -->
 
-<!-- Start schema script -->
 <script type='application/ld+json'>
 {
   "@context": "http://www.schema.org",
   "@type": "Organization",
-  "name": "Sagamore South Beach Hotel",
+  "name": "The Sagamore Hotel Miami Beach",
   "url": "https://www.sagamoresouthbeach.com/",
-  "logo": "https://www.sagamoresouthbeach.com/assets/images/logo.png",
-  "description": "Experience the Sagamore Miami Beach, formerly known as the Manhattan NYC Hotel. Based in the heart of Manhattan, get the best rates here on our Official Website!",
+  "Logo": "https://www.sagamoresouthbeach.com/assets/images/logo.png",
+  "description": "Situated within the historic Miami Beach Art Deco District, Sagamore South Beach offers 93 rooms, two-story bungalows and spacious oceanfront penthouses.",
      "sameAs": [
     "https://www.facebook.com/Sagamorehotel/"
 
@@ -163,3 +161,48 @@
   }
 }
 </script>
+<script type='application/ld+json'>
+{
+  "@context": "http://schema.org",
+  "@type": "Hotel",
+  "image": "https://cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-22-073012/large_Kosher_Events.jpg",
+  "starRating" : { "@type" : "Rating",
+                       "ratingValue" : "4"},
+  "priceRange" : "from $150",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1671 Collins Ave",
+    "addressLocality": "Miami Beach",
+    "addressRegion": "Florida",
+    "postalCode": "FL 33139",
+    "addressCountry": "United States"
+   },
+  "description": "Situated within the historic Miami Beach Art Deco District, Sagamore South Beach offers 93 rooms, two-story bungalows and spacious oceanfront penthouses.",
+  "name": "The Sagamore Hotel Miami Beach",
+  "alternateName":"The Sagamore Hotel South Beach",
+  "telephone": "(305) 535-8088",
+  "email": "reservations@sagamorehotel.com",
+  "url": "https://www.sagamoresouthbeach.com/",
+   "sameAs" : ["https://www.facebook.com/Sagamorehotel/","https://twitter.com/sagamorehotel/","https://www.instagram.com/sagamorehotel/","https://www.tripadvisor.com/Hotel_Review-g34439-d240165-Reviews-The_Sagamore_Hotel-Miami_Beach_Florida.html","https://www.booking.com/hotel/us/the-sagamore.html"]
+    },
+   "https://www.google.com/maps/place/The+Sagamore+Hotel+Miami+Beach/@25.7916268,-80.1315017,17z/data=!3m1!4b1!4m5!3m4!1s0x88d9b49ba7905cf5:0x9e7f07ea65cee27f!8m2!3d25.791622!4d-80.129313"
+ },
+
+  "potentialAction":{
+   "@type":"ReserveAction",
+   "target":{
+   "@type":"EntryPoint",
+   "urlTemplate":"https://www.myhotelreservation.net/b/hamiasag/HAMIASAG/?_ga=2.125591306.1298463290.1545031761-671341408.1544076295":[
+   "http://schema.org/DesktopWebPlatform",
+   "http://schema.org/IOSPlatform",
+    "http://schema.org/AndroidPlatform"
+]
+},
+   "result":{
+   "@type":"LodgingReservation",
+   "name":"Book Now"
+  }
+ }
+}
+</script>
+<!-- end SEO -->
