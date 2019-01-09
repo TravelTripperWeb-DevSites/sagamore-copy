@@ -1,46 +1,46 @@
 ---
-layout: posts
+layout: default
 title: Blog Posts
 meta_description:
 permalink: /blog/
 meta_tags:
-  robots:
+robots:
 sitemap:
-  exclude: true
+exclude: true
 ---
 
-{% comment %}
-
-  Name:
-
-    Blog Posts Page (Listing)
-
-  Description:
-
-    A list of all the blog posts on the site.
-
-  Usage:
-
-    {% assign posts = site.data._models.posts %}
-    {% for post in posts %}
-
-      Display a Posts Featured Image
-      {% if post.image.url %}
+<section class="container-fluid no-padding">
+  <div class="page-banner" style="background-image:url('/assets/images/rooms/rooms-banner.jpg');">
+    {% regionblock page_title, type:header %}
+    <h1 class="page-title" tabindex="0">Blog</h1>
+    {% endregionblock %}
+  </div>
+</section>
+{% assign posts = site.data._models.blog | sort: 'date' %}
+<div class="container">
+  <div class="col-md-8 col-lg-9">
+    <div class="all-posts">
+      {% for post in posts | limit: 1 %}
+      <div class="blog-post">
+        {% if post.image.url %}
         <a href="/blog/{{ post.url_friendly_name }}/"><img src="{{ post.image.url }}"></a>
-      {% endif %}
+        {% endif %}
 
-      Display a Posts Title
-      <h1><a href="/blog/{{ post.url_friendly_name }}/">{{ post.title }}</a></h1>
+        <h2><a href="/blog/{{ post.url_friendly_name }}/">{{ post.title }}</a></h2>
 
-      Display a Posts Category
-      {% if post.category %}
-        {{ post.category.title }}
-      {% endif %}
+        <h4 class="date">{% if post.category %} {{ post.category.title }} {% endif %} | {{ post.date | date: '%B %d, %Y'}}</h4>
 
-      Display a Posts Content Excerpt
-      {{ post.post_content | strip_html | truncatewords: 40 | remove: "<p>" | remove: "</p>" }}
-      <a href="/blog/{{ post.url_friendly_name }}/">Read More</a>
 
-    {% endfor %}
-
-{% endcomment %}
+        <p>
+          {{ post.post_content | strip_html | truncatewords: 40 | remove: "<p>" | remove: "</p>" }}
+        </p>
+        <a class="btn btn-lg btn-primary button-home" href="/blog/{{ post.url_friendly_name }}/">Read More</a>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="infinite-spinner"> loading ...</div>
+  </div>
+  <div class="col-md-4 col-lg-3">
+    {% include blog-aside.html %}
+  </div>
+</div>

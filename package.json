@@ -25,7 +25,7 @@
     "uglify-js": "^2.8.29"
   },
   "scripts": {
-    "js:uglify": "uglifyjs assets/js/vendor/jquery-3.2.1.min.js assets/js/jquery-ui.min.js assets/js/js.cookie-2.2.0.min.js assets/js/vendor/bootstrap.min.js assets/js/plugins/wow.min.js assets/js/plugins/jquery.lightgallery.js assets/js/plugins/jquery.lg-fullscreen.js assets/js/plugins/jquery.lg-thumbnail.js assets/js/vendor/owl.carousel.js assets/js/jquery.utm-tracking.js assets/js/vendor/angular.min.js assets/js/angular.ui-date.js assets/js/_main.js -c -m -o assets/js/main.min.js",
+    "js:uglify": "uglifyjs assets/js/vendor/jquery-3.2.1.min.js assets/js/jquery-ui.min.js assets/js/blogpull.js assets/js/js.cookie-2.2.0.min.js assets/js/vendor/bootstrap.min.js assets/js/plugins/wow.min.js assets/js/plugins/jquery.lightgallery.js assets/js/plugins/jquery.lg-fullscreen.js assets/js/plugins/jquery.lg-thumbnail.js assets/js/vendor/owl.carousel.js assets/js/jquery.utm-tracking.js assets/js/vendor/angular.min.js assets/js/angular.ui-date.js assets/js/_main.js -c -m -o assets/js/main.min.js",
     "js:watch": "onchange \"assets/js/**/*.js\" -e \"assets/js/main.min.js\" -- npm run js:uglify",
     "browsersync": "browser-sync start --server --files 'assets/css/main.css' 'assets/js/main.min.js' '**/*.html'",
     "css": "node-sass --output-style expanded _sass/main.scss assets/css/main.css",

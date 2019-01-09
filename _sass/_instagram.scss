@@ -35,11 +35,7 @@
         height: 200px;
         width: 50%;
       }
-      @media(min-width: $screen-sm-min) {
-        height: 200px;
-        width: 25%;
-      }
-      @media(min-width: $screen-lg-min) {
+      @media(min-width: $screen-md-min) {
         height: 300px;
         width: 20%;
       }

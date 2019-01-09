@@ -1,0 +1,60 @@
+---
+layout: default
+---
+
+{% assign blogpage = '/blog/'%}
+{% if site.active_lang == 'ja' %}
+ {% assign blogpage = '/ja/blog/'%}
+{% endif %}
+<!-- Blog landing banner here -->
+
+<!-- Blog content here -->
+<section class="blog">
+  <div class="blog-row">
+    <div class="blog-content">
+      <!-- Blog individual post -->
+
+      <div class="category-intro">
+        <h2 tabindex="0">{{ page.title }}</h2>
+        <p tabindex="0">{{ page.description }}</p>
+      </div>
+
+      {% for post in site.data._models.blog | sort: 'date' | reverse %}
+        {% if post.category.url_friendly_name == page.url_friendly_name %}
+
+          <div class="blog-item">
+            <figure class="blog-lead-image">
+              <a href="{{ blogpage }}{{ post.url_friendly_name }}/" tabindex="-1">
+                <img src="{{ post.image.url_medium }}" alt="{{ post.title }}">
+              </a>
+            </figure>
+
+            <h2><a href="{{ blogpage }}{{ post.url_friendly_name }}/">{{ post.title }}</a></h2>
+
+            <div class="blog-info">
+              <span class="date" tabindex="0">
+                {% assign d = post.date | date: "%-d" %}
+                {{ post.date | date: "%B" }}
+                {% case d %}{% when "1" or "21" or "31" %}{{ d }}st{% when "2" or "22" %}{{ d }}nd{% when "3" or "23" %}{{ d }}rd{% else %}{{ d }}th{% endcase %},
+                {{ post.date | date: "%Y" }}
+              </span>
+              <span class="cat">
+                <a href="{{ blogpage }}category/{{ post.category.url_friendly_name }}/" aria-label="Category {{ post.category.title }}">{{ post.category.title }}</a>
+              </span>
+            </div>
+
+            <p tabindex="0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus vulputate diam eu pretium. Mauris elit orci, ultricies id fermentum vel, porta et eros.</p>
+
+            <div class="btn-holder">
+              <a class="primary-btn inverse" href="{{ blogpage }}{{ post.url_friendly_name }}/"><span>Read More</span><i class="fas fa-angle-right"></i></a>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+
+    </div>
+    <div class="blog-aside">
+      {% include blog-aside.html %}
+    </div>
+  </div>
+</section> 

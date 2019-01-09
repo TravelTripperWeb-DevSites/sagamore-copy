@@ -1,0 +1,150 @@
+---
+layout: default
+---
+
+{% assign post = site.data._models.blog  %}
+{% assign blog = page %}
+{% assign seo_title = blog.seo_title %}
+{% assign seo_description = blog.seo_description %}
+
+{% for p in post %}
+    {% if p.url_friendly_name == blog.url_friendly_name %}
+        {% assign pInd = forloop.index0 | minus: 1 %}
+        {% assign nInd = forloop.index0 | plus: 1 %}
+        {% if forloop.first != true %}
+            {% assign prevPostTitle = post[pInd].title %}
+            {% assign prevPostUrl = post[pInd].url_friendly_name %}
+        {% endif %}
+        {% if forloop.last != true %}
+            {% assign nextPostTitle = post[nInd].title %}
+            {% assign nextPostUrl = post[nInd].url_friendly_name %}
+        {% endif %}
+    {% endif %}
+{% endfor %}
+
+{% assign blogpage = '/blog/'%}
+{% if site.active_lang == 'ja' %}
+ {% assign blogpage = '/ja/blog/'%}
+{% endif %}
+<!-- Blog landing banner here -->
+
+<!-- Blog content here -->
+<section class="blog blog-details">
+  <div class="blog-row">
+    <div class="blog-content">
+      <!-- Blog individual post -->
+      <div class="blog-item">
+        <h2 tabindex="0">{{ blog.title }}</h2>
+        <div class="blog-info">
+          <span class="date" tabindex="0">
+            {% assign d = blog.date | date: "%-d" %}
+            {{ blog.date | date: "%B" }}
+            {% case d %}{% when "1" or "21" or "31" %}{{ d }}st{% when "2" or "22" %}{{ d }}nd{% when "3" or "23" %}{{ d }}rd{% else %}{{ d }}th{% endcase %},
+            {{ blog.date | date: "%Y" }}
+          </span>
+          <span class="cat">
+            <a href="{{ blogpage }}category/{{ blog.category.url_friendly_name }}/" aria-label="Category {{ blog.category.title }}">{{ blog.category.title }}</a>
+          </span>
+        </div>
+
+        <figure class="blog-lead-image">
+          <img src="{{ blog.image.url_medium }}" alt="{{ post.title }}">
+        </figure>
+
+        {% if blog.image.caption %}
+        <p><em>{{ blog.image.caption }}</em></p>
+        {% endif %}
+
+        <div tabindex="0">
+          {{ blog.post_content }}
+        </div>
+
+        {% if blog.collage_image.size >= 1 %}
+          <div class="blog-image-twocol">
+            {% for collage in blog.collage_image %}
+              <div class="image-col">
+                <div class="blog-body-image" style="background-image:url('{{ collage.url_medium }}');"></div>
+                <span class="caption">{{ collage.caption }} {{ collage.description }}</span>
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        <div tabindex="0">
+          {{ blog.post_more_content }}
+        </div>
+      </div>
+
+      <div class="blog-share">
+        <span class="share" tabindex="0">Share</span>
+
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | prepend: site.url | url_encode }}" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share in facebook"><i class="fab fa-facebook-f"></i></a>
+
+        <a href="https://twitter.com/intent/tweet?{% if site.data.social.twitter.username %}via={{ site.data.social.twitter.username }}&{% endif %}text={{ page.title }} {{site.url}}{{ page.url }}" title="Share on Twitter" onClick="window.open(this.href,'targetWindow','toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=250'); return false;"><i class="fab fa-twitter"></i></a>
+
+        <a href="https://plus.google.com/share?url={{site.url}}{{ page.url }}" onClick="window.open(this.href,'targetWindow','toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=250'); return false;" title="Share on Google plus"><i class="fab fa-google-plus-g"></i></a>
+
+        {% assign title = blog.title | replace: "'", "" %}
+
+        <a href="javascript:void(0);" title="Share on Pinterest" onClick="pinterestShare('{{blog.blogimage.url}}', '{{title}}');"  ><i class="fab fa-pinterest-p"></i></a>
+
+      </div>
+
+      <div class="blog-prev-next">
+        {% if prevPostUrl %}
+          <a class="primary-btn inverse previous" href="{{ blogpage }}{{prevPostUrl}}/" title="Previous blog post" aria-label="Previous blog post"><i class="fas fa-angle-left" aria-hidden="true" aria-label="Previous post"></i><span>Prev</span></a>
+        {% endif %}
+        {% if nextPostUrl %}
+          <a class="primary-btn inverse pushleft" href="{{ blogpage }}{{nextPostUrl}}/" title="Next blog post" aria-label="Next blog post"><span>Next</span> <i class="fas fa-angle-right" aria-hidden="true"></i></a>
+        {% endif %}
+      </div>
+
+    </div>
+    <div class="blog-aside">
+      {% include blog-aside.html %}
+    </div>
+  </div>
+</section>
+
+{% assign moreblogs = site.data._models.blog | sort: 'date' | reverse %}
+{% assign count = 0 %}
+<section class="more-blogs" style="display: none;">
+  <div class="more-blogs-container">
+    <h4 tabindex="0">Related Stories</h4>
+    <div class="more-blogs-row">
+      {% for moreblog in moreblogs %}
+      <!-- Related blog items -->
+        {% if moreblog.category.title == blog.category.title and count < 3 %}
+        <!-- Skip current blog -->
+          {% if moreblog.url_friendly_name != blog.url_friendly_name %}
+          {% assign count = count | plus: 1 %}
+            <div class="more-blogs-item">
+              <div class="more-blogs-content">
+                <a href="{{ blogpage }}{{ moreblog.url_friendly_name }}/" title="{{ moreblog.title }}" tabindex="-1">
+                  <figure class="more-blogs-image bg-cover" style="background-image:url('{{ moreblog.image.url_medium }}');"></figure>
+                </a>
+                <div class="content-block">
+                  <h5><a href="{{ blogpage }}{{ moreblog.url_friendly_name }}">{{ moreblog.title }}</a></h5>
+                  <div class="blog-info">
+                    <span class="date" tabindex="0">
+                      {% assign d = moreblog.date | date: "%-d" %}
+                      {{ moreblog.date | date: "%B" }}
+                      {% case d %}{% when "1" or "21" or "31" %}{{ d }}st{% when "2" or "22" %}{{ d }}nd{% when "3" or "23" %}{{ d }}rd{% else %}{{ d }}th{% endcase %},
+                      {{ moreblog.date | date: "%Y" }}
+                    </span>
+                    <span class="cat">
+                      <a href="{{ blogpage }}category/{{ blog.category.url_friendly_name }}/" aria-label="Category {{ moreblog.category.title }}">{{ moreblog.category.title }}</a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="btn-holder">
+      <a class="primary-btn" href="{{ blogpage }}category/{{ blog.category.url_friendly_name }}/"><span>View All Blog Posts</span><i class="fas fa-angle-right"></i></a>
+    </div>
+  </div>
+</section>
