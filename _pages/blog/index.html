@@ -30,7 +30,6 @@ exclude: true
 
         <h4 class="date">{% if post.category %} {{ post.category.title }} {% endif %} | {{ post.date | date: '%B %d, %Y'}}</h4>
 
-
         <p>
           {{ post.post_content | strip_html | truncatewords: 40 | remove: "<p>" | remove: "</p>" }}
         </p>
