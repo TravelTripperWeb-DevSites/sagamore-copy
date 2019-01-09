@@ -10,7 +10,7 @@
       "category": {{ post.category | jsonify }},
       "date": "{{ post.date }}",
       "url": "{{ post.url_friendly_name }}",
-      "post_content": {{ post.post_content | jsonify }}
+      "post_content": {{ post.post_content | strip_html | truncatewords: 40 | remove: "<p>" | remove: "</p>" | jsonify }}
     }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ]

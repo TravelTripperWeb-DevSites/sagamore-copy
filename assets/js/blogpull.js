@@ -27,7 +27,7 @@ $(function() {
     var windowHeight = $(window).height(),
         windowScrollPosition = $(window).scrollTop(),
         bottomScrollPosition = windowHeight + windowScrollPosition,
-        documentHeight = (($(window).width() > 768) ? $(document).height() : ($('#main').height() + 300));
+        documentHeight = (($(window).width() > 768) ? ($(document).height() - 100) : ($('#main').height() + 300));
 
     // If we've scrolled past the loadNewPostsThreshold, fetch posts
    if ((documentHeight - loadNewPostsThreshold) < bottomScrollPosition) {
@@ -69,18 +69,19 @@ $(function() {
 
   function fetchPostWithIndex(index, callback) {
     var postURL = postURLs[index];
-
+    $(".infinite-spinner").fadeIn();
     $.get(postURL, function(data) {
-      $(".infinite-spinner").fadeIn();
+
       var month= ["January","February","March","April","May","June","July",
             "August","September","October","November","December"];
       var postdate = new Date(postURL.date);
-      var cleantext =  $(postURL.post_content).text();
+      //var cleantext =  $(postURL.post_content).text();
       var post = '<div class="blog-post wow fadeIn">'+
       '<a href="/blog/'+ postURL.url +'/"><img src="'+ postURL.image.url_medium +'" alt="'+ postURL.title +'"></a>'+
       '<h2><a href="/blog/'+ postURL.url +'/">'+ postURL.title +'</a></h2>'+
       '<h4 class="date"> '+postURL.category.title+' | '+ month[postdate.getMonth()]+' '+postdate.getDate()+', '+postdate.getFullYear()+'</h4>'+
-      '<p>'+ shorten(cleantext, 250, "...", false) +'</p>'+
+    //  '<p>'+ shorten(cleantext, 250, "...", false) +'</p>'+
+      '<p>' + postURL.post_content +'</p>'+
       '<a class="btn btn-lg btn-primary button-home" href="/blog/'+ postURL.url +'/">Read More</a>'+
       '</div>';
      $(post).appendTo(".all-posts");
