@@ -20,8 +20,8 @@ exclude: true
 <div class="container">
   <div class="col-md-8 col-lg-9">
     <div class="all-posts">
-      {% for post in posts | limit: 1 %}
-      <div class="blog-post">
+      {% for post in posts | limit: 2 %}
+      <div class="blog-post wow fadeIn">
         {% if post.image.url %}
         <a href="/blog/{{ post.url_friendly_name }}/"><img src="{{ post.image.url }}"></a>
         {% endif %}

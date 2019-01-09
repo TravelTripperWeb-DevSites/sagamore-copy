@@ -3,7 +3,7 @@ $(function() {
   var postURLs,
       isFetchingPosts = false,
       shouldFetchPosts = true,
-      postsToLoad = $(".blog-post").length,
+      postsToLoad = 1,
       loadNewPostsThreshold = $('.blog-post').height();
 
   // Load the JSON file containing all URLs
@@ -70,6 +70,7 @@ $(function() {
   function fetchPostWithIndex(index, callback) {
     var postURL = postURLs[index];
     $(".infinite-spinner").fadeIn();
+    console.log('fecthing');
     $.get(postURL, function(data) {
 
       var month= ["January","February","March","April","May","June","July",
