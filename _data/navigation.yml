@@ -21,6 +21,8 @@ main:
     url: /gallery/
   - title: Press
     url: /press/
+  - title: Blog
+    url: /blog/
 
 
 
@@ -37,6 +39,8 @@ footer:
     url: /press/
   - title: Weddings & Events
     url: /weddings-events/
+  - title: Blog
+    url: /blog/
   - title: Privacy Policy
     url: /privacy-policy/
   - title: Terms & Conditions
