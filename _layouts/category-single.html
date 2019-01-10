@@ -23,23 +23,23 @@ layout: default
             {% if post.image.url %}
             <a href="/blog/{{ post.url_friendly_name }}/" title="{{ post.title }}">
               <figure>
-                <img src="{{ post.image.url }}" alt="{{ post.image.alt }}">
+                <img src="{{ post.image.url_large }}" alt="{{ post.image.alt }}">
               </figure>
             </a>
             {% endif %}
 
             <h2><a href="/blog/{{ post.url_friendly_name }}/">{{ post.title }}</a></h2>
 
-            <h4 class="date">{% if post.category %} {{ post.category.title }} {% endif %} <span></span> {{ post.date | date: '%B %d, %Y'}}</h4>
+            <h4 class="date">{% if post.category %}<a href="/blog/category/{{ post.category.url_friendly_name }}/"> {{ post.category.title }}</a> <span></span> {% endif %} {{ post.date | date: '%B %d, %Y'}}</h4>
 
             <p>
               {{ post.post_content | strip_html | truncatewords: 40 | remove: "<p>" | remove: "</p>" }}
             </p>
             <div class="cta-block">
               <div class="social-links">
-                <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ post.url_friendly_name }}/&via={{ site.data.twitter.username }}&related={{ site.data.twitter.username }}" rel="nofollow" target="_blank" title="Share on Twitter"><i class="fa fa-twitter"></i></a>
-                <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ post.url_friendly_name }}/" rel="nofollow" target="_blank" title="Share on Facebook"><i class="fa fa-facebook-f"></i></a>
-                <a href="https://plus.google.com/share?url={{ site.url }}{{ post.url_friendly_name }}/" rel="nofollow" target="_blank" title="Share on Google+"><i class="fa fa-google-plus"></i></a>
+                <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}/blog/{{ post.url_friendly_name }}/&via={{ site.data.social.twitter.username }}&related={{ site.data.social.twitter.username }}" rel="nofollow" target="_blank" title="Share on Twitter"><i class="fa fa-twitter"></i></a>
+                <a href="https://facebook.com/sharer.php?u={{ site.url }}/blog/{{ post.url_friendly_name }}/" rel="nofollow" target="_blank" title="Share on Facebook"><i class="fa fa-facebook-f"></i></a>
+                <a href="https://plus.google.com/share?url={{ site.url }}/blog/{{ post.url_friendly_name }}/" rel="nofollow" target="_blank" title="Share on Google+"><i class="fa fa-google-plus"></i></a>
               </div>
               <div class="button">
                 <a class="btn btn-lg btn-primary button-home" href="/blog/{{ post.url_friendly_name }}/">Read More</a>

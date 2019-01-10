@@ -21,7 +21,7 @@
           </a>
           <div class="recent-item-content">
             <a href="/blog/{{ recentblog.url_friendly_name }}/" tabindex="-1">
-              <h5 tabindex="0">{{ recentblog.title | truncate: 28 }}</h5>
+              <h5 tabindex="0">{{ recentblog.title | truncate: 40 }}</h5>
               <div class="blog-info">
                 <span class="date" tabindex="0">
                   {% assign d = recentblog.date | date: "%-d" %}

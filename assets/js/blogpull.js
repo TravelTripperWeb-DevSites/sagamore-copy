@@ -80,7 +80,7 @@ $(function() {
       var post = '<div class="blog-post wow fadeIn">'+
       '<a href="/blog/'+ postURL.url +'/" title="'+ postURL.title +'"><figure><img src="'+ postURL.image.url_medium +'" alt="'+ postURL.image.alt +'"></figure></a>'+
       '<h2><a href="/blog/'+ postURL.url +'/">'+ postURL.title +'</a></h2>'+
-      '<h4 class="date"> '+postURL.category.title+' <span></span> '+ month[postdate.getMonth()]+' '+postdate.getDate()+', '+postdate.getFullYear()+'</h4>'+
+      '<h4 class="date"><a href="/blog/category/'+ postURL.category.url_friendly_name +'/"> '+postURL.category.title+'</a> <span></span> '+ month[postdate.getMonth()]+' '+postdate.getDate()+', '+postdate.getFullYear()+'</h4>'+
     //  '<p>'+ shorten(cleantext, 250, "...", false) +'</p>'+
       '<p>' + postURL.post_content +'</p>'+
       '<div class="cta-block"><div class="social-links">'+
