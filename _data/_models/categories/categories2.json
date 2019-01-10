@@ -1,5 +1,25 @@
 {
   "url_friendly_name": "culture-hostory",
   "title": "Culture & History",
-  "description": "Understanding of culture and history is crucial to enjoy traveling around Japan. In our articles we take deep dives into Japanese culture and history, from teahouse traditions to samurai lords."
+  "description": "Understanding of culture and history is crucial to enjoy traveling around Japan. In our articles we take deep dives into Japanese culture and history, from teahouse traditions to samurai lords.",
+  "image": {
+    "name": "culture",
+    "file_name": "culture.jpg",
+    "url": "//cdn.traveltripper.io/site-assets/192_936_22645/media/2019-01-10-055454/culture.jpg",
+    "tags": "",
+    "description": "",
+    "date_added": "2019-01-10-055454",
+    "file_type": "image/jpeg",
+    "width": 1440,
+    "height": 600,
+    "file_size": 72642,
+    "url_large": "//cdn.traveltripper.io/site-assets/192_936_22645/media/2019-01-10-055454/large_culture.jpg",
+    "url_medium": "//cdn.traveltripper.io/site-assets/192_936_22645/media/2019-01-10-055454/medium_culture.jpg",
+    "url_small": "//cdn.traveltripper.io/site-assets/192_936_22645/media/2019-01-10-055454/small_culture.jpg",
+    "url_xsmall": "//cdn.traveltripper.io/site-assets/192_936_22645/media/2019-01-10-055454/xsmall_culture.jpg",
+    "url_thumb": "//cdn.traveltripper.io/site-assets/192_936_22645/media/2019-01-10-055454/thumb_culture.jpg",
+    "path": "//cdn.traveltripper.io/site-assets/192_936_22645/media/2019-01-10-055454/culture.jpg",
+    "alt": "culture",
+    "caption": ""
+  }
 }
