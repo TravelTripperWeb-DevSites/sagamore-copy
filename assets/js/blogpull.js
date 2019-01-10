@@ -78,13 +78,18 @@ $(function() {
       var postdate = new Date(postURL.date);
       //var cleantext =  $(postURL.post_content).text();
       var post = '<div class="blog-post wow fadeIn">'+
-      '<a href="/blog/'+ postURL.url +'/"><img src="'+ postURL.image.url_medium +'" alt="'+ postURL.title +'"></a>'+
+      '<a href="/blog/'+ postURL.url +'/" title="'+ postURL.title +'"><figure><img src="'+ postURL.image.url_medium +'" alt="'+ postURL.image.alt +'"></figure></a>'+
       '<h2><a href="/blog/'+ postURL.url +'/">'+ postURL.title +'</a></h2>'+
-      '<h4 class="date"> '+postURL.category.title+' | '+ month[postdate.getMonth()]+' '+postdate.getDate()+', '+postdate.getFullYear()+'</h4>'+
+      '<h4 class="date"> '+postURL.category.title+' <span></span> '+ month[postdate.getMonth()]+' '+postdate.getDate()+', '+postdate.getFullYear()+'</h4>'+
     //  '<p>'+ shorten(cleantext, 250, "...", false) +'</p>'+
       '<p>' + postURL.post_content +'</p>'+
-      '<a class="btn btn-lg btn-primary button-home" href="/blog/'+ postURL.url +'/">Read More</a>'+
-      '</div>';
+      '<div class="cta-block"><div class="social-links">'+
+      '<a href="https://twitter.com/intent/tweet?text='+ postURL.title +'&url=https://www.sagamoresouthbeach.com/blog/'+ postURL.url +'/&via=sagamorehotel&related=sagamorehotel" rel="nofollow" target="_blank" title="Share on Twitter"><i class="fa fa-twitter"></i></a>'+
+      '<a href="https://facebook.com/sharer.php?u=https://www.sagamoresouthbeach.com/blog/'+ postURL.url +'/" rel="nofollow" target="_blank" title="Share on Facebook"><i class="fa fa-facebook-f"></i></a>'+
+      '<a href="https://plus.google.com/share?url=https://www.sagamoresouthbeach.com/blog/'+ postURL.url +'/" rel="nofollow" target="_blank" title="Share on Google+"><i class="fa fa-google-plus"></i></a>'+
+       '</div>'+
+      '<div class="button"><a class="btn btn-lg btn-primary button-home" href="/blog/'+ postURL.url +'/">Read More</a></div>'+
+      '</div></div>';
      $(post).appendTo(".all-posts");
       callback();
     });
