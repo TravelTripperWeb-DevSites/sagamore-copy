@@ -1,6 +1,6 @@
 ---
 ---
-{% assign blog = site.data._models.blog | sort: 'date'%}
+{% assign blog = site.data._models.blog | sort: 'date' | reverse %}
 {
   "posts" : [
     {% for post in blog %}

@@ -2,59 +2,55 @@
 layout: default
 ---
 
-{% assign blogpage = '/blog/'%}
-{% if site.active_lang == 'ja' %}
- {% assign blogpage = '/ja/blog/'%}
-{% endif %}
+
 <!-- Blog landing banner here -->
-
+<section class="container-fluid no-padding">
+  <div class="category-banner" style="background-image:url('{{ page.image.url_large }}');">
+   <div class="category-banner__details">
+     <h2 class="page-category" tabindex="0">{{ page.title  }}</h2>
+     <p>{{ page.description }}</p>
+   </div>
+  </div>
+</section>
 <!-- Blog content here -->
-<section class="blog">
-  <div class="blog-row">
-    <div class="blog-content">
-      <!-- Blog individual post -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-lg-9">
+    <!-- Blog individual post -->
+    {% for post in site.data._models.blog | sort: 'date' | reverse %}
+      {% if post.category.url_friendly_name == page.url_friendly_name %}
+          <div class="blog-post category-post wow fadeIn">
+            {% if post.image.url %}
+            <a href="/blog/{{ post.url_friendly_name }}/" title="{{ post.title }}">
+              <figure>
+                <img src="{{ post.image.url }}" alt="{{ post.image.alt }}">
+              </figure>
+            </a>
+            {% endif %}
 
-      <div class="category-intro">
-        <h2 tabindex="0">{{ page.title }}</h2>
-        <p tabindex="0">{{ page.description }}</p>
-      </div>
+            <h2><a href="/blog/{{ post.url_friendly_name }}/">{{ post.title }}</a></h2>
 
-      {% for post in site.data._models.blog | sort: 'date' | reverse %}
-        {% if post.category.url_friendly_name == page.url_friendly_name %}
+            <h4 class="date">{% if post.category %} {{ post.category.title }} {% endif %} <span></span> {{ post.date | date: '%B %d, %Y'}}</h4>
 
-          <div class="blog-item">
-            <figure class="blog-lead-image">
-              <a href="{{ blogpage }}{{ post.url_friendly_name }}/" tabindex="-1">
-                <img src="{{ post.image.url_medium }}" alt="{{ post.title }}">
-              </a>
-            </figure>
-
-            <h2><a href="{{ blogpage }}{{ post.url_friendly_name }}/">{{ post.title }}</a></h2>
-
-            <div class="blog-info">
-              <span class="date" tabindex="0">
-                {% assign d = post.date | date: "%-d" %}
-                {{ post.date | date: "%B" }}
-                {% case d %}{% when "1" or "21" or "31" %}{{ d }}st{% when "2" or "22" %}{{ d }}nd{% when "3" or "23" %}{{ d }}rd{% else %}{{ d }}th{% endcase %},
-                {{ post.date | date: "%Y" }}
-              </span>
-              <span class="cat">
-                <a href="{{ blogpage }}category/{{ post.category.url_friendly_name }}/" aria-label="Category {{ post.category.title }}">{{ post.category.title }}</a>
-              </span>
+            <p>
+              {{ post.post_content | strip_html | truncatewords: 40 | remove: "<p>" | remove: "</p>" }}
+            </p>
+            <div class="cta-block">
+              <div class="social-links">
+                <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ post.url_friendly_name }}/&via={{ site.data.twitter.username }}&related={{ site.data.twitter.username }}" rel="nofollow" target="_blank" title="Share on Twitter"><i class="fa fa-twitter"></i></a>
+                <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ post.url_friendly_name }}/" rel="nofollow" target="_blank" title="Share on Facebook"><i class="fa fa-facebook-f"></i></a>
+                <a href="https://plus.google.com/share?url={{ site.url }}{{ post.url_friendly_name }}/" rel="nofollow" target="_blank" title="Share on Google+"><i class="fa fa-google-plus"></i></a>
+              </div>
+              <div class="button">
+                <a class="btn btn-lg btn-primary button-home" href="/blog/{{ post.url_friendly_name }}/">Read More</a>
+              </div>
             </div>
-
-            <p tabindex="0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus vulputate diam eu pretium. Mauris elit orci, ultricies id fermentum vel, porta et eros.</p>
-
-            <div class="btn-holder">
-              <a class="primary-btn inverse" href="{{ blogpage }}{{ post.url_friendly_name }}/"><span>Read More</span><i class="fas fa-angle-right"></i></a>
-            </div>
-          </div>
+         </div>
         {% endif %}
       {% endfor %}
-
     </div>
-    <div class="blog-aside">
+    <div class="col-md-4 col-lg-3">
       {% include blog-aside.html %}
     </div>
   </div>
-</section> 
+</section>

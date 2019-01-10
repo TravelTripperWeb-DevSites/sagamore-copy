@@ -10,13 +10,15 @@ exclude: true
 ---
 
 <section class="container-fluid no-padding">
-  <div class="page-banner" style="background-image:url('/assets/images/rooms/rooms-banner.jpg');">
-    {% regionblock page_title, type:header %}
-    <h1 class="page-title" tabindex="0">Blog</h1>
-    {% endregionblock %}
+  <div class="category-banner" style="background-image:url('/assets/images/rooms/rooms-banner.jpg');">
+   <div class="category-banner__details">
+      {% regionblock page_title, type:header %}
+      <h1 tabindex="0">Blog</h1>
+      {% endregionblock %}
+    </div>
   </div>
 </section>
-{% assign posts = site.data._models.blog | sort: 'date' %}
+{% assign posts = site.data._models.blog | sort: 'date' | reverse %}
 <div class="container">
   <div class="col-md-8 col-lg-9">
     <div class="all-posts">
@@ -39,9 +41,9 @@ exclude: true
         </p>
         <div class="cta-block">
           <div class="social-links">
-            <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ post.url_friendly_name }}/&via={{ site.data.twitter.username }}&related={{ site.data.twitter.username }}" rel="nofollow" target="_blank" title="Share on Twitter"><i class="fa fa-twitter"></i></a>
-            <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ post.url_friendly_name }}/" rel="nofollow" target="_blank" title="Share on Facebook"><i class="fa fa-facebook-f"></i></a>
-            <a href="https://plus.google.com/share?url={{ site.url }}{{ post.url_friendly_name }}/" rel="nofollow" target="_blank" title="Share on Google+"><i class="fa fa-google-plus"></i></a>
+            <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}/blog/{{ post.url_friendly_name }}/&via={{ site.data.social.twitter.username }}&related={{ site.data.social.twitter.username }}" rel="nofollow" target="_blank" title="Share on Twitter"><i class="fa fa-twitter"></i></a>
+            <a href="https://facebook.com/sharer.php?u={{ site.url }}/blog/{{ post.url_friendly_name }}/" rel="nofollow" target="_blank" title="Share on Facebook"><i class="fa fa-facebook-f"></i></a>
+            <a href="https://plus.google.com/share?url={{ site.url }}/blog/{{ post.url_friendly_name }}/" rel="nofollow" target="_blank" title="Share on Google+"><i class="fa fa-google-plus"></i></a>
           </div>
           <div class="button">
             <a class="btn btn-lg btn-primary button-home" href="/blog/{{ post.url_friendly_name }}/">Read More</a>

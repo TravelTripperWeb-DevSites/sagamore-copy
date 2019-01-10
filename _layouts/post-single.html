@@ -23,15 +23,18 @@ layout: default
 {% endfor %}
 
 <section class="container-fluid no-padding">
-  <div class="page-banner" style="background-image:url('{{ blog.category.image.url_large }}');">
-    <h1 class="page-title" tabindex="0">{{ blog.category.title  }}</h1>
-    <p>{{ blog.category.description }}</p>
+  <div class="category-banner" style="background-image:url('{{ blog.category.image.url_large }}');">
+   <div class="category-banner__details">
+     <h2 class="page-category" tabindex="0">{{ blog.category.title  }}</h2>
+     <p>{{ blog.category.description }}</p>
+   </div>
   </div>
 </section>
 <!-- Blog landing banner here -->
 
 <!-- Blog content here -->
 <div class="container">
+  <div class="row">
   <div class="col-md-8 col-lg-9">
     <div class="blog-post blog-post-detail wow fadeIn">
       <!-- Blog individual post -->
@@ -51,69 +54,47 @@ layout: default
             <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ blog.url_friendly_name }}/" rel="nofollow" target="_blank" title="Share on Facebook"><i class="fa fa-facebook-f"></i></a>
             <a href="https://plus.google.com/share?url={{ site.url }}{{ blog.url_friendly_name }}/" rel="nofollow" target="_blank" title="Share on Google+"><i class="fa fa-google-plus"></i></a>
           </div>
-
+          <div class="blog-prev-next">
+            {% if prevPostUrl %}
+              <a class="primary-btn inverse previous" href="/blog/{{prevPostUrl}}/" title="Previous blog post" aria-label="Previous blog post"><i class="fa fa-angle-left" aria-hidden="true" aria-label="Previous post"></i> <span>Prev</span></a>
+            {% endif %}
+            {% if nextPostUrl %}
+              <a class="primary-btn inverse pushleft" href="/blog/{{nextPostUrl}}/" title="Next blog post" aria-label="Next blog post"><span>Next</span> <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            {% endif %}
+          </div>
         </div>
+        {% assign moreblogs = site.data._models.blog | sort: 'date' | reverse %}
+        {% assign count = 0 %}
+        <section class="container-fluid more-blogs" style="display:none;">
+            <h3 tabindex="0">Related Stories</h3>
+            <div class="row">
+              {% for moreblog in moreblogs %}
+              <!-- Related blog items -->
+                {% if moreblog.category.title == blog.category.title and count < 3 %}
+                <!-- Skip current blog -->
+                  {% if moreblog.url_friendly_name != blog.url_friendly_name %}
+                  {% assign count = count | plus: 1 %}
+                    <div class="col-md-4">
+                      <div class="more-blogs-content">
+                        <a href="/blog/{{ moreblog.url_friendly_name }}/" title="{{ moreblog.title }}" tabindex="-1">
+                          <figure>
+                            <img src="{{ moreblog.image.url_small }}" alt="{{ moreblog.image.alt }}">
+                          </figure>
+                        </a>
+                        <div class="content-block">
+                          <h5><a href="/blog/{{ moreblog.url_friendly_name }}/">{{ moreblog.title }}</a></h5>
+                        </div>
+                      </div>
+                    </div>
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+            </div>
+        </section>
       </div>
     </div>
     <div class="col-md-3">
       {% include blog-aside.html %}
-    </div>
-
-
-
-      <div class="blog-prev-next">
-        {% if prevPostUrl %}
-          <a class="primary-btn inverse previous" href="{{ blogpage }}{{prevPostUrl}}/" title="Previous blog post" aria-label="Previous blog post"><i class="fas fa-angle-left" aria-hidden="true" aria-label="Previous post"></i><span>Prev</span></a>
-        {% endif %}
-        {% if nextPostUrl %}
-          <a class="primary-btn inverse pushleft" href="{{ blogpage }}{{nextPostUrl}}/" title="Next blog post" aria-label="Next blog post"><span>Next</span> <i class="fas fa-angle-right" aria-hidden="true"></i></a>
-        {% endif %}
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-{% assign moreblogs = site.data._models.blog | sort: 'date' | reverse %}
-{% assign count = 0 %}
-<section class="more-blogs" style="display: none;">
-  <div class="more-blogs-container">
-    <h4 tabindex="0">Related Stories</h4>
-    <div class="more-blogs-row">
-      {% for moreblog in moreblogs %}
-      <!-- Related blog items -->
-        {% if moreblog.category.title == blog.category.title and count < 3 %}
-        <!-- Skip current blog -->
-          {% if moreblog.url_friendly_name != blog.url_friendly_name %}
-          {% assign count = count | plus: 1 %}
-            <div class="more-blogs-item">
-              <div class="more-blogs-content">
-                <a href="{{ blogpage }}{{ moreblog.url_friendly_name }}/" title="{{ moreblog.title }}" tabindex="-1">
-                  <figure class="more-blogs-image bg-cover" style="background-image:url('{{ moreblog.image.url_medium }}');"></figure>
-                </a>
-                <div class="content-block">
-                  <h5><a href="{{ blogpage }}{{ moreblog.url_friendly_name }}">{{ moreblog.title }}</a></h5>
-                  <div class="blog-info">
-                    <span class="date" tabindex="0">
-                      {% assign d = moreblog.date | date: "%-d" %}
-                      {{ moreblog.date | date: "%B" }}
-                      {% case d %}{% when "1" or "21" or "31" %}{{ d }}st{% when "2" or "22" %}{{ d }}nd{% when "3" or "23" %}{{ d }}rd{% else %}{{ d }}th{% endcase %},
-                      {{ moreblog.date | date: "%Y" }}
-                    </span>
-                    <span class="cat">
-                      <a href="{{ blogpage }}category/{{ blog.category.url_friendly_name }}/" aria-label="Category {{ moreblog.category.title }}">{{ moreblog.category.title }}</a>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          {% endif %}
-        {% endif %}
-      {% endfor %}
-    </div>
-    <div class="btn-holder">
-      <a class="primary-btn" href="{{ blogpage }}category/{{ blog.category.url_friendly_name }}/"><span>View All Blog Posts</span><i class="fas fa-angle-right"></i></a>
     </div>
   </div>
 </section>
