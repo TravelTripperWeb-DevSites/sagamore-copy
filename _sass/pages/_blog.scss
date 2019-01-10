@@ -63,6 +63,20 @@
   }
 }
 
+.blog-post-detail {
+  @media(min-width: $screen-md-min) {
+    padding-right: 30px;
+  }
+
+  h2 {
+    padding-top: 0;
+  }
+
+  img {
+    padding: 15px 0 30px;
+  }
+}
+
 .blog-search {
   margin-top: 60px;
 

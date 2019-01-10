@@ -22,73 +22,44 @@ layout: default
     {% endif %}
 {% endfor %}
 
-{% assign blogpage = '/blog/'%}
-{% if site.active_lang == 'ja' %}
- {% assign blogpage = '/ja/blog/'%}
-{% endif %}
+<section class="container-fluid no-padding">
+  <div class="page-banner" style="background-image:url('{{ blog.category.image.url_large }}');">
+    <h1 class="page-title" tabindex="0">{{ blog.category.title  }}</h1>
+    <p>{{ blog.category.description }}</p>
+  </div>
+</section>
 <!-- Blog landing banner here -->
 
 <!-- Blog content here -->
-<section class="blog blog-details">
-  <div class="blog-row">
-    <div class="blog-content">
+<div class="container">
+  <div class="col-md-8 col-lg-9">
+    <div class="blog-post blog-post-detail wow fadeIn">
       <!-- Blog individual post -->
-      <div class="blog-item">
-        <h2 tabindex="0">{{ blog.title }}</h2>
-        <div class="blog-info">
-          <span class="date" tabindex="0">
-            {% assign d = blog.date | date: "%-d" %}
-            {{ blog.date | date: "%B" }}
-            {% case d %}{% when "1" or "21" or "31" %}{{ d }}st{% when "2" or "22" %}{{ d }}nd{% when "3" or "23" %}{{ d }}rd{% else %}{{ d }}th{% endcase %},
-            {{ blog.date | date: "%Y" }}
-          </span>
-          <span class="cat">
-            <a href="{{ blogpage }}category/{{ blog.category.url_friendly_name }}/" aria-label="Category {{ blog.category.title }}">{{ blog.category.title }}</a>
-          </span>
-        </div>
+        <h2><a href="/blog/{{ blog.url_friendly_name }}/">{{ blog.title }}</a></h2>
 
-        <figure class="blog-lead-image">
-          <img src="{{ blog.image.url_medium }}" alt="{{ post.title }}">
-        </figure>
+        <h4 class="date">{% if blog.category %} {{ blog.category.title }} {% endif %} <span></span> {{ blog.date | date: '%B %d, %Y'}}</h4>
 
-        {% if blog.image.caption %}
-        <p><em>{{ blog.image.caption }}</em></p>
+        {% if blog.image.url_medium %}
+          <img src="{{ blog.image.url_large }}" alt="{{ blog.image.alt }}">
         {% endif %}
-
-        <div tabindex="0">
+        <p>
           {{ blog.post_content }}
-        </div>
-
-        {% if blog.collage_image.size >= 1 %}
-          <div class="blog-image-twocol">
-            {% for collage in blog.collage_image %}
-              <div class="image-col">
-                <div class="blog-body-image" style="background-image:url('{{ collage.url_medium }}');"></div>
-                <span class="caption">{{ collage.caption }} {{ collage.description }}</span>
-              </div>
-            {% endfor %}
+        </p>
+        <div class="cta-block">
+          <div class="social-links">
+            <a href="https://twitter.com/intent/tweet?text={{ blog.title }}&url={{ site.url }}{{ blog.url_friendly_name }}/&via={{ site.data.twitter.username }}&related={{ site.data.twitter.username }}" rel="nofollow" target="_blank" title="Share on Twitter"><i class="fa fa-twitter"></i></a>
+            <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ blog.url_friendly_name }}/" rel="nofollow" target="_blank" title="Share on Facebook"><i class="fa fa-facebook-f"></i></a>
+            <a href="https://plus.google.com/share?url={{ site.url }}{{ blog.url_friendly_name }}/" rel="nofollow" target="_blank" title="Share on Google+"><i class="fa fa-google-plus"></i></a>
           </div>
-        {% endif %}
 
-        <div tabindex="0">
-          {{ blog.post_more_content }}
         </div>
       </div>
+    </div>
+    <div class="col-md-3">
+      {% include blog-aside.html %}
+    </div>
 
-      <div class="blog-share">
-        <span class="share" tabindex="0">Share</span>
 
-        <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | prepend: site.url | url_encode }}" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share in facebook"><i class="fab fa-facebook-f"></i></a>
-
-        <a href="https://twitter.com/intent/tweet?{% if site.data.social.twitter.username %}via={{ site.data.social.twitter.username }}&{% endif %}text={{ page.title }} {{site.url}}{{ page.url }}" title="Share on Twitter" onClick="window.open(this.href,'targetWindow','toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=250'); return false;"><i class="fab fa-twitter"></i></a>
-
-        <a href="https://plus.google.com/share?url={{site.url}}{{ page.url }}" onClick="window.open(this.href,'targetWindow','toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=250'); return false;" title="Share on Google plus"><i class="fab fa-google-plus-g"></i></a>
-
-        {% assign title = blog.title | replace: "'", "" %}
-
-        <a href="javascript:void(0);" title="Share on Pinterest" onClick="pinterestShare('{{blog.blogimage.url}}', '{{title}}');"  ><i class="fab fa-pinterest-p"></i></a>
-
-      </div>
 
       <div class="blog-prev-next">
         {% if prevPostUrl %}
@@ -100,9 +71,7 @@ layout: default
       </div>
 
     </div>
-    <div class="blog-aside">
-      {% include blog-aside.html %}
-    </div>
+
   </div>
 </section>
 
