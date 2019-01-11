@@ -1,0 +1,32 @@
+
+  <!-- Blog search here -->
+  <div class="blog-search col-xs-12 col-sm-6">
+    <form class="search-form mb-0" action="/blog/search/" method="get">
+      <input type="text" class="search-box" name="query" id="search-box" value="" placeholder="Search" aria-label="Search blogs">
+      <button class="search-btn" aria-label="Search blogs"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+
+
+  <!-- Blog categories list here -->
+  <div class="blog-categories col-xs-12 col-sm-6">
+    <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Categories
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+      {% assign category = site.data._models.categories | sort:'order' %}
+      {% for categorylist in category %}
+        <li>
+          <a href="/blog/category/{{ categorylist.url_friendly_name }}/">{{ categorylist.title }}
+            {% assign count = 0 %}
+            {% for postcount in site.data._models.blog %}
+              {% if postcount.category.title == categorylist.title%}
+              {% capture count  %}{{ count  | plus: '1' }}{% endcapture %}
+              {% endif %}
+            {% endfor %}
+            <span>({{ count }})</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

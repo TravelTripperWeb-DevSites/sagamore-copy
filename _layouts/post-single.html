@@ -35,6 +35,9 @@ layout: default
 <!-- Blog content here -->
 <div class="container">
   <div class="row">
+  <div class="col-md-4 col-lg-3 hidden-md hidden-lg">
+    {% include blog-aside-mobile.html %}
+  </div>
   <div class="col-md-8 col-lg-9">
     <div class="blog-post blog-post-detail wow fadeIn">
       <!-- Blog individual post -->
@@ -93,7 +96,7 @@ layout: default
         </section>
       </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-4 col-lg-3 hidden-xs hidden-sm">
       {% include blog-aside.html %}
     </div>
   </div>

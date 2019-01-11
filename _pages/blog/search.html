@@ -1,36 +1,44 @@
 ---
 layout: default
-title: hotel zen tokyo - blog search results
+title: blog search results
 meta_description: Blog Search Results
+permalink: /blog/search/
 meta_tags:
   robots:
 ---
-{% assign blogpage = '/blog/'%}
-{% if site.active_lang == 'ja' %}
- {% assign blogpage = '/ja/blog/'%}
-{% endif %}
-<!-- Blog landing banner here --> 
-
+<!-- Blog landing banner here -->
+<section class="container-fluid no-padding">
+  <div class="category-banner" style="background-image:url('/assets/images/rooms/rooms-banner.jpg');">
+   <div class="category-banner__details">
+     {% regionblock page_title, type:header %}
+      <h1 tabindex="0">Blog</h1>
+      {% endregionblock %}
+      {% regionblock page_detail, type: text %}
+       <p>Nunc lobortis ipsum at ex egestas faucibus. Orci varius natoque penatibus et magnis dis parturient montes ridiculus mus. Mauris eget risus magna.</p>
+      {% endregionblock %}
+    </div>
+  </div>
+</section>
 <!-- Blog content here -->
-<section class="blog">
-  <div class="blog-row">
-    <div class="blog-content">
-
+<section class="container">
+  <div class="row">
+    <div class="col-md-4 col-lg-3 hidden-md hidden-lg">
+      {% include blog-aside-mobile.html %}
+    </div>
+    <div class="col-md-8 col-lg-9">
       <!-- Blog search results -->
-      <div class="blog-results-wrap">
+      <div class="blog-post category-post wow fadeIn">
         <h2 tabindex="0">Search Results:</h2>
         <ul id="search-results" class="blog-results"></ul>
       </div>
 
     </div>
-    <div class="blog-aside">
+    <div class="col-md-4 col-lg-3 hidden-xs hidden-sm">
       {% include blog-aside.html %}
     </div>
   </div>
 </section>
 
-<!-- Newsletter signup here -->
-{% include forms/jotform/newsletter.html %}
 
 <script>
   window.store = {

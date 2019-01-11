@@ -97,7 +97,7 @@
   }
 
   h2 {
-    padding-bottom: 20px; 
+    padding-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: .2rem;
     @media(min-width: $screen-lg-min) {
@@ -137,6 +137,10 @@
     width: 100%;
     margin-bottom: 30px;
     border: 1px solid $tc-black;
+
+    &.mb-0 {
+      margin-bottom: 10px;
+    }
 
     input {
       width: 100%;
@@ -267,6 +271,22 @@
     letter-spacing: .1rem;
   }
 
+
+  .dropdown-toggle {
+    width: 100%;
+    height: 40px;
+    text-transform: uppercase;
+    border-radius: 0;
+    @media(min-width: $screen-sm-min) {
+      margin-top: 60px;
+    }
+  }
+  .dropdown-menu {
+    width: 100%;
+    text-align: center;
+    border-radius: 0;
+  }
+
   ul {
     margin: 0;
     padding: 0;
@@ -331,6 +351,32 @@
       text-transform: uppercase;
       a {
         color: $tc-black;
+      }
+    }
+  }
+}
+.blog-results {
+  margin-top: 40px;
+  li {
+    margin-top: 20px;
+    padding-bottom: 10px;
+    list-style: none;
+    border-bottom: 1px dashed #e6e6e6;
+    h3 {
+      text-transform: uppercase;
+    }
+    a {
+      color: $tc-black;
+    }
+    .btn-holder {
+      padding: 10px 0;
+
+      a {
+        display: inline-block;
+        padding: 5px 15px 3px;
+        line-height: 30px;
+        text-transform: uppercase;
+        border: 1px solid $tc-black;
       }
     }
   }
