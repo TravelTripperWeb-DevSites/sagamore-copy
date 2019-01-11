@@ -17,12 +17,12 @@ main:
         url: /sagamore-is-art/art-events/
       - title: Art Advisor - Sebastien Laboureau
         url: /sagamore-is-art/art-advisor-sebastien-laboureau/
+  - title: Blog
+    url: /blog/
   - title: Gallery
     url: /gallery/
   - title: Press
     url: /press/
-  - title: Blog
-    url: /blog/
 
 
 
