@@ -297,7 +297,7 @@
 
     &[aria-expanded='true'] {
       .fa {
-        transform: rotate(180deg);
+        transform: rotate(-180deg);
       }
     }
 
@@ -326,7 +326,9 @@
       text-transform: uppercase;
       list-style: none;
       border-bottom: 1px solid $grey-color-light;
-
+      @media(min-width: $screen-lg-min) {
+        border-bottom: 0px solid $grey-color-light;
+      }
       a {
         color: $gray-light;
         letter-spacing: .5px;
@@ -418,8 +420,9 @@
 .btn-more-post {
   margin: 20px auto;
   &:active,
-  &:hover {
-    color: $tc-white;
+  &:hover,
+  &:focus {
+    color: $tc-white !important;
     background-color: $tc-black !important;
   }
 }

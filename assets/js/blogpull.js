@@ -8,7 +8,26 @@ $(function() {
 
   // Load the JSON file containing all URLs
   $.getJSON('/assets/js/data/all_blog.json', function(data) {
-    postURLs = data["posts"];
+
+
+    Array.prototype.groupBy = function(prop) {
+      return this.reduce(function(groups, item) {
+        var valOb = item[prop];
+        groups[valOb] = groups[valOb] || [];
+        groups[valOb].push(item);
+        return groups;
+      }, {});
+    };
+
+    if($('.all-posts').attr('data-category-posts')) {
+        var filteredArray = [];
+        filteredArray = data["posts"].groupBy('group');
+        var catfilter = $('.all-posts').attr('data-category-posts');
+
+        postURLs = filteredArray[catfilter]; 
+    }else{
+      postURLs = data["posts"];
+    }
 
     // If there aren't any more posts available to load than already visible, disable fetching
     if (postURLs.length <= postsToLoad) {
@@ -80,8 +99,10 @@ $(function() {
 
   function fetchPostWithIndex(index, callback) {
     var postURL = postURLs[index];
+
     $(".infinite-spinner").fadeIn();
-    $.get(postURL, function(data) {
+
+    //$.get(postURL, function(data) {
 
       var month= ["January","February","March","April","May","June","July",
             "August","September","October","November","December"];
@@ -105,7 +126,7 @@ $(function() {
        $('#more-post').hide();
      }
       callback();
-    });
+  //  });
   }
 
   function disableFetching() {
