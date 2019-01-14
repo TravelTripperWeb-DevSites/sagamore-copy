@@ -23,11 +23,15 @@ layout: default
 {% endfor %}
 
 <section class="container-fluid no-padding">
-  <div class="category-banner" style="background-image:url('{{ blog.category.image.url_large }}');">
+  <div class="category-banner" style="background-image:url('/assets/images/rooms/rooms-banner.jpg');">
    <div class="category-banner__details">
-     <h2 class="page-category" tabindex="0">{{ blog.category.title  }}</h2>
-     <p>{{ blog.category.description }}</p>
-   </div>
+      {% regionblock page_title, type:header %}
+      <h1 tabindex="0">Blog</h1>
+      {% endregionblock %}
+      {% regionblock page_detail, type: text %}
+       <p>Nunc lobortis ipsum at ex egestas faucibus. Orci varius natoque penatibus et magnis dis parturient montes ridiculus mus. Mauris eget risus magna.</p>
+      {% endregionblock %}
+    </div>
   </div>
 </section>
 <!-- Blog landing banner here -->
@@ -43,7 +47,7 @@ layout: default
       <!-- Blog individual post -->
         <h2><a href="/blog/{{ blog.url_friendly_name }}/">{{ blog.title }}</a></h2>
 
-        <h4 class="date">{% if blog.category %} {{ blog.category.title }} {% endif %} <span></span> {{ blog.date | date: '%B %d, %Y'}}</h4>
+        <h4 class="date">{% if blog.category %}<a href="/blog/category/{{ blog.category.url_friendly_name }}/">{{ blog.category.title }}</a>{% endif %} <span></span> {{ blog.date | date: '%B %d, %Y'}}</h4>
 
         {% if blog.image.url_medium %}
           <img src="{{ blog.image.url_large }}" alt="{{ blog.image.alt }}">
@@ -55,7 +59,6 @@ layout: default
           <div class="social-links">
             <a href="https://twitter.com/intent/tweet?text={{ blog.title }}&url={{ site.url }}{{ blog.url_friendly_name }}/&via={{ site.data.twitter.username }}&related={{ site.data.twitter.username }}" rel="nofollow" target="_blank" title="Share on Twitter"><i class="fa fa-twitter"></i></a>
             <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ blog.url_friendly_name }}/" rel="nofollow" target="_blank" title="Share on Facebook"><i class="fa fa-facebook-f"></i></a>
-            <a href="https://plus.google.com/share?url={{ site.url }}{{ blog.url_friendly_name }}/" rel="nofollow" target="_blank" title="Share on Google+"><i class="fa fa-google-plus"></i></a>
           </div>
           <div class="blog-prev-next">
             {% if prevPostUrl %}

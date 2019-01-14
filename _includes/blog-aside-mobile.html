@@ -10,9 +10,10 @@
 
   <!-- Blog categories list here -->
   <div class="blog-categories col-xs-12 col-sm-6">
-    <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Categories
-    <span class="caret"></span></button>
-    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+    <button class="btn btn-default btn-category" type="button" id="menu1" data-toggle="collapse" aria-expanded="false" aria-controls="collapseCategory" data-target="#collapseCategory" aria-expanded="false">Categories
+    <i class="fa fa-angle-up" aria-hidden="true"></i></button>
+  <div class="collapse" id="collapseCategory">
+      <ul>
       {% assign category = site.data._models.categories | sort:'order' %}
       {% for categorylist in category %}
         <li>
@@ -28,5 +29,6 @@
         </li>
       {% endfor %}
     </ul>
+  </div>
   </div>
 </div>
