@@ -23,7 +23,7 @@ layout: default
     <!-- Blog individual post -->
     {% assign cnt = 0 %}
     {% for post in site.data._models.blog | sort: 'date' | reverse %}
-      {% if post.category.url_friendly_name == page.url_friendly_name and cnt < 1 %}
+      {% if post.category.url_friendly_name == page.url_friendly_name and cnt < 4 %}
       {% assign cnt = cnt | plus:1 %}
           <div class="blog-post wow fadeIn">
             {% if post.image.url %}
