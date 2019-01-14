@@ -24,7 +24,7 @@ $(function() {
         filteredArray = data["posts"].groupBy('group');
         var catfilter = $('.all-posts').attr('data-category-posts');
 
-        postURLs = filteredArray[catfilter]; 
+        postURLs = filteredArray[catfilter];
     }else{
       postURLs = data["posts"];
     }
@@ -34,7 +34,12 @@ $(function() {
       disableFetching();
     }
 
+    if(postURLs.length < 5) {
+      $('#more-post').hide();
+    }
+
   });
+
 
   // If there's no spinner, it's not a page where posts should be fetched
   if ($(".infinite-spinner").length < 1)
@@ -47,6 +52,7 @@ $(function() {
       if (!shouldFetchPosts || isFetchingPosts) return;
 
       fetchPosts();
+
   })
 
   // Are we close to the end of the page? If we are, load more posts
