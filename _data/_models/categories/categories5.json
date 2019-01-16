@@ -1,5 +1,26 @@
 {
-  "url_friendly_name": "events",
-  "title": "Events",
-  "description": "Japan is home to exciting events like traditional matsuri festivals, firework shows, and food markets. Read on to find out what is happening around you this week."
+  "url_friendly_name": "miami-events",
+  "title": "Miami Events",
+  "description": "Some of the world’s most famous festivals take place right here in Miami. Stay scene-savvy with the latest happenings in and around South Beach. Check out our guide to know what events coincide with your stay.",
+  "image": {
+    "name": "culture",
+    "file_name": "culture.jpg",
+    "url": "//cdn.traveltripper.io/site-assets/192_936_22645/media/2019-01-10-055454/culture.jpg",
+    "tags": "",
+    "description": "",
+    "date_added": "2019-01-10-055454",
+    "file_type": "image/jpeg",
+    "width": 1440,
+    "height": 600,
+    "file_size": 72642,
+    "url_large": "//cdn.traveltripper.io/site-assets/192_936_22645/media/2019-01-10-055454/large_culture.jpg",
+    "url_medium": "//cdn.traveltripper.io/site-assets/192_936_22645/media/2019-01-10-055454/medium_culture.jpg",
+    "url_small": "//cdn.traveltripper.io/site-assets/192_936_22645/media/2019-01-10-055454/small_culture.jpg",
+    "url_xsmall": "//cdn.traveltripper.io/site-assets/192_936_22645/media/2019-01-10-055454/xsmall_culture.jpg",
+    "url_thumb": "//cdn.traveltripper.io/site-assets/192_936_22645/media/2019-01-10-055454/thumb_culture.jpg",
+    "git_file_name": "_assets/image_data/culture.json",
+    "path": "//cdn.traveltripper.io/site-assets/192_936_22645/media/2019-01-10-055454/culture.jpg",
+    "alt": "culture",
+    "caption": ""
+  }
 }
