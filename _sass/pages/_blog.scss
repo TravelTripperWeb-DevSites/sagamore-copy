@@ -318,7 +318,9 @@
   ul {
     margin: 0;
     padding: 10px 0;
-
+    @media(min-width: $screen-lg-min) {
+      padding: 0 0 10px;
+    }
 
     li {
       display: block;
@@ -327,6 +329,7 @@
       list-style: none;
       border-bottom: 1px solid $grey-color-light;
       @media(min-width: $screen-lg-min) {
+        padding: 8px 0;
         border-bottom: 0px solid $grey-color-light;
       }
       a {
@@ -416,6 +419,10 @@
 }
 .loading-btn {
   text-align: center;
+  a {
+    display: none;
+  }
+
 }
 .btn-more-post {
   margin: 20px auto;

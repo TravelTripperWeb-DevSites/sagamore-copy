@@ -34,8 +34,8 @@ $(function() {
       disableFetching();
     }
 
-    if(postURLs.length < 5) {
-      $('#more-post').hide();
+    if(postURLs.length > 4) {
+      $('#more-post').show();
     }
 
   });
