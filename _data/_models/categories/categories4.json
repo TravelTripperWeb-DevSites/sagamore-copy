@@ -1,5 +1,26 @@
 {
   "url_friendly_name": "eat-drink",
   "title": "Eat & Drink",
-  "description": "Tokyo is known to be one of the best food cities in the world, and we cannot agree more. We share our love of Japanese food and write about where to get excellent ramen, eat fresh sushi straight from the market, savor matcha tea, and more."
+  "description": "Make the most of your South Beach stay by discovering Miami’s unique gastronomic delights. Get the latest on Miami’s hippest eateries, chicest bars, and featured Sagamore Hotel cocktails.",
+  "image": {
+    "name": "Oceanfront Suite Balcony with Ocean Views",
+    "file_name": "Oceanfront Suite Balcony with Ocean Views.jpg",
+    "url": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-21-053444/Oceanfront_Suite_Balcony_with_Ocean_Views.jpg",
+    "tags": "",
+    "description": "",
+    "date_added": "2018-11-21-053444",
+    "file_type": "image/jpeg",
+    "width": 1400,
+    "height": 650,
+    "file_size": 139248,
+    "url_large": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-21-053444/large_Oceanfront_Suite_Balcony_with_Ocean_Views.jpg",
+    "url_medium": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-21-053444/medium_Oceanfront_Suite_Balcony_with_Ocean_Views.jpg",
+    "url_small": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-21-053444/small_Oceanfront_Suite_Balcony_with_Ocean_Views.jpg",
+    "url_xsmall": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-21-053444/xsmall_Oceanfront_Suite_Balcony_with_Ocean_Views.jpg",
+    "url_thumb": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-21-053444/thumb_Oceanfront_Suite_Balcony_with_Ocean_Views.jpg",
+    "git_file_name": "_assets/image_data/Oceanfront-Suite-Balcony-with-Ocean-Views.json",
+    "path": "//cdn.traveltripper.io/site-assets/192_936_21239/media/2018-11-21-053444/Oceanfront_Suite_Balcony_with_Ocean_Views.jpg",
+    "alt": "Oceanfront Suite Balcony with Ocean Views",
+    "caption": ""
+  }
 }
