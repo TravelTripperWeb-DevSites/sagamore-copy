@@ -29,8 +29,8 @@ footer:
     url: /about/
   - title: Rooms
     url: /rooms/
-  # - title: Offers
-  #   url: /offers/
+  - title: Offers
+    url: /offers/
   - title: Gallery
     url: /gallery/
   - title: Press
