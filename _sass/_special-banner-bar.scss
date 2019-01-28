@@ -1,0 +1,9 @@
+.special-top-banner-bar {
+  padding: 10px 5px;
+  text-align: center;
+  h2 {
+    @media (max-width: $screen-xs-min) {
+      font-size: 16px;
+    }
+  }
+}

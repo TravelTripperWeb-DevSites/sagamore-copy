@@ -1,0 +1,8 @@
+{% for banner in site.data._models.special_banner_bar %}
+  {% if banner.banner_display == true %}
+  <!-- Special Banner Bar -->
+  <section class="special-top-banner-bar" style="background-color: {{ banner.banner_color }};">
+    <h2 style="color: {{ banner.banner_text_color }};">{{ banner.banner_text }}</h2>
+  </section>
+  {% endif %}
+{% endfor %}
