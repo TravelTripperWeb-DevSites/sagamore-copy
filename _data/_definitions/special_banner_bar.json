@@ -1,0 +1,21 @@
+{
+  "title": {
+    "required": true
+  },
+  "banner_color": {
+    "type": "color",
+    "required": true
+  },
+  "banner_text_color": {
+    "type": "color",
+    "required": true
+  },
+  "banner_text": {
+    "required": true,
+    "hint": "text to be displayed"
+  },
+  "banner_display": {
+    "type": "boolean",
+    "label": "Activate banner?"
+  }
+}

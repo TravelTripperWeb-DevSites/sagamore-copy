@@ -19,6 +19,7 @@
   <a class="sr-only sr-only-focusable skip-main" href="#main">Skip to main content</a>
   {% include header.html %}
   <div id="main">
+  {% include special-banner-bar.html %}
   {{ content }}
   </div>
     {% unless page.url == '/room/' or page.url == '/rooms/' or page.url == '/offers/' or page.url == '/offer/' or page.url == '/gallery/' %}
