@@ -20,7 +20,32 @@
     "url_thumb": "//cdn.traveltripper.io/site-assets/192_936_23170/media/2019-01-29-141115/thumb_gillie-and-marc-sculpture-in-sagamore-garden.png",
     "path": "//cdn.traveltripper.io/site-assets/192_936_23170/media/2019-01-29-141115/gillie-and-marc-sculpture-in-sagamore-garden.png",
     "alt": "gillie-and-marc-sculpture-in-sagamore-garden",
-    "caption": ""
+    "caption": "",
+    "crop": {
+      "origin": {
+        "x": 0,
+        "y": 0
+      },
+      "width": 593,
+      "height": 390
+    },
+    "croppedImage": {
+      "name": "gillie-and-marc-sculpture-in-sagamore-garden",
+      "file_name": "gillie-and-marc-sculpture-in-sagamore-garden.png",
+      "url": "//cdn.traveltripper.io/site-assets/192_936_23170/media/2019-01-29-171519/gillie-and-marc-sculpture-in-sagamore-garden.png",
+      "tags": "",
+      "description": "",
+      "date_added": "2019-01-29-171519",
+      "file_type": "image/png",
+      "width": 593,
+      "height": 390,
+      "file_size": 523676,
+      "url_large": "//cdn.traveltripper.io/site-assets/192_936_23170/media/2019-01-29-171519/large_gillie-and-marc-sculpture-in-sagamore-garden.png",
+      "url_medium": "//cdn.traveltripper.io/site-assets/192_936_23170/media/2019-01-29-171519/medium_gillie-and-marc-sculpture-in-sagamore-garden.png",
+      "url_small": "//cdn.traveltripper.io/site-assets/192_936_23170/media/2019-01-29-171519/small_gillie-and-marc-sculpture-in-sagamore-garden.png",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/192_936_23170/media/2019-01-29-171519/xsmall_gillie-and-marc-sculpture-in-sagamore-garden.png",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/192_936_23170/media/2019-01-29-171519/thumb_gillie-and-marc-sculpture-in-sagamore-garden.png"
+    }
   },
   "category": "categories1",
   "url_friendly_name": "inside-look-at-sagamore-sculpture-garden",
