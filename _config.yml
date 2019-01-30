@@ -82,8 +82,8 @@ timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 # data_paginate:
 #   per_page: 5
 #   data: 'blog'
-#   path: 'blog/page:num'
-#   pagination_template: 'blog/index.html'
+#   path: '/blog/page:num'
+#   pagination_template: '_pages/blog/index.html'
 #   sort_field: 'date'
 #   sort_reverse: true
 
@@ -97,9 +97,12 @@ page_gen: #
   # - data: 'attractions'
   #   template: 'single-attraction'
   #   dir: 'attractions'
-  # - data: 'blog'
-  #   template: 'single-blog'
-  #   dir: 'blog'
+  - data: 'blog'
+    template: 'post-single'
+    dir: '/blog/'
+  - data: 'categories'
+    template: 'category-single'
+    dir: '/blog/category/'
   # - data: 'events'
   #   template: 'single-event'
   #   dir: 'events'

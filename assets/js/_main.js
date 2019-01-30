@@ -26,6 +26,10 @@ $(document)
 			});
 		}
 
+		//more blog posts
+		if($('.more-blogs-content').length > 0) {
+			$('.more-blogs').fadeIn('slow');
+		}
     //Tab order for navbar dropdown
 
     $(document).on("focus", '.nav-header .menu-item > a', function(){

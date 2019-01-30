@@ -51,10 +51,13 @@
 
     }
     &.dropdown {
+      position: relative;
       .fa-caret-right {
-        top: 20px;
+        position: absolute;
+        top: 24px;
+        right: 0;
+        left: auto;
         @media (max-width: 991px) {
-          position: absolute;
           top: 20px;
           right: 30px;
         }

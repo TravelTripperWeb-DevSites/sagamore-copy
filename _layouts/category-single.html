@@ -1,0 +1,68 @@
+---
+layout: default
+---
+
+
+<!-- Blog landing banner here -->
+<section class="container-fluid no-padding">
+  <div class="category-banner" style="background-image:url('{{ page.image.url_large }}');">
+   <div class="category-banner__details">
+     <h2 class="page-category" tabindex="0">{{ page.title  }}</h2>
+     <p>{{ page.description }}</p>
+   </div>
+  </div>
+</section>
+<!-- Blog content here -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-lg-3 hidden-md hidden-lg">
+      {% include blog-aside-mobile.html %}
+    </div>
+    <div class="col-md-8 col-lg-9">
+      <div class="all-posts" data-category-posts="{{ page.url_friendly_name }}">
+    <!-- Blog individual post -->
+    {% assign cnt = 0 %}
+    {% for post in site.data._models.blog | sort: 'date' | reverse %}
+      {% if post.category.url_friendly_name == page.url_friendly_name and cnt < 4 %}
+      {% assign cnt = cnt | plus:1 %}
+          <div class="blog-post wow fadeIn">
+            {% if post.image.url %}
+            <a href="/blog/{{ post.url_friendly_name }}/" title="{{ post.title }}">
+              <figure>
+                <img src="{{ post.image.url_large }}" alt="{{ post.image.alt }}">
+              </figure>
+            </a>
+            {% endif %}
+
+            <h2><a href="/blog/{{ post.url_friendly_name }}/">{{ post.title }}</a></h2>
+
+            <h4 class="date">{% if post.category %}<a href="/blog/category/{{ post.category.url_friendly_name }}/"> {{ post.category.title }}</a> <span></span> {% endif %} {{ post.date | date: '%B %d, %Y'}}</h4>
+
+            <p>
+              {{ post.post_content | strip_html | truncatewords: 40 | remove: "<p>" | remove: "</p>" }}
+            </p>
+            <div class="cta-block">
+              <div class="social-links">
+                <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}/blog/{{ post.url_friendly_name }}/&via={{ site.data.social.twitter.username }}&related={{ site.data.social.twitter.username }}" rel="nofollow" target="_blank" title="Share on Twitter"><i class="fa fa-twitter"></i></a>
+                <a href="https://facebook.com/sharer.php?u={{ site.url }}/blog/{{ post.url_friendly_name }}/" rel="nofollow" target="_blank" title="Share on Facebook"><i class="fa fa-facebook-f"></i></a>
+              </div>
+              <div class="button">
+                <a class="btn btn-lg btn-primary button-home" href="/blog/{{ post.url_friendly_name }}/">Read More</a>
+              </div>
+            </div>
+         </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="loading-btn">
+      <a class="btn btn-lg btn-primary button-home btn-more-post" href="#" id="more-post">Load More Posts</a>
+    </div>
+    <div class="infinite-spinner">
+      <img src="/assets/images/loading.gif" alt="loading..">
+    </div>
+  </div>
+    <div class="col-md-4 col-lg-3 hidden-xs hidden-sm">
+      {% include blog-aside.html %}
+    </div>
+  </div>
+</section>

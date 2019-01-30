@@ -1,0 +1,60 @@
+
+  <!-- Blog search here -->
+  <div class="blog-search">
+    <form class="search-form" action="/blog/search/" method="get">
+      <input type="text" class="search-box" name="query" id="search-box" value="" placeholder="Search" aria-label="Search blogs">
+      <button class="search-btn" aria-label="Search blogs"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+
+  <!-- Blog recent posts here -->
+  <div class="blog-recent">
+    <h4 tabindex="0">Recent Posts</h4>
+    <div id="recent-blogs">
+      {% assign recentblogs = site.data._models.blog | sort: 'date' | reverse %}
+      {% for recentblog in recentblogs | limit: 5 %}
+        <div class="blog-recent-item">
+          <a href="/blog/{{ recentblog.url_friendly_name }}/" tabindex="-1">
+            <figure>
+              <img src="{{ recentblog.image.url_xsmall }}" alt="{{ recentblog.image.alt }}">
+            </figure>
+          </a>
+          <div class="recent-item-content">
+            <a href="/blog/{{ recentblog.url_friendly_name }}/" tabindex="-1">
+              <h5 tabindex="0">{{ recentblog.title | truncate: 40 }}</h5>
+              <div class="blog-info">
+                <span class="date" tabindex="0">
+                  {% assign d = recentblog.date | date: "%-d" %}
+                  {{ recentblog.date | date: "%B" }}
+                  {% case d %}{% when "1" or "21" or "31" %}{{ d }}st{% when "2" or "22" %}{{ d }}nd{% when "3" or "23" %}{{ d }}rd{% else %}{{ d }}th{% endcase %},
+                  {{ recentblog.date | date: "%Y" }}
+                </span>
+              </div>
+             </a>
+          </div>
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+
+  <!-- Blog categories list here -->
+  <div class="blog-categories">
+    <h4 tabindex="0">Categories</h4>
+    <ul class="categories-list" id="categories">
+      {% assign category = site.data._models.categories | sort:'order' %}
+      {% for categorylist in category %}
+        <li>
+          <a href="/blog/category/{{ categorylist.url_friendly_name }}/">{{ categorylist.title }}
+            {% assign count = 0 %}
+            {% for postcount in site.data._models.blog %}
+              {% if postcount.category.title == categorylist.title%}
+              {% capture count  %}{{ count  | plus: '1' }}{% endcapture %}
+              {% endif %}
+            {% endfor %}
+            <span>({{ count }})</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,106 @@
+---
+layout: default
+---
+
+{% assign post = site.data._models.blog  %}
+{% assign blog = page %}
+{% assign seo_title = blog.seo_title %}
+{% assign seo_description = blog.seo_description %}
+
+{% for p in post %}
+    {% if p.url_friendly_name == blog.url_friendly_name %}
+        {% assign pInd = forloop.index0 | minus: 1 %}
+        {% assign nInd = forloop.index0 | plus: 1 %}
+        {% if forloop.first != true %}
+            {% assign prevPostTitle = post[pInd].title %}
+            {% assign prevPostUrl = post[pInd].url_friendly_name %}
+        {% endif %}
+        {% if forloop.last != true %}
+            {% assign nextPostTitle = post[nInd].title %}
+            {% assign nextPostUrl = post[nInd].url_friendly_name %}
+        {% endif %}
+    {% endif %}
+{% endfor %}
+
+<section class="container-fluid no-padding">
+  <div class="category-banner" style="background-image:url('/assets/images/beach-sagamore-hero.jpg');">
+   <div class="category-banner__details">
+      {% regionblock page_title, type:header %}
+      <h1 tabindex="0">Blog</h1>
+      {% endregionblock %}
+      {% regionblock page_detail, type: text %}
+       <p>Whether you’re seeking an art-filled escape, a day on the white sands of South Beach, or a night out at the trendiest new eatery, Miami has plenty to offer. Stay up to date with all the happenings in South Beach with the Sagamore Hotel Blog.</p>
+      {% endregionblock %}
+    </div>
+  </div>
+</section>
+<!-- Blog landing banner here -->
+
+<!-- Blog content here -->
+<div class="container">
+  <div class="row">
+  <div class="col-md-4 col-lg-3 hidden-md hidden-lg">
+    {% include blog-aside-mobile.html %}
+  </div>
+  <div class="col-md-8 col-lg-9">
+    <div class="blog-post blog-post-detail wow fadeIn">
+      <!-- Blog individual post -->
+        <h2><a href="/blog/{{ blog.url_friendly_name }}/">{{ blog.title }}</a></h2>
+
+        <h4 class="date">{% if blog.category %}<a href="/blog/category/{{ blog.category.url_friendly_name }}/">{{ blog.category.title }}</a>{% endif %} <span></span> {{ blog.date | date: '%B %d, %Y'}}</h4>
+
+        {% if blog.image.url_medium %}
+          <img src="{{ blog.image.url_large }}" alt="{{ blog.image.alt }}">
+        {% endif %}
+        <p>
+          {{ blog.post_content }}
+        </p>
+        <div class="cta-block">
+          <div class="social-links">
+            <a href="https://twitter.com/intent/tweet?text={{ blog.title }}&url={{ site.url }}{{ blog.url_friendly_name }}/&via={{ site.data.twitter.username }}&related={{ site.data.twitter.username }}" rel="nofollow" target="_blank" title="Share on Twitter"><i class="fa fa-twitter"></i></a>
+            <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ blog.url_friendly_name }}/" rel="nofollow" target="_blank" title="Share on Facebook"><i class="fa fa-facebook-f"></i></a>
+          </div>
+          <div class="blog-prev-next">
+            {% if prevPostUrl %}
+              <a class="primary-btn inverse previous" href="/blog/{{prevPostUrl}}/" title="Previous blog post" aria-label="Previous blog post"><i class="fa fa-angle-left" aria-hidden="true" aria-label="Previous post"></i> <span>Prev</span></a>
+            {% endif %}
+            {% if nextPostUrl %}
+              <a class="primary-btn inverse pushleft" href="/blog/{{nextPostUrl}}/" title="Next blog post" aria-label="Next blog post"><span>Next</span> <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            {% endif %}
+          </div>
+        </div>
+        {% assign moreblogs = site.data._models.blog | sort: 'date' | reverse %}
+        {% assign count = 0 %}
+        <section class="container-fluid more-blogs" style="display:none;">
+            <h3 tabindex="0">Related Stories</h3>
+            <div class="row">
+              {% for moreblog in moreblogs %}
+              <!-- Related blog items -->
+                {% if moreblog.category.title == blog.category.title and count < 3 %}
+                <!-- Skip current blog -->
+                  {% if moreblog.url_friendly_name != blog.url_friendly_name %}
+                  {% assign count = count | plus: 1 %}
+                    <div class="col-md-4">
+                      <div class="more-blogs-content">
+                        <a href="/blog/{{ moreblog.url_friendly_name }}/" title="{{ moreblog.title }}" tabindex="-1">
+                          <figure>
+                            <img src="{{ moreblog.image.url_small }}" alt="{{ moreblog.image.alt }}">
+                          </figure>
+                        </a>
+                        <div class="content-block">
+                          <h5><a href="/blog/{{ moreblog.url_friendly_name }}/">{{ moreblog.title }}</a></h5>
+                        </div>
+                      </div>
+                    </div>
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+            </div>
+        </section>
+      </div>
+    </div>
+    <div class="col-md-4 col-lg-3 hidden-xs hidden-sm">
+      {% include blog-aside.html %}
+    </div>
+  </div>
+</section>

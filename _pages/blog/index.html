@@ -1,46 +1,72 @@
 ---
-layout: posts
+layout: default
 title: Blog Posts
 meta_description:
 permalink: /blog/
 meta_tags:
-  robots:
+robots:
 sitemap:
-  exclude: true
+exclude: true
 ---
 
-{% comment %}
+<section class="container-fluid no-padding">
+  <div class="category-banner" style="background-image:url('/assets/images/beach-sagamore-hero.jpg');">
+   <div class="category-banner__details">
+      {% regionblock page_title, type:header %}
+      <h1 tabindex="0">Blog</h1>
+      {% endregionblock %}
+      {% regionblock page_detail, type: text %}
+       <p>Whether you’re seeking an art-filled escape, a day on the white sands of South Beach, or a night out at the trendiest new eatery, Miami has plenty to offer. Stay up to date with all the happenings in South Beach with the Sagamore Hotel Blog.</p>
+      {% endregionblock %}
+    </div>
+  </div>
+</section>
+{% assign posts = site.data._models.blog | sort: 'date' | reverse %}
+<div class="container">
+  <div class="row">
+  <div class="col-md-4 col-lg-3 hidden-md hidden-lg">
+    {% include blog-aside-mobile.html %}
+  </div>
+  <div class="col-md-8 col-lg-9">
+    <div class="all-posts">
+      {% for post in posts | limit: 4 %}
+      <div class="blog-post wow fadeIn">
+        {% if post.image.url %}
+        <a href="/blog/{{ post.url_friendly_name }}/" title="{{ post.title }}">
+          <figure>
+            <img src="{{ post.image.url_large }}" alt="{{ post.image.alt }}">
+          </figure>
+        </a>
+        {% endif %}
 
-  Name:
+        <h2><a href="/blog/{{ post.url_friendly_name }}/">{{ post.title }}</a></h2>
 
-    Blog Posts Page (Listing)
+        <h4 class="date">{% if post.category %}<a href="/blog/category/{{ post.category.url_friendly_name }}/"> {{ post.category.title }}</a> <span></span>{% endif %} {{ post.date | date: '%B %d, %Y'}}</h4>
 
-  Description:
-
-    A list of all the blog posts on the site.
-
-  Usage:
-
-    {% assign posts = site.data._models.posts %}
-    {% for post in posts %}
-
-      Display a Posts Featured Image
-      {% if post.image.url %}
-        <a href="/blog/{{ post.url_friendly_name }}/"><img src="{{ post.image.url }}"></a>
-      {% endif %}
-
-      Display a Posts Title
-      <h1><a href="/blog/{{ post.url_friendly_name }}/">{{ post.title }}</a></h1>
-
-      Display a Posts Category
-      {% if post.category %}
-        {{ post.category.title }}
-      {% endif %}
-
-      Display a Posts Content Excerpt
-      {{ post.post_content | strip_html | truncatewords: 40 | remove: "<p>" | remove: "</p>" }}
-      <a href="/blog/{{ post.url_friendly_name }}/">Read More</a>
-
-    {% endfor %}
-
-{% endcomment %}
+        <p>
+          {{ post.post_content | strip_html | truncatewords: 40 | remove: "<p>" | remove: "</p>" }}
+        </p>
+        <div class="cta-block">
+          <div class="social-links">
+            <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}/blog/{{ post.url_friendly_name }}/&via={{ site.data.social.twitter.username }}&related={{ site.data.social.twitter.username }}" rel="nofollow" target="_blank" title="Share on Twitter"><i class="fa fa-twitter"></i></a>
+            <a href="https://facebook.com/sharer.php?u={{ site.url }}/blog/{{ post.url_friendly_name }}/" rel="nofollow" target="_blank" title="Share on Facebook"><i class="fa fa-facebook-f"></i></a>
+          </div>
+          <div class="button">
+            <a class="btn btn-lg btn-primary button-home" href="/blog/{{ post.url_friendly_name }}/">Read More</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="loading-btn">
+      <a class="btn btn-lg btn-primary button-home btn-more-post" href="#" id="more-post">Load More Posts</a>
+    </div>
+    <div class="infinite-spinner">
+      <img src="/assets/images/loading.gif" alt="loading..">
+    </div>
+  </div>
+  <div class="col-md-4 col-lg-3 hidden-xs hidden-sm">
+    {% include blog-aside.html %}
+  </div>
+</div>
+</div>
